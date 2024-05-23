@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="stylesheet" href="/src/calendar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+    <title>DashBoard</title>
+  </head>
+  <body>
+      <nav
+      class="flex gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+    >
+      <div class="flex items-center justify-center flex-shrink-0 pl-[34px] text-white">
+        <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+      </div>
+      <div class="block lg:hidden">
+        <button
+          class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full block  flex-grow  lg:flex  lg:items-center lg:w-auto">
+        <div class="text-sm flex gap-3 items-center lg:flex-grow">
+          <div>
+            <img src="/images/menu.png" id="menu-button"  />
+          </div>
+          <div class=" relative">
+            <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+            <input
+              type="text"
+              placeholder="Search"
+              class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div>
+            <img src="/images/notification-bing.png" />
+          </div>
+          <div
+            class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+          >
+            <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+              <img src="/images/user.png" />
+            </div>
+            <div>
+              <h6
+                class="font-medium text-[14px] leading-[25px] text-[Black Color]"
+              >
+                Abhishek Sharma
+              </h6>
+              <p
+                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
+              >
+                Sales Head
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="lg:flex gap-2">
+      <div id="main-content" class=" main-content  px-[20px] lg:py-[5rem] pt-[11rem]">
+      <div class="lg:flex justify-between items-center">
+        <div>
+          <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
+            DashBoard
+          </h2>
+        </div>
+        <div class="lg:flex gap-5 px-[20px]">
+          <div class=" w-full lg:w-[237px] flex gap-4 items-center bg-[#FCFCFC] h-[68px] rounded-[10px] border border-[#DFEAF0] p-3">
+            <div>
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class=" flex gap-8 items-center">
+            <div>
+              <h6 class=" font-semibold text-[18px] leading-[22px] text-[#000000]">Select User</h6>
+              <p class=" font-normal text-[14px] leading-[17px] text-[#777777]">Judith Rodriguez</p>
+            </div>
+            <div class="">
+              <i class="fa-solid fa-chevron-down text-[10px] text-[#A098AE]"></i>
+            </div>
+          </div>
+          </div>
+          <div class=" w-full lg:w-[237px] flex gap-4 items-center bg-[#FCFCFC] h-[68px] rounded-[10px] border border-[#DFEAF0] p-3">
+            <div>
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class=" flex gap-8 items-center">
+            <div>
+              <h6 class=" font-semibold text-[18px] leading-[22px] text-[#000000]">Change Periode</h6>
+              <p class=" font-normal text-[14px] leading-[17px] text-[#777777]">August - October, 2024</p>
+            </div>
+            <div class="">
+              <i class="fa-solid fa-chevron-down text-[10px] text-[#A098AE]"></i>
+            </div>
+          </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class=" lg:flex items-center gap-5 mt-5">
+        <div class="w-full lg:w-[268px] bg-[#EEFBFF] box-shadow2 p-4  rounded-md">
+          <div class="flex items-center justify-between">
+          <div>
+            <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Fresh Tenders</h3>
+            <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+          </div>
+          <div class=" w-[50px] h-[50px] bg-[#EEFBFF] box-shadow3 Border2  relative">
+            <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+          </div>
+        </div>
+        <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+        </div>
+        <div class=" w-full lg:w-[268px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
+          <div class="flex items-center justify-between">
+          <div>
+            <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Tender Result</h3>
+            <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+          </div>
+          <div class=" w-[50px] h-[50px] bg-[#EEFBFF] box-shadow3 Border2  relative">
+            <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+          </div>
+        </div>
+        <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+        </div>
+        <div class=" w-full lg:w-[268px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
+          <div class="flex items-center justify-between">
+          <div>
+            <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">In-Progress Tender</h3>
+            <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+          </div>
+          <div class=" w-[50px] h-[50px] bg-[#E7FBD7] box-shadow3 Border2  relative">
+            <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+          </div>
+        </div>
+        <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+        </div>
+        <div class=" w-full lg:w-[268px] bg-[#FFE8F2] box-shadow2 p-4  rounded-md">
+          <div class="flex items-center justify-between">
+          <div>
+            <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Submitted Tenders</h3>
+            <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+          </div>
+          <div class=" w-[50px] h-[50px] bg-[#E7FBD7] box-shadow3 Border2  relative">
+            <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+          </div>
+        </div>
+        <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+        </div>
+
+      </div>
+
+      <div class=" flex items-center  gap-14" >
+        <div class=" w-full lg:w-[520px] h-[522px] border border-[#DFEAF0] rounded-lg mt-4">
+          <div class="calendar-container">
+            <div class="calendar-month-arrow-container">
+              <div class="calendar-month-year-container">
+                <select class="calendar-years"></select>
+                <select class="calendar-months">
+                </select>
+              </div>
+              <div class="calendar-month-year">
+              </div>
+              <div class="calendar-arrow-container">
+                <button class="calendar-today-button"></button>
+                <button class="calendar-left-arrow">
+                  ← </button>
+                <button class="calendar-right-arrow"> →</button>
+              </div>
+            </div>
+            <ul class="calendar-week">
+            </ul>
+            <ul class="calendar-days">
+            </ul>
+          </div>
+
+        </div>
+        <div class="">
+          <div class=" lg:flex items-center gap-5 mt-5">
+            <div class=" w-full lg:w-[268px] bg-[#FFE4E2] box-shadow2 p-4  rounded-md">
+              <div class="flex items-center justify-between">
+              <div>
+                <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Submitted Tenders</h3>
+                <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+              </div>
+              <div class=" w-[50px] h-[50px] bg-[#EEFBFF] box-shadow3 Border2  relative">
+                <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+              </div>
+            </div>
+            <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+            </div>
+            <div class=" w-full lg:w-[268px] bg-[#FFF9C2] box-shadow2 p-4  rounded-md">
+              <div class="flex items-center justify-between">
+              <div>
+                <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Tender Result</h3>
+                <p class=" text-[28px] mt-3 font-bold leading-[38px] text-[#202224]">40,689</p>
+              </div>
+              <div class=" w-[50px] h-[50px] bg-[#EEFBFF] box-shadow3 Border2  relative">
+                <i class="fa-solid fa-user absolute left-[38%] top-[30%]"></i>
+              </div>
+            </div>
+            <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
+            </div>
+          </div>
+          <div class="bg-[#B9E2EF] mt-5 rounded-[29px] w-full lg:w-[539px]  h-[371px] flex justify-center items-center font-bold text-[24px] leading-[30px] text-[#000000] ">
+            Recent Bid Assign
+           
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class=" p-1 py-[5rem] border-l border-[#D7D7D7]">
+      <div>
+        <h3 class=" font-bold text-[18px] leading-[30px]">Tender Remider</h3>
+        <div class="px-[10px]">
+          <div class="flex justify-between items-center">
+          <div class=" font-bold text-[16px] mt-4 leading-[20px] text-[#005787]">Name Of Tender</div>
+          <div class=" font-light text-[11px] leading-[15px]">14:21pm</div>
+        </div>
+          <p class=" font-normal text-[12px] leading-[15px]">Abhishek sharma</p>
+          <div class=" font-normal text-[12px] leading-[15px] text-[#FF0000]">22-03-2023</div>
+          <p class=" font-normal text-[11px] leading-[19px]">
+            Lorem ipsum dolor sit amet consectetur. Non amet mi posuere id nunc tortor bibendum nibh. 
+          </p>
+        </div>
+        <div class="px-[10px]">
+          <div class="flex justify-between items-center">
+          <div class=" font-bold text-[16px] mt-4 leading-[20px] text-[#005787]">Name Of Tender</div>
+          <div class=" font-light text-[11px] leading-[15px]">14:21pm</div>
+        </div>
+          <p class=" font-normal text-[12px] leading-[15px]">Abhishek sharma</p>
+          <div class=" font-normal text-[12px] leading-[15px] text-[#FF0000]">22-03-2023</div>
+          <p class=" font-normal text-[11px] leading-[19px]">
+            Lorem ipsum dolor sit amet consectetur. Non amet mi posuere id nunc tortor bibendum nibh. 
+          </p>
+        </div>
+        <div class="px-[10px]">
+          <div class="flex justify-between items-center">
+          <div class=" font-bold text-[16px] mt-4 leading-[20px] text-[#005787]">Name Of Tender</div>
+          <div class=" font-light text-[11px] leading-[15px]">14:21pm</div>
+        </div>
+          <p class=" font-normal text-[12px] leading-[15px]">Abhishek sharma</p>
+          <div class=" font-normal text-[12px] leading-[15px] text-[#FF0000]">22-03-2023</div>
+          <p class=" font-normal text-[11px] leading-[19px]">
+            Lorem ipsum dolor sit amet consectetur. Non amet mi posuere id nunc tortor bibendum nibh. 
+          </p>
+        </div>
+    
+      </div>
+
+
+    </div>
+
+  </div>
+      <script>
+        document.getElementById("menu-button").addEventListener("click", function () {
+          document.getElementById("sidebar").classList.toggle("hidden");
+          document.getElementById("content").classList.toggle("no-padding-left");
+        });
+
+        const weekArray = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
+const monthArray = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+const current = new Date();
+const todaysDate = current.getDate();
+const currentYear = current.getFullYear();
+const currentMonth = current.getMonth();
+
+window.onload = function () {
+  const currentDate = new Date();
+  generateCalendarDays(currentDate);
+
+  let calendarWeek = document.getElementsByClassName("calendar-week")[0];
+  let calendarTodayButton = document.getElementsByClassName(
+    "calendar-today-button"
+  )[0];
+  calendarTodayButton.textContent = `Today ${todaysDate}`;
+
+  calendarTodayButton.addEventListener("click", () => {
+    generateCalendarDays(currentDate);
+  });
+
+  weekArray.forEach((week) => {
+    let li = document.createElement("li");
+    li.textContent = week;
+    li.classList.add("calendar-week-day");
+    calendarWeek.appendChild(li);
+  });
+
+  const calendarMonths = document.getElementsByClassName("calendar-months")[0];
+  const calendarYears = document.getElementsByClassName("calendar-years")[0];
+  const monthYear = document.getElementsByClassName("calendar-month-year")[0];
+
+  const selectedMonth = parseInt(monthYear.getAttribute("data-month") || 0);
+  const selectedYear = parseInt(monthYear.getAttribute("data-year") || 0);
+
+  monthArray.forEach((month, index) => {
+    let option = document.createElement("option");
+    option.textContent = month;
+    option.value = index;
+    option.selected = index === selectedMonth;
+    calendarMonths.appendChild(option);
+  });
+
+  const currentYear = new Date().getFullYear();
+  const startYear = currentYear - 60;
+  const endYear = currentYear + 60;
+  let newYear = startYear;
+  while (newYear <= endYear) {
+    let option = document.createElement("option");
+    option.textContent = newYear;
+    option.value = newYear;
+    option.selected = newYear === selectedYear;
+    calendarYears.appendChild(option);
+    newYear++;
+  }
+
+  const leftArrow = document.getElementsByClassName("calendar-left-arrow")[0];
+
+  leftArrow.addEventListener("click", () => {
+    const monthYear = document.getElementsByClassName("calendar-month-year")[0];
+    const month = parseInt(monthYear.getAttribute("data-month") || 0);
+    const year = parseInt(monthYear.getAttribute("data-year") || 0);
+
+    let newMonth = month === 0 ? 11 : month - 1;
+    let newYear = month === 0 ? year - 1 : year;
+    let newDate = new Date(newYear, newMonth, 1);
+    generateCalendarDays(newDate);
+  });
+
+  const rightArrow = document.getElementsByClassName("calendar-right-arrow")[0];
+
+  rightArrow.addEventListener("click", () => {
+    const monthYear = document.getElementsByClassName("calendar-month-year")[0];
+    const month = parseInt(monthYear.getAttribute("data-month") || 0);
+    const year = parseInt(monthYear.getAttribute("data-year") || 0);
+    let newMonth = month + 1;
+    newMonth = newMonth === 12 ? 0 : newMonth;
+    let newYear = newMonth === 0 ? year + 1 : year;
+    let newDate = new Date(newYear, newMonth, 1);
+    generateCalendarDays(newDate);
+  });
+
+  calendarMonths.addEventListener("change", function () {
+    let newDate = new Date(calendarYears.value, calendarMonths.value, 1);
+    generateCalendarDays(newDate);
+  });
+
+  calendarYears.addEventListener("change", function () {
+    let newDate = new Date(calendarYears.value, calendarMonths.value, 1);
+    generateCalendarDays(newDate);
+  });
+};
+
+function generateCalendarDays(currentDate) {
+  const newDate = new Date(currentDate);
+  const year = newDate.getFullYear();
+  const month = newDate.getMonth();
+  const totalDaysInMonth = getTotalDaysInAMonth(year, month);
+  const firstDayOfWeek = getFirstDayOfWeek(year, month);
+  let calendarDays = document.getElementsByClassName("calendar-days")[0];
+
+  removeAllChildren(calendarDays);
+
+  let firstDay = 1;
+  while (firstDay <= firstDayOfWeek) {
+    let li = document.createElement("li");
+    li.classList.add("calendar-day");
+    calendarDays.appendChild(li);
+    firstDay++;
+  }
+
+  let day = 1;
+  while (day <= totalDaysInMonth) {
+    let li = document.createElement("li");
+    li.textContent = day;
+    li.classList.add("calendar-day");
+    if (todaysDate === day && currentMonth === month && currentYear === year) {
+      li.classList.add("calendar-day-active");
+    }
+    calendarDays.appendChild(li);
+    day++;
+  }
+
+  const monthYear = document.getElementsByClassName("calendar-month-year")[0];
+  monthYear.setAttribute("data-month", month);
+  monthYear.setAttribute("data-year", year);
+  const calendarMonths = document.getElementsByClassName("calendar-months")[0];
+  const calendarYears = document.getElementsByClassName("calendar-years")[0];
+  calendarMonths.value = month;
+  calendarYears.value = year;
+}
+
+function getTotalDaysInAMonth(year, month) {
+  return new Date(year, month + 1, 0).getDate();
+}
+
+function getFirstDayOfWeek(year, month) {
+  return new Date(year, month, 1).getDay();
+}
+
+function removeAllChildren(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+      </script>
+   
+    
+   
+  </body>
+</html>

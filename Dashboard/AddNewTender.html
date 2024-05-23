@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/src/output.css" rel="stylesheet" />
+        <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/src/input.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Document</title>
+    </head>
+<body>
+    <nav
+    class="flex gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+    >
+    <div
+        class="flex items-center justify-center flex-shrink-0 pl-[34px] text-white"
+    >
+        <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+    </div>
+    <div class="block lg:hidden">
+        <button
+        class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white"
+        >
+        <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+        </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm flex gap-3 items-center lg:flex-grow">
+        <div>
+            <img src="/images/menu.png" id="menu-button" />
+        </div>
+        <div class="relative">
+            <i
+            class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
+            ></i>
+            <input
+            type="text"
+            placeholder="Search"
+            class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+            />
+        </div>
+        </div>
+        <div class="flex items-center gap-4">
+        <div>
+            <img src="/images/notification-bing.png" />
+        </div>
+        <div
+            class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+        >
+            <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+            <img src="/images/user.png" />
+            </div>
+            <div>
+            <h6
+                class="font-medium text-[14px] leading-[25px] text-[Black Color]"
+            >
+                Abhishek Sharma
+            </h6>
+            <p
+                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
+            >
+                Sales Head
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </nav>
+    <div
+    id="sidebar"
+    class="w-[17rem] height mt-[66px] bg-white fixed z-50 h-full overflow-scroll flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]"
+    >
+    <div
+        class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
+    >
+        <div
+        class="rounded-full w-[20px] h-[20px] border border-white relative"
+        >
+        <i
+            class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
+        ></i>
+        </div>
+        <div class="text-white font-semibold text-[14px] leading-[30px]">
+        Add New Tender
+        </div>
+    </div>
+    <div
+        className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 "
+    >
+        <div
+        class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                DashBoard
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                User Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="/Dashboard/TenderManagement.html">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Tender Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Financial Approvals
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Document Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Tender Response Creation
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Calendar
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Finance Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                MIS
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                OEM
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Settings
+            </h2>
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="pl-[15%] pr-[20px] py-[5rem] flex gap-5 ">
+        <div class="">
+        <div>
+            <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
+                Tender Mangement
+            </h2>
+        </div>
+        <div class="w-[906px] mt-10  rounded-[20px] border border-[B2B2B2]">
+            <div>
+                <div class="border-b border-[B2B2B2] p-4">
+                    <h3 class=" font-bold text-[20px] leading-[30px]">Add New Tender</h3>
+                </div>
+                <div class=" p-6  border-b border-[B2B2B2]">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Tender ID</div>
+                    <input type="text" placeholder="Enter Name" class="bg-transparent w-[350px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="grid grid-cols-2 gap-6  mt-4 p-4">
+                    <div class="">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Reference Number *</div>
+                        <input type="text" placeholder="Enter Name" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                    </div>  
+                    <div>
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Organization Name *</div>
+                        <!-- <select class="  w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <option value="0" class=" font-medium text-[16px] leading-[20px] text-[#000000]">Organization Name </option>
+                            <option value="1">Abhishek Sharma</option>
+                            <option value="2">Abhishek Sharma</option>
+                            <option>Add New Organization</option>
+                        </select> -->
+                    
+                    <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                        <button class="dropbtn">Organization Name</button>
+                        <div class="dropdown-content">
+                          <a href="#" >Organization Name</a>
+                          <a href="#">Organization Name</a>
+                          <a href="#" class="Border">Organization Name</a>
+                          <div class="flex justify-center py-[10px]">
+                          <button href="#" class="" id="addOrganization">Add New Organization</button>
+                        </div>
+                        </div>
+
+                        <div class=" dropdown-content pb-[20px] ">
+                            <div class="flex flex-col p-4 gap-4 Border">
+                            <div class="">
+                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Organization Name</div>
+                                <input type="text" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                            </div>  
+                            <div class="">
+                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Email</div>
+                                <input type="email" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                            </div> 
+                            <div class="mb-[20px]">
+                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Address</div>
+                                <input type="text" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                            </div>
+                        </div>
+                        <div class="flex justify-center gap-2">
+                            <button class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                                Cancel
+                            </button>
+                            <button class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                                Save
+                            </button>
+                        </div>
+                        </div>
+
+                      </div>
+                    </div>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Keyword *</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Keyword *</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Site Location *</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Site Location *</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Estimated Cost *</div>
+                    <input type="text" placeholder="Estimated Cost" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div> 
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Earnest Money Deposited*</div>
+                    <input type="text" placeholder="Earnest Money Deposited *" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Document Fees *</div>
+                    <input type="text" placeholder="Document Fees*" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Submission Date *</div>
+                    <input type="text" placeholder="Submission Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Tender Opening Date *</div>
+                    <input type="text" placeholder="Tender Opening Date " class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+
+            </div>
+            <div class="w-[170px] mb-[20px] ml-[19px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                Save
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="border border-[#B2B2B2] w-[485px] rounded-[20px] h-[312px] mt-[70px] ">
+        <div class="border-b border-[#B2B2B2] p-4 ">
+            <h3 class=" font-bold text-[20px] leading-[30px]">Upload File</h3>
+        </div>
+        <div>
+            <div class="w-[60px] h-[59px] m-auto mt-10">
+            <img src="/images/Uploadicon.png"/>
+          </div>
+            <p class=" font-bold text-[16px] leading-[24px] mt-4 text-center">Drag & drop files or Browse</p>
+            <p class=" font-normal text-[12px] leading-[18px] text-center">Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
+        </div>
+
+    </div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const addOrganization = document.getElementById('addOrganization');
+
+    addOrganization.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+    });
+
+})
+</script>
+</body>
+</html>

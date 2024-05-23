@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+    />
+    <link href="/src/input.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body >
+    <nav
+    class="flex gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+    >
+    <div
+        class="flex items-center justify-center flex-shrink-0 pl-[34px] text-white"
+    >
+        <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+    </div>
+    <div class="block lg:hidden">
+        <button
+        class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white"
+        >
+        <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+        </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm flex gap-3 items-center lg:flex-grow">
+        <div>
+            <img src="/images/menu.png" id="menu-button" />
+        </div>
+        <div class="relative">
+            <i
+            class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
+            ></i>
+            <input
+            type="text"
+            placeholder="Search"
+            class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+            />
+        </div>
+        </div>
+        <div class="flex items-center gap-4">
+        <div>
+            <img src="/images/notification-bing.png" />
+        </div>
+        <div
+            class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+        >
+            <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+            <img src="/images/user.png" />
+            </div>
+            <div>
+            <h6
+                class="font-medium text-[14px] leading-[25px] text-[Black Color]"
+            >
+                Abhishek Sharma
+            </h6>
+            <p
+                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
+            >
+                Sales Head
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </nav>
+    <div
+    id="sidebar"
+    class="w-[17rem] height mt-[66px] bg-white fixed z-50 h-full overflow-scroll flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]"
+    >
+    <div
+        class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
+    >
+        <div
+        class="rounded-full w-[20px] h-[20px] border border-white relative"
+        >
+        <i
+            class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
+        ></i>
+        </div>
+        <div class="text-white font-semibold text-[14px] leading-[30px]">
+        Add New Tender
+        </div>
+    </div>
+    <div
+        className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 "
+    >
+        <div
+        class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                DashBoard
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                User Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="/Dashboard/TenderManagement.html">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Tender Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Financial Approvals
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Document Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Tender Response Creation
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Calendar
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Finance Management
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                MIS
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                OEM
+            </h2>
+            </a>
+        </div>
+        </div>
+        <div
+        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
+        >
+        <div>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <a href="">
+            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                Settings
+            </h2>
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="pl-[15%] pr-[20px] py-[5rem]">
+    <div class="flex justify-between">
+        <div>
+        <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
+            Tender Mangement
+        </h2>
+        </div>
+        <div class="flex items-center gap-4">
+        <div
+            class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
+        >
+            <div
+            class="rounded-full w-[20px] h-[20px] border border-white relative"
+            >
+            <i
+                class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
+            ></i>
+            </div>
+            <div class="text-white font-semibold text-[14px] leading-[30px]">
+            Add New Tender
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <label
+            class="font-normal text-[15px] leading-[20px] text-[#000000s]"
+            >Show Result</label
+            >
+            <div
+            class="w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]"
+            ></div>
+        </div>
+        <div class="relative">
+            <i
+            class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"
+            ></i>
+            <input
+            type="text"
+            placeholder="Type and Enter"
+            class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4"
+            />
+        </div>
+        </div>
+    </div>
+    <div class="flex items-center gap-5 rounded-[20px] bg-[#EDF3F2] p-6 mt-5">
+        <div class="">
+        <div>State</div>
+        <select
+            class="w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+        >
+            <option
+            value="0"
+            class="font-normal text-[14px] leading-[20px] text-[#000000]"
+            >
+            Select state
+            </option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+        </select>
+        </div>
+        <div class="">
+        <div>Start Date</div>
+        <input
+            type="date"
+            placeholder="Select Date"
+            class="bg-transparent w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+        />
+        </div>
+        <div class="">
+        <div>End Date</div>
+        <input
+            type="date"
+            placeholder="Select Date"
+            class="bg-transparent w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+        />
+        </div>
+        <div
+        class="w-[98px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px]"
+        >
+        Apply
+        </div>
+        <div
+        class="mt-5 font-semibold text-[14px] text-[#000000] leading-[20px]"
+        >
+        Clear All
+        </div>
+    </div>
+    <div class="flex gap-3">
+        <div class="mt-4">
+        <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
+            <p
+            class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+            Fresh( 100)
+            </p>
+        </div>
+        </div>
+        <div class="mt-4">
+        <div class="w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
+            <p
+            class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+            Live (100)
+            </p>
+        </div>
+        </div>
+        <div class="mt-4">
+        <div class="w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
+            <p
+            class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+            Archive (100)
+            </p>
+        </div>
+        </div>
+        <div class="mt-4">
+        <div class="w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
+            <p
+            class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+            Intrested( 100)
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5 flex justify-between">
+        <div>
+        <div class="font-semibold text-[18px] leading-[22px] text-[#000000]">
+            Public Works Department - Nanded - Maharashtra
+        </div>
+        <div class="flex gap-2 items-center my-4">
+            <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+            <span class="font-normal text-[15px] leading-[18px]"
+            ><i class="fa-regular fa-clock"></i>12-03-2024
+            <sub>(14 Days Left)</sub>
+            </span>
+        </div>
+        <p class=" font-normal text-[15px] leading-[25px] w-[900px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+        </p>
+        <div class="flex items-center  gap-6 mt-5">
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-heart absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Favorite</p>
+            </div>
+            <div id="reminder">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-clock absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Date</p>
+            </div>
+            <div id="assign-button">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Assign</p>
+            </div>
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-solid fa-download absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Download</p>
+            </div>
+            <div id="Request-Finance">
+                <div class="w-[40px] mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                    <i
+                    class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                    ></i>
+                </div>
+                <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
+                </div>
+             <div >
+             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                        <i
+                        class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                        ></i>
+                    </div>
+                    <p class="font-normal text-center text-[14px] leading-[17px]">Tender
+                        Statur</p>
+             </div>
+             <div id="RequestApproval" >
+                <div class="w-[40px]  mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                           <i
+                           class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                           ></i>
+                       </div>
+                       <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Approval</p>
+                </div>
+        </div>
+        </div>
+        <div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Tender Id - 1050</p>
+            <div class="mt-3">
+                <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
+                <p
+                    class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                >
+                Assigned
+                </p>
+                </div>
+            </div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Submitted To:-</p>
+        </div>
+    </div>
+    <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5 flex justify-between">
+        <div>
+        <div class="font-semibold text-[18px] leading-[22px] text-[#000000]">
+            Public Works Department - Nanded - Maharashtra
+        </div>
+        <div class="flex gap-2 items-center my-4">
+            <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+            <span class="font-normal text-[15px] leading-[18px]"
+            ><i class="fa-regular fa-clock"></i>12-03-2024
+            <sub>(14 Days Left)</sub>
+            </span>
+        </div>
+        <p class=" font-normal text-[15px] leading-[25px] w-[900px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+        </p>
+        <div class="flex items-center  gap-6 mt-5">
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-heart absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Favorite</p>
+            </div>
+            <div id="reminder">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-clock absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Date</p>
+            </div>
+            <div id="assign-button">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Assign</p>
+            </div>
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-solid fa-download absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Download</p>
+            </div>
+            <div id="Request-Finance">
+                <div class="w-[40px] mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                    <i
+                    class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                    ></i>
+                </div>
+                <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
+                </div>
+             <div >
+             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                        <i
+                        class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                        ></i>
+                    </div>
+                    <p class="font-normal text-center text-[14px] leading-[17px]">Tender
+                        Statur</p>
+             </div>
+             <div id="RequestApproval" >
+                <div class="w-[40px]  mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                           <i
+                           class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                           ></i>
+                       </div>
+                       <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Approval</p>
+                </div>
+        </div>
+        </div>
+        <div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Tender Id - 1050</p>
+            <div class="mt-3">
+                <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
+                <p
+                    class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                >
+                Assigned
+                </p>
+                </div>
+            </div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Submitted To:-</p>
+        </div>
+    </div>
+    <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5 flex justify-between">
+        <div>
+        <div class="font-semibold text-[18px] leading-[22px] text-[#000000]">
+            Public Works Department - Nanded - Maharashtra
+        </div>
+        <div class="flex gap-2 items-center my-4">
+            <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+            <span class="font-normal text-[15px] leading-[18px]"
+            ><i class="fa-regular fa-clock"></i>12-03-2024
+            <sub>(14 Days Left)</sub>
+            </span>
+        </div>
+        <p class=" font-normal text-[15px] leading-[25px] w-[900px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+        </p>
+        <div class="flex items-center  gap-6 mt-5">
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-heart absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Favorite</p>
+            </div>
+            <div id="reminder">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-clock absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Date</p>
+            </div>
+            <div id="assign-button">
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Assign</p>
+            </div>
+            <div>
+            <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                <i
+                class="fa-solid fa-download absolute top-[11px] left-[10px] text-[18px]"
+                ></i>
+            </div>
+            <p class="font-normal text-center text-[14px] leading-[17px]">Download</p>
+            </div>
+            <div id="Request-Finance">
+                <div class="w-[40px] mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                    <i
+                    class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                    ></i>
+                </div>
+                <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
+                </div>
+             <div >
+             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                        <i
+                        class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                        ></i>
+                    </div>
+                    <p class="font-normal text-center text-[14px] leading-[17px]">Tender
+                        Statur</p>
+             </div>
+             <div id="RequestApproval" >
+                <div class="w-[40px]  mt-[10px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+                           <i
+                           class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
+                           ></i>
+                       </div>
+                       <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Approval</p>
+                </div>
+        </div>
+        </div>
+        <div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Tender Id - 1050</p>
+            <div class="mt-3">
+                <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
+                <p
+                    class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                >
+                Assigned
+                </p>
+                </div>
+            </div>
+            <p class=" font-semibold text-[14px] leading-[23px] text-center">Submitted To:-</p>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="ApprovalModal" class="hidden fixed top-0 right-0 z-50 h-full  bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full">
+            <div class="flex justify-between border-b border-[#CADDE4] p-4">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Tender Request For Approval</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                </div>
+            </div>
+            <div class="px-[20px] py-[20px] ">
+                <div class="w-[800px] rounded-[15px] bg-[#CCEFFC] p-4">
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Breif:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">Lorem ipsum dolor sit amet consectetur. A eleifend viverra quis cras nisl ....</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Authority:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">ajmer vidyut vitran nigam limited</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Reference Number:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px] underline">2024_AVVNL_382210_10</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Value:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px] underline">Refer Document</div>
+                    </div>
+        
+                </div>
+                <div class="grid grid-cols-2 gap-10 mt-10">
+
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Approval For</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Reminder Date</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Deadline</div>
+                    <input type="date" placeholder="Reminder Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Approval From</div>
+                    <input type="text" placeholder="Approval From" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">In Loop</div>
+                    <input type="text" placeholder="In Loop" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="relative">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Approval Description</div>
+                    <input type="text" placeholder="Approval Description" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+            </div>
+                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Assign User
+                </div>
+            </div>
+            <div class="overflow-x-auto mt-5">
+                <table class="min-w-full">
+                    <thead class="bg-[#005787] text-white">
+                        <tr>
+                            <th class="text-[15px] py-2">#</th>
+                            <th class="text-[15px] py-2">Assign By</th>
+                            <th class="text-[15px] py-2">Comment</th>
+                            <th class="text-[15px] py-2">Number</th>
+                            <th class="text-[15px] py-2">Assign Date Time</th>
+                            <th class="text-[15px] py-2">Tender Awarded</th>
+                            <th class="text-[15px] py-2">Action</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="finnace" class="hidden fixed top-0 right-0 z-50 h-full  bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full">
+            <div class="flex justify-between border-b border-[#CADDE4] p-4">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Tender Request To Finance</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                </div>
+            </div>
+            <div class="px-[20px] py-[20px] ">
+                <div class="w-[800px] rounded-[15px] bg-[#CCEFFC] p-4">
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Breif:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">Lorem ipsum dolor sit amet consectetur. A eleifend viverra quis cras nisl ....</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Authority:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">ajmer vidyut vitran nigam limited</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Reference Number:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px] underline">2024_AVVNL_382210_10</div>
+                    </div>
+                    <div class=" flex justify-between items-center">
+                        <div class=" font-bold text-[14px] leading-[25px]">Tender Value:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px] underline">Refer Document</div>
+                    </div>
+        
+                </div>
+                <div class="grid grid-cols-2 gap-10 mt-10">
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Requirement</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">EMD</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Amount</div>
+                    <input type="date" placeholder="Reminder Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+
+                <div class="">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Deadline</div>
+                    <input type="date" placeholder="Approval From" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Request To</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Request To</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Payment</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Select Payment Mode</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div class="relative">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+                </div>
+            </div>
+            <div class="mt-6">
+                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Payment Description</div>
+                <div class="">
+                    <textarea class=" rounded-[30px] border border-[#647986] outline-none w-full h-[90px]"></textarea>
+                </div>
+            </div>
+                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Assign User
+                </div>
+            </div>
+            <div class="overflow-x-auto mt-5">
+                <table class="min-w-full">
+                    <thead class="bg-[#005787] text-white">
+                        <tr>
+                            <th class="text-[15px] py-2">#</th>
+                            <th class="text-[15px] py-2">Assign By</th>
+                            <th class="text-[15px] py-2">Comment</th>
+                            <th class="text-[15px] py-2">Number</th>
+                            <th class="text-[15px] py-2">Assign Date Time</th>
+                            <th class="text-[15px] py-2">Tender Awarded</th>
+                            <th class="text-[15px] py-2">Action</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('RequestApproval');
+    const assignModal = document.getElementById('ApprovalModal');
+    const closeModalButton = document.getElementById('closeModalButton');
+
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == ApprovalModal) {
+            assignModal.classList.add('hidden');
+        }
+    });
+})
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('Request-Finance');
+    const assignModal = document.getElementById('finnace');
+    const closeModalButton = document.getElementById('closeModalButton');
+
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == finnace) {
+            assignModal.classList.add('hidden');
+        }
+    });
+})
+    </script>
+
+</body>
+</html>

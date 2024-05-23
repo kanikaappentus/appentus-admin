@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/src/output.css" rel="stylesheet" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet" />
+        <link href="/src/input.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav
+            class="flex items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+            </div>
+            <div class="block lg:hidden">
+                <button
+                    class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white">
+                    <svg
+                        class="fill-current h-3 w-3"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm flex items-center lg:flex-grow">
+                    <div>
+                        <img src="/images/menu.png" id="menu-button" />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            class="w-[360px] h-[50px] rounded-[60px] border border-[#F3FCFF] bg-[#F3FCFF] p-4" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div>
+                        <img src="/images/notification-bing.png" />
+                    </div>
+                    <div
+                        class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
+                        <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+                            <img src="/images/user.png" />
+                        </div>
+                        <div>
+                            <h6
+                                class="font-medium text-[14px] leading-[25px] text-[Black Color]">
+                                Abhishek Sharma
+                            </h6>
+                            <p
+                                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
+                                Sales Head
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div
+            id="sidebar"
+            class="w-[17rem] mt-[28px] bg-white fixed z-50 h-full flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]">
+            <div
+                class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+                <div
+                    class="rounded-full w-[20px] h-[20px] border border-white relative">
+                    <i
+                        class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+                </div>
+                <div
+                    class="text-white font-semibold text-[14px] leading-[30px]">
+                    Add New Tender
+                </div>
+            </div>
+            <div
+                className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 ">
+                <div
+                    class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                DashBoard
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                User Management
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Tender Management
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Financial Approvals
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Document Management
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Tender Response Creation
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Calendar
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Finance Management
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                MIS
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                OEM
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <a href>
+                            <h2
+                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
+                                Settings
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" pl-[20%] py-[10px]">
+                <div>
+                    <h2
+                        class=" font-bold text-[30px] leading-[30px] text-[#000000]">User
+                        Mangement</h2>
+                </div>
+
+                <div class=" px-[100px] mt-10">
+                    <div class="bg-white rounded-[20px] border border-[#000000]">
+                    <h2 class="text-[20px] py-[20px] leading-[20px] font-bold text-center border-b border-[#000000] ">Add New User</h2>
+                    <div class="p-[3rem]">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-[2rem]">
+                
+                            <!-- User Name -->
+                            <div>
+                                <label for="userName" class="block text-gray-700 text-sm font-bold mb-2">User Name</label>
+                                <input type="text" id="userName" placeholder="Enter Name"  class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                
+                            <!-- Email Address -->
+                            <div>
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email-Address</label>
+                                <input type="email" id="email" placeholder="Enter Email-Address" 
+                                class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                
+                            <!-- Phone Number -->
+                            <div>
+                                <label for="phoneNumber" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                                <input type="tel" id="phoneNumber" placeholder="Enter Short Name"  class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                
+                            <!-- Designation -->
+                            <div>
+                                <label for="designation" class="block text-gray-700 text-sm font-bold mb-2">Designation</label>
+                                <input type="text" id="designation" placeholder="Enter Address"   class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                
+                            <!-- Role -->
+                            <div>
+                                <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Role</label>
+                                <input type="text" id="role" placeholder="Enter Pin Code"   class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                
+                            <!-- Address -->
+                            <div>
+                                <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address</label>
+                                <input type="text" id="address" placeholder="Enter Contact No."   class=" w-[261px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"> 
+                            </div>
+                        </div>
+                
+                        <!-- Save Button -->
+                        <div class=" flex justify-center">
+                            <button class=" w-[261px] h-[60px] rounded-[100px] bg-[#B3E7FA]  font-bold py-2 px-4  text-center  text-black  mt-10">
+                                Save
+                            </button>
+                        </div>
+                      
+                    </div>
+                </div>
+                
+                    <!-- Module Permissions -->
+                    <div class="rounded-[20px] border border-black mt-6 overflow-hidden">
+                        <div class="overflow-x-auto">
+                          <table class="min-w-full">
+                            <thead class="bg-[#B9F1FF] text-black">
+                              <tr>
+                                <th class="px-4 py-2 text-left">Module Permission</th>
+                                <th class="px-4 py-2 text-center">Only View</th>
+                                <th class="px-4 py-2 text-center">Edit Access</th>
+                                <th class="px-4 py-2 text-center">Download Access</th>
+                              </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 1</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 2</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 3</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 4</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 5</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                              <tr class="hover:bg-gray-100">
+                                <td class="px-4 py-2">Module 6</td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                                <td class="px-4 py-2 text-center"><input type="checkbox" class="form-checkbox"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                </div>
+        </div>
+    </body>
+</html>
