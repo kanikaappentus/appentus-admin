@@ -18,241 +18,50 @@
         <title>Document</title>
     </head>
     <body>
-        <nav
-            class="flex items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+        <nav class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+            <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
+              <img src="/images/logo.png" class="w-[194px] h-[25px]">
             </div>
             <div class="block lg:hidden">
-                <button
-                    class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white">
-                    <svg
-                        class="fill-current h-3 w-3"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
+              <!-- <div>
+                <img src="/images/menu.png" class="menu-button"  />
+              </div> -->
             </div>
-            <div
-                class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm flex items-center lg:flex-grow">
-                    <div>
-                        <img src="/images/menu.png" id="menu-button" />
-                    </div>
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            class="w-[360px] h-[50px] rounded-[60px] border border-[#F3FCFF] bg-[#F3FCFF] p-4" />
-                    </div>
+            <div class="w-full block  flex-grow  lg:flex  lg:items-center lg:w-auto">
+              <div class="text-sm flex gap-3 items-center lg:flex-grow">
+                <div class="hidden lg:block">
+                  <img src="/images/menu.png" id="menu-button">
                 </div>
-                <div class="flex items-center gap-4">
-                    <div>
-                        <img src="/images/notification-bing.png" />
-                    </div>
-                    <div
-                        class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
-                        <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
-                            <img src="/images/user.png" />
-                        </div>
-                        <div>
-                            <h6
-                                class="font-medium text-[14px] leading-[25px] text-[Black Color]">
-                                Abhishek Sharma
-                            </h6>
-                            <p
-                                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
-                                Sales Head
-                            </p>
-                        </div>
-                    </div>
+                <div class=" relative">
+                  <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+                  <input type="text" placeholder="Search" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4">
                 </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="hidden lg:block">
+                  <img src="/images/notification-bing.png">
+                </div>
+                <div class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
+                  <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+                    <img src="/images/user.png">
+                  </div>
+                  <div>
+                    <h6 class="font-medium text-[14px] leading-[25px] text-[Black Color]">
+                      Abhishek Sharma
+                    </h6>
+                    <p class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
+                      Sales Head
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
-        <div
-            id="sidebar"
-            class="w-[17rem] mt-[28px] bg-white fixed z-50 h-full flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]">
-            <div
-                class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+          </nav>
+          <div
+          id="sidebar"
+                class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
                 <div
-                    class="rounded-full w-[20px] h-[20px] border border-white relative">
-                    <i
-                        class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
-                </div>
-                <div
-                    class="text-white font-semibold text-[14px] leading-[30px]">
-                    Add New Tender
-                </div>
-            </div>
-            <div
-                className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 ">
-                <div
-                    class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                DashBoard
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                User Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Tender Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Financial Approvals
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Document Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Tender Response Creation
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Calendar
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Finance Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                MIS
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                OEM
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Settings
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" pl-[20%] py-[10px]">
-            <div class=" flex justify-between">
-                <div>
-                    <h2
-                        class=" font-bold text-[30px] leading-[30px] text-[#000000]">User
-                        Mangement</h2>
-                </div>
-                <div class="flex items-center gap-4">
-                <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+                    class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
                     <div
                         class="rounded-full w-[20px] h-[20px] border border-white relative">
                         <i
@@ -263,115 +72,445 @@
                         Add New Tender
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
-                    <div class=" w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
-
+                <div
+                    className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+                    <div class="mt-[17px] ">
+                        <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                       <img src="/images/category-2.svg">
+                           <span class="ms-3">Dashboard</span>
+                        </a>
+                    </div>
+     
+                    <div>
+                        <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <img src="/images/3 User.svg">
+                              <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                              <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
+                        </a>
+                        <ul id="user-management" class="hidden py-2 space-y-2">
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                              </li>
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <a  href="/Dashboard/TenderManagement.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <img src="/images/judge.svg">
+                              <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                              <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
+                        </a>
+                        <ul id="tender-management" class="hidden py-2 space-y-2">
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                              </li>
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <a href="/Dashboard/FinancialManagemet.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <img src="/images/card-tick.svg">
+                              <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                              <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
+                        </a>
+                        <ul id="financial-Approvals" class="hidden py-2 space-y-2">
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                              </li>
+                        </ul>
+                    </div>
+                   
+                  <div>
+                    <a  href="#" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/document-copy.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
+                    </a>
+                  </div>
+    
+                
+                  <div>
+                    <a href="#" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/document-copy.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
+                    </button>
+                </div>
+    
+    
+                  <div>
+                    <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/calendar.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/wallet-money.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                            Management</span>
+                          <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
+                    </button>
+                    <ul id="financial-Management" class="hidden py-2 space-y-2">
+                          <li>
+                             <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                          </li>
+                          <li>
+                             <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                          </li>
+                          <li>
+                             <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                          </li>
+                    </ul>
+                </div>
+                
+    
+                <div>
+                    <a href="#" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/Vector.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/safe-home.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
+                    </a>
+                  </div>
+    
+                  <div>
+                    <a href="/Dashboard/Setting.html" type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <img src="/images/setting.svg">
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+                    </button>
+                  </div>
+                </div>
+        </div>
+            <div id="main-content" class=" main-content  px-[20px] lg:py-[5rem] pt-[11rem]">
+                <div class=" lg:flex md:flex justify-between">
+                    <div>
+                        <h2 class=" font-bold text-[30px] leading-[30px] text-[#000000]">User
+                            Mangement</h2>
+                    </div>
+                    <div class="lg:flex md:flex items-center gap-4">
+                    <div class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+                        <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+                            <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+                        </div>
+                        <div class="text-white  font-semibold text-[14px] leading-[30px]">
+                            Add New Tender
+                        </div>
+                    </div>
+                   
+                    <div class="md:hidden xl:flex gap-2">
+                    <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+                        <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+                        <div class=" w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+    
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+                        <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+                    </div>
                     </div>
                 </div>
-                <div>
-                    <input
-                      type="text"
-                      placeholder="Type and Enter"
-                      class="w-[360px] h-[40px] rounded-[60px] border border-[#F3FCFF] bg-[#F3FCFF] p-4"
-                    />
-                  </div>
+                </div>
+                <div class="md:flex gap-2 hidden xl:hidden ">
+                    <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+                        <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+                        <div class=" w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+    
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+                        <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+                    </div>
+                </div>
+                <div class="lg:flex md:flex md:gap-4 gap-2 items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-5">
+                <div class="">
+                    <div>State</div>
+                    <select class=" w-full md:w-[226px] lg:w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class=" font-normal text-[14px] leading-[20px] text-[#000000]">Select state</option>
+                        <option value="1">Audi</option>
+                        <option value="2">BMW</option>
+                    </select>
+                </div>
+                <div class="">
+                    <div>Start Date</div>
+                    <input type="date" placeholder="Select Date" class=" bg-transparent w-full md:w-[226px] lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                       
+                </div>
+                <div class="">
+                    <div>End Date</div>
+                    <input type="date" placeholder="Select Date" class="bg-transparent md:w-[226px] w-full lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">   
+                </div>
+                <div class="md:hidden lg:flex items-center gap-3">
+                <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
+                    Apply
+                </div>
+                <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
+                    Clear All
+                </div>
             </div>
+                </div>
+                <div class="md:flex items-center gap-3 lg:hidden hidden ">
+                    <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
+                        Apply
+                    </div>
+                    <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
+                        Clear All
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto mt-5">
+                    <table class="min-w-full">
+                        <thead class="bg-[#005787] text-white">
+                            <tr>
+                                <th class="px-4 py-2">S. No.</th>
+                                <th class="px-4 py-2">User Name</th>
+                                <th class="px-4 py-2">Email Address</th>
+                                <th class="px-4 py-2">Number</th>
+                                <th class="px-4 py-2">Tender Assign</th>
+                                <th class="px-4 py-2">Tender Awarded</th>
+                                <th class="px-4 py-2">Status</th>
+                                <th class="px-4 py-2">Action</th>
+                            </tr>
+                        </thead>
+                 
+                        <tbody id="table-body"><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">1</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">2</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">3</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">4</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">5</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">6</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr><tr class="bg-white my-4">
+                <td class="px-4 py-2 text-center Border">7</td>
+                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                <td class="px-4 py-2 text-center Border">06</td>
+                <td class="px-4 py-2 text-center Border">02</td>
+                <td class="px-4 py-2 text-center Border">
+                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                </td>
+                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> View
+                    </button>
+                </td>
+            </tr></tbody>
+                        <tbody>
+                            <!-- Example row, duplicated to show multiple entries -->
+                            <tr class="bg-white my-4">
+                                <td class="px-4 py-2 text-center Border">01</td>
+                                <td class="px-4 py-2 text-center Border">Amanpreet Kaur</td>
+                                <td class="px-4 py-2 text-center Border">amanpreet123@.com</td>
+                                <td class="px-4 py-2 text-center Border">+91 987654321</td>
+                                <td class="px-4 py-2 text-center Border">06</td>
+                                <td class="px-4 py-2 text-center Border">02</td>
+                                <td class="px-4 py-2 text-center Border">
+                                    <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
+                                </td>
+                                <td class="px-4 py-2 mt-[11px] Border text-center flex justify-center items-center gap-2">
+                                    <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                                    </button>
+                                    <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                                        <i class="fa-solid fa-trash"></i> Delete
+                                    </button>
+                                    <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as necessary -->
+                       
+                        
+                    </tbody></table>
+                    <div class="pagination mt-4 flex justify-end">
+                        <button class="page-link" id="prev-page">←</button>
+                        <button class="page-link page-number active" data-page="1">1</button>
+                        <button class="page-link page-number" data-page="2">2</button>
+                        <button class="page-link page-number" data-page="3">3</button>
+                        <button class="page-link page-number" data-page="4">4</button>
+                        <button class="page-link page-number" data-page="5">5</button>
+                        <button class="page-link" id="next-page">→</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    console.log('Menu button clicked');
+                    const sidebar = document.getElementById('sidebar');
+                    console.log('Sidebar classes before toggle:', sidebar.className);
+                    sidebar.classList.toggle('-translate-x-full');
+                    console.log('Sidebar classes after toggle:', sidebar.className);
 
-            </div>
-            <div class="flex items-center gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-5" >
-            <div class="">
-                <div>State</div>
-                <select  class="w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                    <option value="0" class=" font-normal text-[14px] leading-[20px] text-[#000000]">Select state</option>
-                    <option value="1">Audi</option>
-                    <option value="2">BMW</option>
-                </select>
-            </div>
-            <div class="">
-                <div>Start Date</div>
-                <input type="date" placeholder="Select Date" class=" bg-transparent w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                   
-            </div>
-            <div class="">
-                <div>End Date</div>
-                <input type="date" placeholder="Select Date" class="bg-transparent w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">   
-            </div>
-            <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
-                Apply
-            </div>
-            <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
-                Clear All
-            </div>
-            </div>
-            <div class="overflow-x-auto mt-5">
-                <table class="min-w-full">
-                    <thead class="bg-[#005787] text-white">
-                        <tr>
-                            <th class="px-4 py-2">S. No.</th>
-                            <th class="px-4 py-2">User Name</th>
-                            <th class="px-4 py-2">Email Address</th>
-                            <th class="px-4 py-2">Number</th>
-                            <th class="px-4 py-2">Tender Assign</th>
-                            <th class="px-4 py-2">Tender Awarded</th>
-                            <th class="px-4 py-2">Status</th>
-                            <th class="px-4 py-2">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example row, duplicated to show multiple entries -->
-                        <tr class="bg-white my-4">
-                            <td class="px-4 py-2 text-center">01</td>
-                            <td class="px-4 py-2 text-center">Amanpreet Kaur</td>
-                            <td class="px-4 py-2 text-center">amanpreet123@.com</td>
-                            <td class="px-4 py-2 text-center">+91 987654321</td>
-                            <td class="px-4 py-2 text-center">06</td>
-                            <td class="px-4 py-2 text-center">02</td>
-                            <td class="px-4 py-2 text-center">
-                                <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
-                            </td>
-                            <td class="px-4 py-2 text-center flex justify-center items-center gap-2">
-                                <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-pen-to-square"></i> Edit
-                                </button>
-                                <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-trash"></i> Delete
-                                </button>
-                                <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-eye"></i> View
-                                </button>
-                            </td>
-                        </tr>
-                        <!-- Add more rows as necessary -->
-                    </tbody>
-                    <tbody>
-                        <!-- Example row, duplicated to show multiple entries -->
-                        <tr class="bg-white my-4">
-                            <td class="px-4 py-2 text-center">02</td>
-                            <td class="px-4 py-2 text-center">Amanpreet Kaur</td>
-                            <td class="px-4 py-2 text-center">amanpreet123@.com</td>
-                            <td class="px-4 py-2 text-center">+91 987654321</td>
-                            <td class="px-4 py-2 text-center">06</td>
-                            <td class="px-4 py-2 text-center">02</td>
-                            <td class="px-4 py-2 text-center">
-                                <span class="bg-[#B3E6FA] text-black py-1 px-3 rounded-full">Active</span>
-                            </td>
-                            <td class="px-4 py-2 text-center flex justify-center items-center gap-2">
-                                <button class="bg-[#007BFF] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-pen-to-square"></i> Edit
-                                </button>
-                                <button class="bg-[#FF4C4C] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-trash"></i> Delete
-                                </button>
-                                <button class="bg-[#000000] text-white py-1 px-3 rounded-full flex items-center gap-1">
-                                    <i class="fa-solid fa-eye"></i> View
-                                </button>
-                            </td>
-                        </tr>
-                        <!-- Add more rows as necessary -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content classes before toggle:', mainContent.className);
+                    mainContent.classList.toggle('shifted');
+                    console.log('Main content classes after toggle:', mainContent.className);
+                });
+            } else {
+                console.error('Menu button not found');
+            }
+        });
+
+function toggleSubItems(id) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
+    }
+}
+            </script>
     </body>
 </html>

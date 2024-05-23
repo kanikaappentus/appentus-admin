@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" >
+</head>
+<body>
+    <nav class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+        <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
+          <img src="/images/logo.png" class="w-[194px] h-[25px]">
+        </div>
+        
+          <div class="w-full block  flex-grow  lg:flex  lg:items-center lg:w-auto">
+            <div class="text-sm flex gap-3 items-center lg:flex-grow">
+              <div>
+                <img src="/images/menu.png" id="menu-button">
+              </div>
+              <div class=" relative">
+                <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+                <input type="text" placeholder="Search" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4">
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="hidden lg:block">
+                <img src="/images/notification-bing.png">
+              </div>
+              <div class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
+                <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+                  <img src="/images/user.png">
+                </div>
+                <div>
+                  <h6 class="font-medium text-[14px] leading-[25px] text-[Black Color]">
+                    Abhishek Sharma
+                  </h6>
+                  <p class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
+                    Sales Head
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    <div
+    id="sidebar"
+          class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+          <div
+              class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+              <div
+                  class="rounded-full w-[20px] h-[20px] border border-white relative">
+                  <i
+                      class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+              </div>
+              <div
+                  class="text-white font-semibold text-[14px] leading-[30px]">
+                  Add New Tender
+              </div>
+          </div>
+          <div
+              className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+              <div class="mt-[17px] ">
+                  <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                 <img src="/images/category-2.svg">
+                     <span class="ms-3">Dashboard</span>
+                  </a>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/3 User.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
+                  </button>
+                  <ul id="user-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/judge.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
+                  </button>
+                  <ul id="tender-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/card-tick.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
+                  </button>
+                  <ul id="financial-Approvals" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+             
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
+              </button>
+            </div>
+
+          
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
+              </button>
+          </div>
+
+
+            <div>
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/calendar.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/wallet-money.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                      Management</span>
+                    <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
+              </button>
+              <ul id="financial-Management" class="hidden py-2 space-y-2">
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                    </li>
+              </ul>
+          </div>
+          
+
+          <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/Vector.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/safe-home.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/setting.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+              </button>
+            </div>
+          </div>
+  </div>
+  <div class="p-5">
+    <h2 class="mb-4">Full Calendar</h2>
+    <div class="card">
+      <div class="card-body p-0">
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- calendar modal -->
+  <div id="modal-view-event" class="modal modal-top fade calendar-modal">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <h4 class="modal-title"><span class="event-icon"></span><span class="event-title"></span></h4>
+                      <div class="event-body"></div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  <div id="modal-view-event-add" class="modal modal-top fade calendar-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="add-event">
+          <div class="modal-body">
+          <h4>Add Event Detail</h4>        
+            <div class="form-group">
+              <label>Event name</label>
+              <input type="text" class="form-control" name="ename">
+            </div>
+            <div class="form-group">
+              <label>Event Date</label>
+              <input type='text' class="datetimepicker form-control" name="edate">
+            </div>        
+            <div class="form-group">
+              <label>Event Description</label>
+              <textarea class="form-control" name="edesc"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Event Color</label>
+              <select class="form-control" name="ecolor">
+                <option value="fc-bg-default">fc-bg-default</option>
+                <option value="fc-bg-blue">fc-bg-blue</option>
+                <option value="fc-bg-lightgreen">fc-bg-lightgreen</option>
+                <option value="fc-bg-pinkred">fc-bg-pinkred</option>
+                <option value="fc-bg-deepskyblue">fc-bg-deepskyblue</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Event Icon</label>
+              <select class="form-control" name="eicon">
+                <option value="circle">circle</option>
+                <option value="cog">cog</option>
+                <option value="group">group</option>
+                <option value="suitcase">suitcase</option>
+                <option value="calendar">calendar</option>
+              </select>
+            </div>        
+        </div>
+          <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" >Save</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>        
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="related-product">
+              <div class="container">
+          <h1 class="text-center mb-5" hidden>Bootstrap 4 Admin Panel</h1>
+                  <ul class="row justify-content-center">
+                      <li class="col-md-6 col-sm-12">
+                          <a href="https://github.com/dropways/deskapp" target="_blank">
+                              <div class="related-box">
+                                  <img src="https://dropways.github.io/feathericons/assets/themes/twitter/images/deskapp.png" alt="deskapp">
+                              </div>
+                              <h3>DeskApp Bootstrap 4 admin template</h3>
+                              <p>DeskApp Admin is a free to use Bootstrap 4 admin template. This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.</p>
+                          </a>
+              <div class="text-center">
+                <a href="https://github.com/dropways/deskapp" target="_blank" class="btn btn-primary btn-lg download-btn"><i class="fa fa-github"></i> Download Now</a>
+              </div>
+                      </li>
+            <li class="col-md-6 col-sm-12">
+                          <a href="https://codepen.io/ankithingarajiya/pen/WNaQdOw" target="_blank">
+                              <div class="related-box related-box-iframe">
+                                  <iframe height="300" style="width: 100%;" scrolling="no" title="Cross Fade Image Animation Using Bootstrap Carousel" src="https://codepen.io/ankithingarajiya/embed/WNaQdOw?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/ankithingarajiya/pen/WNaQdOw">
+    Cross Fade Image Animation Using Bootstrap Carousel</a> by Ankit Hingarajiya (<a href="https://codepen.io/ankithingarajiya">@ankithingarajiya</a>)
+    on <a href="https://codepen.io">CodePen</a>.
+  </iframe>
+                              </div>
+                              <h3>Cross Fade Image Animation Using Bootstrap Carousel</h3>
+                          </a>
+              <div class="text-center">
+                <a href="https://codepen.io/ankithingarajiya/pen/WNaQdOw" target="_blank" class="btn btn-primary btn-lg download-btn"><i class="fa fa-codepen"></i> View Pen</a>
+              </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    console.log('Menu button clicked');
+                    const sidebar = document.getElementById('sidebar');
+                    console.log('Sidebar classes before toggle:', sidebar.className);
+                    sidebar.classList.toggle('-translate-x-full');
+                    console.log('Sidebar classes after toggle:', sidebar.className);
+
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content classes before toggle:', mainContent.className);
+                    mainContent.classList.toggle('shifted');
+                    console.log('Main content classes after toggle:', mainContent.className);
+                });
+            } else {
+                console.error('Menu button not found');
+            }
+        });
+
+function toggleSubItems(id) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
+    }
+}
+jQuery(document).ready(function(){
+  jQuery('.datetimepicker').datepicker({
+      timepicker: true,
+      language: 'en',
+      range: true,
+      multipleDates: true,
+		  multipleDatesSeparator: " - "
+    });
+  jQuery("#add-event").submit(function(){
+      alert("Submitted");
+      var values = {};
+      $.each($('#add-event').serializeArray(), function(i, field) {
+          values[field.name] = field.value;
+      });
+      console.log(
+        values
+      );
+  });
+});
+
+(function () {    
+    'use strict';
+    // ------------------------------------------------------- //
+    // Calendar
+    // ------------------------------------------------------ //
+	jQuery(function() {
+		// page is ready
+		jQuery('#calendar').fullCalendar({
+			themeSystem: 'bootstrap4',
+			// emphasizes business hours
+			businessHours: false,
+			defaultView: 'month',
+			// event dragging & resizing
+			editable: true,
+			// header
+			header: {
+				left: 'title',
+				center: 'month,agendaWeek,agendaDay',
+				right: 'today prev,next'
+			},
+			events: [
+				{
+					title: 'Barber',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-05-05',
+					end: '2023-05-05',
+					className: 'fc-bg-default',
+					icon : "circle"
+				},
+				{
+					title: 'Flight Paris',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-08-08T14:00:00',
+					end: '2023-08-08T20:00:00',
+					className: 'fc-bg-deepskyblue',
+					icon : "cog",
+					allDay: false
+				},
+				{
+					title: 'Team Meeting',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-07-10T13:00:00',
+					end: '2023-07-10T16:00:00',
+					className: 'fc-bg-pinkred',
+					icon : "group",
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-08-12',
+					className: 'fc-bg-lightgreen',
+					icon : "suitcase"
+				},
+				{
+					title: 'Conference',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-08-13',
+					end: '2023-08-15',
+					className: 'fc-bg-blue',
+					icon : "calendar"
+				},
+				{
+					title: 'Baby Shower',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-08-13',
+					end: '2023-08-14',
+					className: 'fc-bg-default',
+					icon : "child"
+				},
+				{
+					title: 'Birthday',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-09-13',
+					end: '2023-09-14',
+					className: 'fc-bg-default',
+					icon : "birthday-cake"
+				},
+				{
+					title: 'Restaurant',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-10-15T09:30:00',
+					end: '2023-10-15T11:45:00',
+					className: 'fc-bg-default',
+					icon : "glass",
+					allDay: false
+				},
+				{
+					title: 'Dinner',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-11-15T20:00:00',
+					end: '2023-11-15T22:30:00',
+					className: 'fc-bg-default',
+					icon : "cutlery",
+					allDay: false
+				},
+				{
+					title: 'Shooting',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-08-25',
+					end: '2023-08-25',
+					className: 'fc-bg-blue',
+					icon : "camera"
+				},
+				{
+					title: 'Go Space :)',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-12-27',
+					end: '2023-12-27',
+					className: 'fc-bg-default',
+					icon : "rocket"
+				},
+				{
+					title: 'Dentist',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+					start: '2023-12-29T11:30:00',
+					end: '2023-12-29T012:30:00',
+					className: 'fc-bg-blue',
+					icon : "medkit",
+					allDay: false
+				}
+			],
+			eventRender: function(event, element) {
+				if(event.icon){
+					element.find(".fc-title").prepend("<i class='fa fa-"+event.icon+"'></i>");
+				}
+			  },
+			dayClick: function() {
+				jQuery('#modal-view-event-add').modal();
+			},
+			eventClick: function(event, jsEvent, view) {
+			        jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");
+					jQuery('.event-title').html(event.title);
+					jQuery('.event-body').html(event.description);
+					jQuery('.eventUrl').attr('href',event.url);
+					jQuery('#modal-view-event').modal();
+			},
+		})
+	});
+  
+})(jQuery);
+  </script>
+</body>
+</html>

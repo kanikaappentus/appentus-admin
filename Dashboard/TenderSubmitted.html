@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+    >
+      <div
+        class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white"
+      >
+        <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+      </div>
+      <div class="block lg:hidden">
+        <!-- <div>
+        <img src="/images/menu.png" class="menu-button"  />
+      </div> -->
+      </div>
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm flex gap-3 items-center lg:flex-grow">
+          <div class="hidden lg:block">
+            <img src="/images/menu.png" id="menu-button" />
+          </div>
+          <div class="relative">
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
+            ></i>
+            <input
+              type="text"
+              placeholder="Search"
+              class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden lg:block">
+            <img src="/images/notification-bing.png" />
+          </div>
+          <div
+            class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+          >
+            <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+              <img src="/images/user.png" />
+            </div>
+            <div>
+              <h6
+                class="font-medium text-[14px] leading-[25px] text-[Black Color]"
+              >
+                Abhishek Sharma
+              </h6>
+              <p
+                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
+              >
+                Sales Head
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+    id="sidebar"
+          class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+          <div
+              class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+              <div
+                  class="rounded-full w-[20px] h-[20px] border border-white relative">
+                  <i
+                      class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+              </div>
+              <div
+                  class="text-white font-semibold text-[14px] leading-[30px]">
+                  Add New Tender
+              </div>
+          </div>
+          <div
+              className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+              <div class="mt-[17px] ">
+                  <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                 <img src="/images/category-2.svg">
+                     <span class="ms-3">Dashboard</span>
+                  </a>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/3 User.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
+                  </button>
+                  <ul id="user-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/judge.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
+                  </button>
+                  <ul id="tender-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/card-tick.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
+                  </button>
+                  <ul id="financial-Approvals" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+             
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
+              </button>
+            </div>
+
+          
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
+              </button>
+          </div>
+
+
+            <div>
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/calendar.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/wallet-money.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                      Management</span>
+                    <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
+              </button>
+              <ul id="financial-Management" class="hidden py-2 space-y-2">
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                    </li>
+              </ul>
+          </div>
+          
+
+          <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/Vector.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/safe-home.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/setting.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+              </button>
+            </div>
+          </div>
+  </div>
+    <div class="lg:pl-[15%] pt-[11rem] px-[12px] lg:py-[5rem]">
+      <div class="lg:flex md:flex justify-between">
+        <div>
+          <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
+            Tender Mangement
+          </h2>
+        </div>
+        <div class="lg:flex md:flex items-center gap-4">
+          <div
+            class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
+          >
+            <div
+              class="rounded-full w-[20px] h-[20px] border border-white relative"
+            >
+              <i
+                class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
+              ></i>
+            </div>
+            <div class="text-white font-semibold text-[14px] leading-[30px]">
+              Add New Tender
+            </div>
+          </div>
+
+          <div class="md:hidden xl:flex gap-2">
+            <div class="flex items-center gap-3 md:my-0 my-2 lg:my-0">
+              <label
+                class="font-normal text-[15px] leading-[20px] text-[#000000s]"
+                >Show Result</label
+              >
+              <div
+                class="w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]"
+              ></div>
+            </div>
+            <div class="relative">
+              <i
+                class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"
+              ></i>
+              <input
+                type="text"
+                placeholder="Type and Enter"
+                class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex gap-2 hidden xl:hidden">
+        <div class="flex items-center gap-3 md:my-0 my-2 lg:my-0">
+          <label class="font-normal text-[15px] leading-[20px] text-[#000000s]"
+            >Show Result</label
+          >
+          <div
+            class="w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]"
+          ></div>
+        </div>
+        <div class="relative">
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"
+          ></i>
+          <input
+            type="text"
+            placeholder="Type and Enter"
+            class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4"
+          />
+        </div>
+      </div>
+      <div
+        class="lg:flex md:flex md:gap-4 gap-2 items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-5"
+      >
+        <div class="">
+          <div>State</div>
+          <select
+            class="w-full md:w-[226px] lg:w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+          >
+            <option
+              value="0"
+              class="font-normal text-[14px] leading-[20px] text-[#000000]"
+            >
+              Select state
+            </option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+          </select>
+        </div>
+        <div class="">
+          <div>Start Date</div>
+          <input
+            type="date"
+            placeholder="Select Date"
+            class="bg-transparent w-full md:w-[226px] lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+          />
+        </div>
+        <div class="">
+          <div>End Date</div>
+          <input
+            type="date"
+            placeholder="Select Date"
+            class="bg-transparent md:w-[226px] w-full lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+          />
+        </div>
+        <div class="md:hidden lg:flex items-center gap-3">
+          <div
+            class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]"
+          >
+            Apply
+          </div>
+          <div
+            class="mt-5 font-semibold text-[14px] text-[#000000] leading-[20px]"
+          >
+            Clear All
+          </div>
+        </div>
+      </div>
+      <div class="md:flex items-center gap-3 lg:hidden hidden">
+        <div
+          class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]"
+        >
+          Apply
+        </div>
+        <div
+          class="mt-5 font-semibold text-[14px] text-[#000000] leading-[20px]"
+        >
+          Clear All
+        </div>
+      </div>
+      <div class="lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3">
+        <div class="mt-4">
+          <div
+            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3"
+          >
+            <p
+              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+              Awarded (100)
+            </p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div
+            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+          >
+            <p
+              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+              Rejected (100)
+            </p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div
+            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+          >
+            <p
+              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+              Cancelled (100)
+            </p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div
+            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+          >
+            <p
+              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+              Lost (100)
+            </p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div
+            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+          >
+            <p
+              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+            >
+              Re-opened (100)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5">
+        <div>
+          <div class="lg:flex justify-between">
+            <div>
+              <p
+                class="font-semibold text-[14px] leading-[23px] text-[#979797]"
+              >
+                Tender Id - 1050
+              </p>
+              <div
+                class="font-semibold text-[18px] leading-[22px] text-[#000000]"
+              >
+                Public Works Department - Nanded - Maharashtra
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+              <div>
+                <p
+                  class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted By
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[15px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  Nita Sharma
+                </div>
+              </div>
+              <div>
+                <p
+                  class="font-semibold  text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted Date
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[14px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  March 29, 2024
+                </div>
+              </div>
+              <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
+               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+              </div>
+            </div>
+          </div>
+
+          <div class=" block lg:flex gap-6 items-center my-4">
+            <div>
+                <p class="font-normal text-[18px] lg:text-[30px] lg:leading-[37px]">₹ 81.49 CR</p>
+            </div>
+          <div class="flex items-center gap-2 mt-2">
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#FFEDED] p-2 relative">
+                   <img src="/images/sandclock.svg">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#FF4747]">2 days left</p>
+             </div>
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#EAFFE0] p-2 relative">
+                    <img src="/images/Check Circle.png">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#107C41]">Awarded</p>
+             </div>
+            </div>
+          </div>
+          <p class="font-normal text-[15px] leading-[25px] mb-[20px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+          </p>
+          <div class=" lg:flex justify-between">
+          <div class=" md:flex lg:flex gap-4 items-center">
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#005787]">ASSIGNED</span>
+                </div>
+                <p class="w-[167px] font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame2.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#FFA901]">IN PROGRESS</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Check Circle.png">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#107C41]">SUBMITTED</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+          </div>
+          <div class="grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
+            <div id="Presentation-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
+                <p class=" font-medium text-[14px] leading-[24px] text-white text-center cursor-pointer">Presentation</p>
+            </div>
+            <div id="Clarification-button" class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Clarification</p>
+            </div>
+            <div id="Corrigendum-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Corrigendum</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5">
+        <div>
+          <div class="lg:flex justify-between">
+            <div>
+              <p
+                class="font-semibold text-[14px] leading-[23px] text-[#979797]"
+              >
+                Tender Id - 1050
+              </p>
+              <div
+                class="font-semibold text-[18px] leading-[22px] text-[#000000]"
+              >
+                Public Works Department - Nanded - Maharashtra
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+              <div>
+                <p
+                  class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted By
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[15px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  Nita Sharma
+                </div>
+              </div>
+              <div>
+                <p
+                  class="font-semibold  text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted Date
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[14px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  March 29, 2024
+                </div>
+              </div>
+              <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
+               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+              </div>
+            </div>
+          </div>
+
+          <div class=" block lg:flex gap-6 items-center my-4">
+            <div>
+                <p class="font-normal text-[18px] lg:text-[30px] lg:leading-[37px]">₹ 81.49 CR</p>
+            </div>
+          <div class="flex items-center gap-2 mt-2">
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#FFEDED] p-2 relative">
+                   <img src="/images/sandclock.svg">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#FF4747]">2 days left</p>
+             </div>
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#EAFFE0] p-2 relative">
+                    <img src="/images/Check Circle.png">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#107C41]">Awarded</p>
+             </div>
+            </div>
+          </div>
+          <p class="font-normal text-[15px] leading-[25px] mb-[20px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+          </p>
+          <div class=" lg:flex justify-between">
+          <div class=" md:flex lg:flex gap-4 items-center">
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#005787]">ASSIGNED</span>
+                </div>
+                <p class="w-[167px] font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame2.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#FFA901]">IN PROGRESS</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Check Circle.png">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#107C41]">SUBMITTED</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+          </div>
+          <div class=" grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
+                <p class=" font-medium text-[14px] leading-[24px] text-white text-center">Presentation</p>
+            </div>
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Clarification</p>
+            </div>
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Corrigendum</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-5">
+        <div>
+          <div class="lg:flex justify-between">
+            <div>
+              <p
+                class="font-semibold text-[14px] leading-[23px] text-[#979797]"
+              >
+                Tender Id - 1050
+              </p>
+              <div
+                class="font-semibold text-[18px] leading-[22px] text-[#000000]"
+              >
+                Public Works Department - Nanded - Maharashtra
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+              <div>
+                <p
+                  class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted By
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[15px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  Nita Sharma
+                </div>
+              </div>
+              <div>
+                <p
+                  class="font-semibold  text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
+                >
+                  Submitted Date
+                </p>
+                <div
+                  class="font-semibold leading-[23px] text-[14px] lg:text-[16px] text-[#2F2F2F]"
+                >
+                  March 29, 2024
+                </div>
+              </div>
+              <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
+               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+              </div>
+            </div>
+          </div>
+
+          <div class=" block lg:flex gap-6 items-center my-4">
+            <div>
+                <p class="font-normal text-[18px] lg:text-[30px] lg:leading-[37px]">₹ 81.49 CR</p>
+            </div>
+          <div class="flex items-center gap-2 mt-2">
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#FFEDED] p-2 relative">
+                   <img src="/images/sandclock.svg">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#FF4747]">2 days left</p>
+             </div>
+             <div class=" flex items-center gap-3 w-[125px] rounded-[100px] h-[40px] bg-[#EAFFE0] p-2 relative">
+                    <img src="/images/Check Circle.png">
+                   <p class=" font-semibold text-[14px] leading-[24px] text-center text-[#107C41]">Awarded</p>
+             </div>
+            </div>
+          </div>
+          <p class="font-normal text-[15px] leading-[25px] mb-[20px]">
+            Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+            vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+            dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+            pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+            amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+            duis.
+          </p>
+          <div class=" lg:flex justify-between">
+          <div class=" md:flex lg:flex gap-4 items-center">
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#005787]">ASSIGNED</span>
+                </div>
+                <p class="w-[167px] font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Frame2.svg">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#FFA901]">IN PROGRESS</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                <img src="/images/Check Circle.png">
+                  <span class=" font-medium text-[12px] leading-[20px] text-[#107C41]">SUBMITTED</span>
+                </div>
+                <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+          </div>
+          <div class=" grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
+                <p class=" font-medium text-[14px] leading-[24px] text-white text-center">Presentation</p>
+            </div>
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Clarification</p>
+            </div>
+            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Corrigendum</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+ 
+      <div id="Presentation" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full ">
+            <div class="flex justify-between items-center border-b border-[#CADDE4]  pl-[46px] p-4 lg:px-[10px]">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Presentation</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                </div>
+            </div>
+            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                <ul>
+                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                </ul>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
+                    <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Time *</div>
+                    <input type="time" placeholder="Enter Time" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+            </div>
+        <div>
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Meeting type *</div>
+            <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572] " >
+              
+                <button class="dropbtn" id="meetingTypeButton">Offline</button>
+                <div class="dropdown-content">
+                    <a href="#" id="Virtual" onclick="selectMeetingType('Virtual')">Virtual</a>
+                    <a href="#" id="Offline" onclick="selectMeetingType('Offline')">Offline</a>>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"  id="meetingLinkField">
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Meeting link *</div>
+            <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572] relative" >
+            <div class="absolute top-[4px] left-[4px]">
+                <div class="w-[40px] h-[40px] bg-[#DFEAF0] relative rounded-full ">
+                    <img src="/images/Link.svg" class="absolute top-[10px] left-[11px]">
+                </div>
+            </div>
+                <button class="dropbtn pl-[39px] underline text-[#00ADEE]">meet.google.com</button>
+                <div class="dropdown-content">
+                    <a href="#" id="googleMeetLink">meet.google.com</a>
+                  <a href="#">Offline</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Assigned To **</div>
+            <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                <button class="dropbtn">Choose assignee</button>
+                <div class="dropdown-content">
+                  <a href="#" >1</a>
+                  <a href="#">2</a>
+                </div>
+            </div>
+        </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
+                    <div class="">
+                        <textarea class="  rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
+                    </div>
+                </div>
+                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                  Save
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+    <div id="Clarification" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full ">
+            <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 pl-[20px]">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Clarification</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeClarificationModalButton"></i>
+                </div>
+            </div>
+            <div id="modalContent" class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                <ul>
+                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                </ul>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
+                    <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="relative mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Attachment</div>
+                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+                </div>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Assigned To *</div>
+                    <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                        <button class="dropbtn">Choose assignee</button>
+                        <div class="dropdown-content">
+                          <a href="#" >1</a>
+                          <a href="#">2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
+                    <div class="">
+                        <textarea class="  rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
+                    </div>
+                </div>
+                <div id="save-button" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Save
+                </div>
+            </div>
+           
+      
+       
+        </div>
+    </div>
+
+    <div id="Corrigendum" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full ">
+            <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 pl-[20px]">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Corrigendum</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer"  id="closeCorrigendumModalButton"></i>
+                </div>
+            </div>
+            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                <ul>
+                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                </ul>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
+                    <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="relative mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Attachment</div>
+                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+                </div>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Assigned To *</div>
+                    <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                        <button class="dropbtn">Choose assignee</button>
+                        <div class="dropdown-content">
+                          <a href="#" >1</a>
+                          <a href="#">2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
+                    <div class="">
+                        <textarea class="  rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
+                    </div>
+                </div>
+                <div id="save-button" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Save
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('Presentation-button');
+    const assignModal = document.getElementById('Presentation');
+    const closeModalButton = document.getElementById('closeModalButton');
+
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == Presentation) {
+            assignModal.classList.add('hidden');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Clarification modal elements
+    const clarificationButton = document.getElementById('Clarification-button');
+    const clarificationModal = document.getElementById('Clarification');
+    const closeClarificationModalButton = document.getElementById('closeClarificationModalButton');
+
+    if (clarificationButton && clarificationModal && closeClarificationModalButton) {
+        clarificationButton.addEventListener('click', () => {
+            clarificationModal.classList.remove('hidden');
+        });
+
+        closeClarificationModalButton.addEventListener('click', () => {
+            clarificationModal.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target.id === 'Clarification') {
+                clarificationModal.classList.add('hidden');
+            }
+        });
+    }
+
+    // Corrigendum modal elements
+    const corrigendumButton = document.getElementById('Corrigendum-button');
+    const corrigendumModal = document.getElementById('Corrigendum');
+    const closeCorrigendumModalButton = document.getElementById('closeCorrigendumModalButton');
+
+    if (corrigendumButton && corrigendumModal && closeCorrigendumModalButton) {
+        corrigendumButton.addEventListener('click', () => {
+            corrigendumModal.classList.remove('hidden');
+        });
+
+        closeCorrigendumModalButton.addEventListener('click', () => {
+            corrigendumModal.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target.id === 'Corrigendum') {
+                corrigendumModal.classList.add('hidden');
+            }
+        });
+    }
+});
+
+function selectMeetingType(type) {
+            const meetingTypeButton = document.getElementById('meetingTypeButton');
+            const meetingLinkField = document.getElementById('meetingLinkField');
+            
+            meetingTypeButton.textContent = type;
+
+            if (type === 'Virtual') {
+                meetingLinkField.classList.remove('hidden');
+            } else {
+                meetingLinkField.classList.add('hidden');
+            }
+        }
+
+        const saveButton = document.getElementById('save-button');
+        const assignModal = document.getElementById('Clarification');
+        saveButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+    });
+
+
+    document.getElementById('save-button').addEventListener('click', function() {
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div id="confirmationContent" class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold text-[14px] leading-[25px]">Reminder Date and Time:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">29-02-2024, 12:00PM</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold text-[14px] leading-[25px]">Comment:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px]">Lorem ipsum dolor sit amet consectetur.</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="font-bold text-[14px] leading-[25px]">Modify:-</div>
+                        <div class="font-semibold text-[14px] leading-[25px] underline">Change</div>
+                    </div>
+                </div>
+            `;
+        });
+
+        document.getElementById('closeModalButton').addEventListener('click', function() {
+            document.getElementById('Clarification').classList.add('hidden');
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    console.log('Menu button clicked');
+                    const sidebar = document.getElementById('sidebar');
+                    console.log('Sidebar classes before toggle:', sidebar.className);
+                    sidebar.classList.toggle('-translate-x-full');
+                    console.log('Sidebar classes after toggle:', sidebar.className);
+
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content classes before toggle:', mainContent.className);
+                    mainContent.classList.toggle('shifted');
+                    console.log('Main content classes after toggle:', mainContent.className);
+                });
+            } else {
+                console.error('Menu button not found');
+            }
+        });
+
+function toggleSubItems(id) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
+    }
+}
+    </script>
+  </body>
+</html>

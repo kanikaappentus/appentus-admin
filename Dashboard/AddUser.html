@@ -7,7 +7,7 @@
         <link
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet" />
-        <link href="/src/input.css" />
+        <link  rel="stylesheet" href="/src/input.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -72,178 +72,150 @@
             </div>
         </nav>
         <div
-            id="sidebar"
-            class="w-[17rem] mt-[28px] bg-white fixed z-50 h-full flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]">
-            <div
-                class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
-                <div
-                    class="rounded-full w-[20px] h-[20px] border border-white relative">
-                    <i
-                        class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+        id="sidebar"
+              class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+              <div
+                  class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+                  <div
+                      class="rounded-full w-[20px] h-[20px] border border-white relative">
+                      <i
+                          class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+                  </div>
+                  <div
+                      class="text-white font-semibold text-[14px] leading-[30px]">
+                      Add New Tender
+                  </div>
+              </div>
+              <div
+                  className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+                  <div class="mt-[17px] ">
+                      <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                     <img src="/images/category-2.svg">
+                         <span class="ms-3">Dashboard</span>
+                      </a>
+                  </div>
+    
+                  <div>
+                      <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                          <img src="/images/3 User.svg">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                            <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
+                      </button>
+                      <ul id="user-management" class="hidden py-2 space-y-2">
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                            </li>
+                      </ul>
+                  </div>
+    
+                  <div>
+                      <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                          <img src="/images/judge.svg">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                            <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
+                      </button>
+                      <ul id="tender-management" class="hidden py-2 space-y-2">
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                            </li>
+                      </ul>
+                  </div>
+    
+                  <div>
+                      <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                          <img src="/images/card-tick.svg">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                            <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
+                      </button>
+                      <ul id="financial-Approvals" class="hidden py-2 space-y-2">
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                            </li>
+                            <li>
+                               <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                            </li>
+                      </ul>
+                  </div>
+                 
+                <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/document-copy.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
+                  </button>
                 </div>
-                <div
-                    class="text-white font-semibold text-[14px] leading-[30px]">
-                    Add New Tender
+    
+              
+                <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/document-copy.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
+                  </button>
+              </div>
+    
+    
+                <div>
+                  <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/calendar.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+                  </button>
                 </div>
-            </div>
-            <div
-                className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 ">
-                <div
-                    class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                DashBoard
-                            </h2>
-                        </a>
-                    </div>
+                <div>
+                  <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/wallet-money.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                          Management</span>
+                        <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
+                  </button>
+                  <ul id="financial-Management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+              
+    
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/Vector.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
+                  </button>
                 </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                User Management
-                            </h2>
-                        </a>
-                    </div>
+                <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/safe-home.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
+                  </button>
                 </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Tender Management
-                            </h2>
-                        </a>
-                    </div>
+    
+                <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/setting.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+                  </button>
                 </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Financial Approvals
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Document Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Tender Response Creation
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Calendar
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Finance Management
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                MIS
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                OEM
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div>
-                        <a href>
-                            <h2
-                                class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                                Settings
-                            </h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+              </div>
+      </div>>
         <div class=" pl-[20%] py-[10px]">
                 <div>
                     <h2
@@ -361,4 +333,34 @@
                 </div>
         </div>
     </body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    console.log('Menu button clicked');
+                    const sidebar = document.getElementById('sidebar');
+                    console.log('Sidebar classes before toggle:', sidebar.className);
+                    sidebar.classList.toggle('-translate-x-full');
+                    console.log('Sidebar classes after toggle:', sidebar.className);
+
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content classes before toggle:', mainContent.className);
+                    mainContent.classList.toggle('shifted');
+                    console.log('Main content classes after toggle:', mainContent.className);
+                });
+            } else {
+                console.error('Menu button not found');
+            }
+        });
+
+function toggleSubItems(id) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
+    }
+}
+    </script>
 </html>

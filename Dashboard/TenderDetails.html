@@ -1,360 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/src/output.css" rel="stylesheet" />
-        <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/src/input.css" />
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Document</title>
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
     <nav
-    class="flex gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+      class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
     >
-    <div
-        class="flex items-center justify-center flex-shrink-0 pl-[34px] text-white"
-    >
+      <div
+        class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white"
+      >
         <img src="/images/logo.png" class="w-[194px] h-[25px]" />
-    </div>
-    <div class="block lg:hidden">
-        <button
-        class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white"
-        >
-        <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-        </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      </div>
+      <div class="block lg:hidden">
+        <!-- <div>
+            <img src="/images/menu.png" class="menu-button"  />
+          </div> -->
+      </div>
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm flex gap-3 items-center lg:flex-grow">
-        <div>
+          <div class="hidden lg:block">
             <img src="/images/menu.png" id="menu-button" />
-        </div>
-        <div class="relative">
+          </div>
+          <div class="relative">
             <i
-            class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
+              class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
             ></i>
             <input
-            type="text"
-            placeholder="Search"
-            class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+              type="text"
+              placeholder="Search"
+              class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
             />
-        </div>
+          </div>
         </div>
         <div class="flex items-center gap-4">
-        <div>
+          <div class="hidden lg:block">
             <img src="/images/notification-bing.png" />
-        </div>
-        <div
-            class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
-        >
+          </div>
+          <div
+            class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+          >
             <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
-            <img src="/images/user.png" />
+              <img src="/images/user.png" />
             </div>
             <div>
-            <h6
+              <h6
                 class="font-medium text-[14px] leading-[25px] text-[Black Color]"
-            >
+              >
                 Abhishek Sharma
-            </h6>
-            <p
+              </h6>
+              <p
                 class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
-            >
+              >
                 Sales Head
-            </p>
+              </p>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     </nav>
+    
     <div
     id="sidebar"
-    class="w-[17rem] height mt-[66px] bg-white fixed z-50 h-full overflow-scroll flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0]"
-    >
-    <div
-        class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
-    >
-        <div
-        class="rounded-full w-[20px] h-[20px] border border-white relative"
-        >
-        <i
-            class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
-        ></i>
-        </div>
-        <div class="text-white font-semibold text-[14px] leading-[30px]">
-        Add New Tender
-        </div>
-    </div>
-    <div
-        className="flex flex-col items-center w-[284px] h-[44px] mt-[17px] gap-3 "
-    >
-        <div
-        class="mt-5 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4 bg-[#B3E6FA]"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                DashBoard
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                User Management
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="/Dashboard/TenderManagement.html">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Tender Management
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Financial Approvals
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Document Management
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Tender Response Creation
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Calendar
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Finance Management
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                MIS
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                OEM
-            </h2>
-            </a>
-        </div>
-        </div>
-        <div
-        class="mt-2 flex items-center w-[254px] h-[50px] rounded-tl-full rounded-bl-full pl-[36px] gap-4"
-        >
-        <div>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div>
-            <a href="">
-            <h2 class="text-[14px] leading-[20px] font-medium text-[#2F2F2F]">
-                Settings
-            </h2>
-            </a>
-        </div>
-        </div>
-    </div>
-    </div>
-    <div class="pl-[15%] pr-[20px] py-[5rem]  ">
-        <div class="">
-            <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
-                Tender Details
-            </h2>
-        </div>
-        <div>
-        <div>
-        <div class=" rounded-[30px] border border-[#B2B2B2] mt-10">
-        <div class="flex justify-between items-center border border-b-[#B2B2B2] rounded- p-4">
-            <div>
-                <h3 class=" font-semibold text-[18px] leading-[22px]">Tender Details</h3>
+          class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+          <div
+              class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+              <div
+                  class="rounded-full w-[20px] h-[20px] border border-white relative">
+                  <i
+                      class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+              </div>
+              <div
+                  class="text-white font-semibold text-[14px] leading-[30px]">
+                  Add New Tender
+              </div>
+          </div>
+          <div
+              className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+              <div class="mt-[17px] ">
+                  <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                 <img src="/images/category-2.svg">
+                     <span class="ms-3">Dashboard</span>
+                  </a>
+              </div>
 
+              <div>
+                  <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/3 User.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
+                  </button>
+                  <ul id="user-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/judge.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
+                  </button>
+                  <ul id="tender-management" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+
+              <div>
+                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/card-tick.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
+                  </button>
+                  <ul id="financial-Approvals" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                  </ul>
+              </div>
+             
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
+              </button>
             </div>
-            <div class=" font-semibold text-[18px] leading-[22px]">Hide</div>
-        </div>
-         
-        <div class="overflow-x-auto mt-5  Border">
-            <table class="min-w-full">
-                <thead class=" text-black font-bold text-[18px] leading-[18px]">
-                    <tr>
-                        <th class="text-[15px] py-2">Tender ID</th>
-                        <th class="text-[15px] py-2">Tender ID</th>
-                        <th class="text-[15px] py-2">Reference No.</th>
-                        <th class="text-[15px] py-2">Assign Date Time</th>
-                        <th class="text-[15px] py-2">Tender Authority</th>
-                    </tr>
+
+          
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/document-copy.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
+              </button>
+          </div>
+
+
+            <div>
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/calendar.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/wallet-money.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                      Management</span>
+                    <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
+              </button>
+              <ul id="financial-Management" class="hidden py-2 space-y-2">
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                    </li>
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                    </li>
+              </ul>
+          </div>
+          
+
+          <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/Vector.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/safe-home.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
+              </button>
+            </div>
+
+            <div>
+              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <img src="/images/setting.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+              </button>
+            </div>
+          </div>
+  </div>
+    <div class="lg:pl-[15%] pt-[11rem] px-[12px] lg:py-[5rem]">
+      <div class="">
+        <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
+          Tender Details
+        </h2>
+      </div>
+      <div>
+        <div class=" lg:flex gap-10 items-center">
+            <div>
+          <div class="rounded-[30px] border border-[#B2B2B2] mt-10">
+            <div
+              class="flex justify-between items-center Border rounded- p-4"
+            >
+              <div>
+                <h3 class="font-semibold text-[18px] leading-[22px]">
+                  Tender Details
+                </h3>
+              </div>
+              <div class="font-semibold text-[18px] leading-[22px]">Hide</div>
+            </div>
+
+            <div class="overflow-x-auto mt-5 Border p-3">
+              <table class="min-w-full">
+                <thead class="text-black font-bold text-[18px] leading-[18px]">
+                  <tr>
+                    <th class="text-[15px] py-2">Tender ID</th>
+                    <th class="text-[15px] py-2">Tender ID</th>
+                    <th class="text-[15px] py-2">Reference No.</th>
+                    <th class="text-[15px] py-2">Assign Date Time</th>
+                    <th class="text-[15px] py-2">Tender Authority</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white my-4">
-                        <td class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]">1179</td>
-                        <td class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]">In Progress</td>
-                        <td class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]">2024_AVVNL_382210_1</td>
-                        <td class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]">ajmer vidyut vitran nigam
-                            limited</td>
-                    </tr>
-             
+                  <tr class="bg-white my-4">
+                    <td
+                      class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]"
+                    >
+                      1179
+                    </td>
+                    <td
+                      class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]"
+                    >
+                      In Progress
+                    </td>
+                    <td
+                      class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]"
+                    >
+                      2024_AVVNL_382210_1
+                    </td>
+                    <td
+                      class="px-4 py-2 text-center font-normal text-[16px] leading-[35px]"
+                    >
+                      ajmer vidyut vitran nigam limited
+                    </td>
+                  </tr>
                 </tbody>
-            </table>
-        </div>
-        <div class="p-4">y
-               <h4 class=" font-semibold text-[18px] leading-[35px]">Breif</h4>
-               <p class=" font-normal text-[16px] leading-[35px]">Lorem ipsum dolor sit amet consectetur. Elit at libero posuere a pulvinar hendrerit.</p>
-        </div>
-    </div>
-
-    <div class="mt-5 flex flex-col gap-5">
-        <div class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]">
-            <div class=" font-semibold text-[18px] leading-[28px]">
+              </table>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold text-[18px] leading-[35px]">Breif</h4>
+              <p class="font-normal text-[16px] leading-[35px]">
+                Lorem ipsum dolor sit amet consectetur. Elit at libero posuere a
+                pulvinar hendrerit.
+              </p>
+            </div>
+          </div>
+          <div class="mt-5 flex flex-col gap-5">
+            <div
+              class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]"
+            >
+              <div class="font-semibold text-[18px] leading-[28px]">
                 Key Values
+              </div>
+              <div>
+                <button class="font-semibold text-[18px] leading-[22px]">
+                  view
+                </button>
+              </div>
             </div>
-           <div>
-            <button class=" font-semibold text-[18px] leading-[22px]">view</button>
-           </div>
-        </div>
-        <div class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]">
-            <div class=" font-semibold text-[18px] leading-[28px]">
+            <div
+              class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]"
+            >
+              <div class="font-semibold text-[18px] leading-[28px]">
                 Key Dates
+              </div>
+              <div>
+                <button class="font-semibold text-[18px] leading-[22px]">
+                  view
+                </button>
+              </div>
             </div>
-           <div>
-            <button class=" font-semibold text-[18px] leading-[22px]">view</button>
-           </div>
-        </div>
-        <div class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]">
-            <div class=" font-semibold text-[18px] leading-[28px]">
+            <div
+              class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]"
+            >
+              <div class="font-semibold text-[18px] leading-[28px]">
                 Site Location
+              </div>
+              <div>
+                <button
+                  class="font-semibold text-[18px] leading-[22px] rounded-[30px]"
+                >
+                  view
+                </button>
+              </div>
             </div>
-           <div>
-            <button class=" font-semibold text-[18px] leading-[22px] rounded-[30px]">view</button>
-           </div>
-        </div>
-        <div class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]">
-            <div class=" font-semibold text-[18px] leading-[28px]">
+            <div
+              class="border border-[#B2B2B2] p-4 flex justify-between items-center rounded-[30px]"
+            >
+              <div class="font-semibold text-[18px] leading-[28px]">
                 Tender Document
+              </div>
+              <div>
+                <button class="font-semibold text-[18px] leading-[22px]">
+                  view
+                </button>
+              </div>
             </div>
-           <div>
-            <button class=" font-semibold text-[18px] leading-[22px]">view</button>
-           </div>
+          </div>
         </div>
-    </div>
-</div>
-<div class=" Border2">
-    <div class="bg-[#005787] p-4">
-        <h2 class=" font-semibold text-[18px] leading-[22px] text-white ">Tender Features</h2>
-    </div>
-    <div class="Border">
-        <div class="Border flex gap-2">
-            <div><i class="fa-solid fa-user"></i></div>
-            <div>Assign </div>
 
+          
+       <div>
+          <div class="border border-[#A0A0A0] rounded-[30px] lg:w-[413px] mt-5 lg:mt-0 ">
+            <div class=" p-4 Border rounded-tl-[20px] rounded-tr-[20px]  bg-[#005787]">
+              <h2 class="font-semibold text-[18px] text-white  leading-[22px]">
+                Tender Features
+              </h2>
+            </div>
+            <div class="flex flex-col">
+            <div class="flex gap-4 items-center Border p-[10px]">
+              <div class="w-[24px] h-[24px] pl-[10px]">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="font-medium text-[18px] leading-[24px]">Assign</div>
+            </div>
+            <div class="flex gap-4 items-center Border p-[10px]">
+                <div class="w-[24px] h-[24px]  pl-[10px]">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px]">Intrested</div>
+              </div>
+              <div class="flex gap-4 items-center Border p-[10px]">
+                <div class="w-[24px] h-[24px]  pl-[10px]">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px]">Request to Finance</div>
+              </div>
+              <div class="flex gap-4 items-center Border p-[10px]">
+                <div class="w-[24px] h-[24px]  pl-[10px]">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px] ">Kick off Call</div>
+              </div>
+              <div class="flex gap-4 items-center Border  p-[10px]">
+                <div class="w-[24px] h-[24px] pl-[10px]">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px]">Tender Status</div>
+              </div>
+              <div class="flex gap-4 items-center   p-[10px]">
+                <div class="w-[24px] h-[24px] pl-[10px]">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px] ">Request for Approvals</div>
+              </div>
+            </div>
+
+          
+          </div>
+          <div id="sumbit-button" class=" cursor-pointer lg:w-[413px] text-center py-[12px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[18px] leading-[22px]">
+            Submit To Review
         </div>
     </div>
-</div>
-</div>
+        </div>
+      </div>
+      <div id="submit" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full ">
+            <div class="flex justify-between border-b border-[#CADDE4] p-4 lg:pl-0 pl-[46px]">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Submit To Review</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                </div>
+            </div>
+            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                <ul>
+                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                </ul>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date Of Submission</div>
+                    <input type="date" placeholder="Select Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                </div>
+                <div class="relative mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+                </div>
+
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
+                    <div class="">
+                        <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
+                    </div>
+                </div>
+                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Submit
+                </div>
+            </div>
+        </div>
     </div>
-</body>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const sumbitbutton = document.getElementById('sumbit-button');
+    const submitModal = document.getElementById('submit');
+    const closeModalButton = document.getElementById('closeModalButton');
+
+    sumbitbutton.addEventListener('click', () => {
+        submitModal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        submitModal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == submitModal) {
+            submitModal.classList.add('hidden');
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    console.log('Menu button clicked');
+                    const sidebar = document.getElementById('sidebar');
+                    console.log('Sidebar classes before toggle:', sidebar.className);
+                    sidebar.classList.toggle('-translate-x-full');
+                    console.log('Sidebar classes after toggle:', sidebar.className);
+
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content classes before toggle:', mainContent.className);
+                    mainContent.classList.toggle('shifted');
+                    console.log('Main content classes after toggle:', mainContent.className);
+                });
+            } else {
+                console.error('Menu button not found');
+            }
+        });
+
+function toggleSubItems(id) {
+    const element = document.getElementById(id);
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+    } else {
+        element.classList.add('hidden');
+    }
+}
+    </script>
+  </body>
 </html>

@@ -81,3 +81,44 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.page-link {
+  width:40px;
+  background-color: #E1E1E1;
+  border: none;
+  color: black;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #D1D1D1;
+}
+
+.page-number.active {
+  background-color: #00AEEF;
+  color: white;
+}
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-open {
+  transform: translateX(0); /* Move into view */
+}
+
+.shifted {
+  margin-left: 16rem; /* Adjust based on your sidebar width */
+}
+
+.hidden {
+  display: none;
+}
