@@ -275,6 +275,15 @@
             } else {
                 console.error('Menu button not found');
             }
+            const currentLocation = window.location.href;
+    const sidebarLinks = document.querySelectorAll('#sidebar a');
+    
+    sidebarLinks.forEach(link => {
+        if (link.href === currentLocation) {
+            link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
+            link.closest('div').classList.remove('hidden');
+        }
+    });
         });
 
 function toggleSubItems(id) {
