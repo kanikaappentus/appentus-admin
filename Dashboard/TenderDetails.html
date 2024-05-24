@@ -22,7 +22,9 @@
   <body>
     <nav
       class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+      
     >
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
       <div
         class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white"
       >
@@ -78,7 +80,7 @@
     
     <div
     id="sidebar"
-          class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+          class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
           <div
               class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
               <div
@@ -86,10 +88,10 @@
                   <i
                       class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
               </div>
-              <div
+              <a href="/Dashboard/AddNewTender.html"
                   class="text-white font-semibold text-[14px] leading-[30px]">
                   Add New Tender
-              </div>
+            </a>
           </div>
           <div
               className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
@@ -101,127 +103,69 @@
               </div>
 
               <div>
-                  <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/3 User.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
-                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
-                  </button>
-                  <ul id="user-management" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                        </li>
-                  </ul>
+  
+                  </a>
               </div>
-
               <div>
-                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/judge.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
                         <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
-                  </button>
+                  </a>
                   <ul id="tender-management" class="hidden py-2 space-y-2">
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                           <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Tenders</a>
                         </li>
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                           <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">My Tender</a>
                         </li>
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                           <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Assigned to learn</a>
                         </li>
+                        <li>
+                          <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">In-Progrss Tender</a>
+                       </li>
+                       <li>
+                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Tender Result</a>
+                     </li>
                   </ul>
               </div>
 
               <div>
-                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/card-tick.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
-                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
-                  </button>
-                  <ul id="financial-Approvals" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                        </li>
-                  </ul>
+                      
+                  </a>
+           
               </div>
-             
             <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/document-copy.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
-              </button>
-            </div>
-
-          
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/document-copy.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
-              </button>
-          </div>
-
-
-            <div>
-              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/calendar.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
-              </button>
+              </a>
             </div>
             <div>
-              <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/wallet-money.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
                       Management</span>
-                    <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
-              </button>
-              <ul id="financial-Management" class="hidden py-2 space-y-2">
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                    </li>
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                    </li>
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                    </li>
-              </ul>
+              </a>
+         
           </div>
-          
-
-          <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/Vector.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
-              </button>
-            </div>
+        
             <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/safe-home.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
-              </button>
-            </div>
-
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/setting.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
-              </button>
+              </a>
             </div>
           </div>
   </div>
-    <div class="lg:pl-[15%] pt-[11rem] px-[12px] lg:py-[5rem]">
+  <div id="main-content" class="main-content  px-[120px] lg:py-[5rem] py-[11rem]">
       <div class="">
         <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
           Tender Details
@@ -396,11 +340,12 @@
     </div>
         </div>
       </div>
+      <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
       <div id="submit" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
         <div class="w-full ">
-            <div class="flex justify-between border-b border-[#CADDE4] p-4 lg:pl-0 pl-[46px]">
+            <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 lg:pl-[10px] pl-[46px]">
                 <div>
-                    <h2 class="font-bold text-[24px] leading-[40px]">Submit To Review</h2>
+                    <h2 class="font-bold text-[24px] leading-[40px] ">Submit To Review</h2>
                 </div>
                 <div>
                     <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
@@ -441,10 +386,12 @@
 
     sumbitbutton.addEventListener('click', () => {
         submitModal.classList.remove('hidden');
+        document.getElementById('overlay').classList.add('show');
     });
 
     closeModalButton.addEventListener('click', () => {
         submitModal.classList.add('hidden');
+        document.getElementById('overlay').classList.remove('show');
     });
 
     window.addEventListener('click', (event) => {

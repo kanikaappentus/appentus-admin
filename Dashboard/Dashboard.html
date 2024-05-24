@@ -22,69 +22,45 @@
     <title>DashBoard</title>
   </head>
   <body>
-      <nav
-      class="flex gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
-    >
-      <div class="flex items-center justify-center flex-shrink-0 pl-[34px] text-white">
-        <img src="/images/logo.png" class="w-[194px] h-[25px]" />
+    <nav class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+      <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
+          <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+        <img src="/images/logo.png" class="w-[194px] h-[25px]">
       </div>
-      <div class="block lg:hidden">
-        <button
-          class="flex items-center px-3 py-2 rounded text-black hover:text-white hover:border-white"
-        >
-          <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div class="w-full block  flex-grow  lg:flex  lg:items-center lg:w-auto">
-        <div class="text-sm flex gap-3 items-center lg:flex-grow">
-          <div>
-            <img src="/images/menu.png" id="menu-button"  />
-          </div>
-          <div class=" relative">
-            <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
-            <input
-              type="text"
-              placeholder="Search"
-              class="w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
-            />
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <div>
-            <img src="/images/notification-bing.png" />
-          </div>
-          <div
-            class="flex items-center gap-4 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
-          >
-            <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
-              <img src="/images/user.png" />
-            </div>
+      
+        <div class="w-full block  flex-grow  lg:flex  lg:items-center lg:w-auto">
+          <div class="text-sm flex gap-3 items-center lg:flex-grow">
             <div>
-              <h6
-                class="font-medium text-[14px] leading-[25px] text-[Black Color]"
-              >
-                Abhishek Sharma
-              </h6>
-              <p
-                class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
-              >
-                Sales Head
-              </p>
+              <img src="/images/menu.png" id="menu-button">
+            </div>
+            <div class=" relative">
+              <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+              <input type="text" placeholder="Search" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4">
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="hidden lg:block">
+              <img src="/images/notification-bing.png">
+            </div>
+            <div class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
+              <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+                <img src="/images/user.png">
+              </div>
+              <div>
+                <h6 class="font-medium text-[14px] leading-[25px] text-[Black Color]">
+                  Abhishek Sharma
+                </h6>
+                <p class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
+                  Sales Head
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <div
     id="sidebar"
-          class="sidebar mt-[66px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+          class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
           <div
               class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
               <div
@@ -92,13 +68,13 @@
                   <i
                       class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
               </div>
-              <div
+              <a href="/Dashboard/AddNewTender.html"
                   class="text-white font-semibold text-[14px] leading-[30px]">
                   Add New Tender
-              </div>
+            </a>
           </div>
-          <div
-              className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+          <div id="dashboard-link"
+              class=" flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
               <div class="mt-[17px] ">
                   <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
                  <img src="/images/category-2.svg">
@@ -106,130 +82,72 @@
                   </a>
               </div>
 
-              <div>
-                  <button type="button" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <div id="user-link">
+                  <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/3 User.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
-                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('user-management')">
-                  </button>
-                  <ul id="user-management" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                        </li>
-                  </ul>
+  
+                  </a>
               </div>
-
-              <div>
-                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <div id="Tender-link">
+                  <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/judge.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
                         <img src="/images/Polygon 2.png" onclick="toggleSubItems('tender-management')">
-                  </button>
+                  </a>
                   <ul id="tender-management" class="hidden py-2 space-y-2">
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                           <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Tenders</a>
                         </li>
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                           <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">My Tender</a>
                         </li>
                         <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                           <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Assigned to learn</a>
                         </li>
+                        <li>
+                          <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">In-Progrss Tender</a>
+                       </li>
+                       <li>
+                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Tender Result</a>
+                     </li>
                   </ul>
               </div>
 
-              <div>
-                  <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <div id="finsncial-link">
+                  <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                       <img src="/images/card-tick.svg">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
-                        <img src="/images/Polygon 2.png" onclick="toggleSubItems('financial-Approvals')">
-                  </button>
-                  <ul id="financial-Approvals" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                        </li>
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                        </li>
-                  </ul>
+              
+                  </a>
+            
               </div>
-             
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/document-copy.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document  Management</span>
-              </button>
-            </div>
-
-          
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/document-copy.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Response Creation </span>
-              </button>
-          </div>
-
-
-            <div>
-              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <div id="calendar-link">
+              <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/calendar.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
-              </button>
+              </a>
             </div>
-            <div>
-              <button type="button" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <div id="finance-link">
+              <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/wallet-money.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
                       Management</span>
-                    <img src="/images/Polygon 2.png"onclick="toggleSubItems('financial-Management')" >
-              </button>
-              <ul id="financial-Management" class="hidden py-2 space-y-2">
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                    </li>
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                    </li>
-                    <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                    </li>
-              </ul>
+              </a>
+         
           </div>
-          
-
-          <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0]  dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/Vector.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">MIS</span>
-              </button>
-            </div>
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <img src="/images/safe-home.svg">
-                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">OEM</span>
-              </button>
-            </div>
-
-            <div>
-              <button type="button" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        
+            <div class="setting-link">
+              <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px] dark:text-white hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                   <img src="/images/setting.svg">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
-              </button>
+              </a>
             </div>
           </div>
   </div>
   
-    <div id="main-content" class="lg:flex gap-2 main-content  px-[20px] lg:py-[5rem] pt-[11rem]"" >
-      <div >
+    <div id="main-content" class=" main-content  lg:flex gap-2  px-[20px] lg:py-[5rem] pt-[11rem]">
+      <div class="dashboard lg:w-[86%]" >
       <div class="lg:flex justify-between items-center">
         <div>
           <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
@@ -270,7 +188,7 @@
         
       </div>
       <div class="  md:grid grid-cols-2 lg:flex items-center gap-5 mt-5">
-        <div class="w-full lg:w-[268px] bg-[#EEFBFF] mt-5 lg:mt-0 box-shadow2 p-4  rounded-md">
+        <div class="w-full lg:w-[300px] bg-[#EEFBFF] mt-5 lg:mt-0 box-shadow2 p-4  rounded-md">
           <div class="flex items-center justify-between">
           <div>
             <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Fresh Tenders</h3>
@@ -282,7 +200,7 @@
         </div>
         <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
         </div>
-        <div class=" w-full mt-5 lg:mt-0  lg:w-[268px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
+        <div class=" w-full mt-5 lg:mt-0  lg:w-[300px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
           <div class="flex items-center justify-between">
           <div>
             <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Tender Result</h3>
@@ -294,7 +212,7 @@
         </div>
         <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
         </div>
-        <div class=" w-full mt-5 lg:mt-0  lg:w-[268px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
+        <div class=" w-full mt-5 lg:mt-0  lg:w-[300px] bg-[#EDE4FF] box-shadow2 p-4  rounded-md">
           <div class="flex items-center justify-between">
           <div>
             <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">In-Progress Tender</h3>
@@ -306,7 +224,7 @@
         </div>
         <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
         </div>
-        <div class=" w-full mt-5 lg:mt-0  lg:w-[268px] bg-[#FFE8F2] box-shadow2 p-4  rounded-md">
+        <div class=" w-full mt-5 lg:mt-0  lg:w-[300px] bg-[#FFE8F2] box-shadow2 p-4  rounded-md">
           <div class="flex items-center justify-between">
           <div>
             <h3 class=" font-semibold text-[16px] leading-[20px] text-[#000000]">Submitted Tenders</h3>
@@ -321,8 +239,8 @@
 
       </div>
 
-      <div class="lg:grid grid-cols-2" >
-        <div class=" w-full lg:w-[520px] border border-[#DFEAF0] rounded-lg mt-4">
+      <div class="lg:grid grid-cols-2 gap-6 " >
+        <div class=" w-full  border border-[#DFEAF0] rounded-lg mt-4">
           <div class="calendar-container">
             <div class="calendar-month-arrow-container">
               <div class="calendar-month-year-container">
@@ -373,7 +291,7 @@
             <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
             </div>
           </div>
-          <div class="bg-[#B9E2EF] mt-5 rounded-[29px] w-full lg:w-[539px]  h-[371px] flex justify-center items-center font-bold text-[24px] leading-[30px] text-[#000000] ">
+          <div class="bg-[#B9E2EF] mt-5 rounded-[29px]  w-full   h-[371px] flex justify-center items-center font-bold text-[24px] leading-[30px] text-[#000000] ">
             Recent Bid Assign
            
           </div>
@@ -381,7 +299,7 @@
 
       </div>
     </div>
-    <div class=" p-1 md:px-[10px] pt-2 lg:w-[310px] lg:py-[5rem] border-l border-[#D7D7D7]">
+    <div class=" p-1 md:px-[10px] pt-2 lg:w-[310px] border-l border-[#D7D7D7]">
       <div>
         <h3 class=" font-bold text-[18px] leading-[30px]">Tender Remider</h3>
         <div class="px-[10px]">
@@ -425,10 +343,6 @@
 
   </div>
       <script>
-        document.getElementById("menu-button").addEventListener("click", function () {
-          document.getElementById("sidebar").classList.toggle("hidden");
-          document.getElementById("content").classList.toggle("no-padding-left");
-        });
 
         const weekArray = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
 const monthArray = [
@@ -589,36 +503,10 @@ function removeAllChildren(parent) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('menu-button');
-            if (menuButton) {
-                menuButton.addEventListener('click', function() {
-                    console.log('Menu button clicked');
-                    const sidebar = document.getElementById('sidebar');
-                    console.log('Sidebar classes before toggle:', sidebar.className);
-                    sidebar.classList.toggle('-translate-x-full');
-                    console.log('Sidebar classes after toggle:', sidebar.className);
 
-                    const mainContent = document.getElementById('main-content');
-                    console.log('Main content classes before toggle:', mainContent.className);
-                    mainContent.classList.toggle('shifted');
-                    console.log('Main content classes after toggle:', mainContent.className);
-                });
-            } else {
-                console.error('Menu button not found');
-            }
-        });
 
-function toggleSubItems(id) {
-    const element = document.getElementById(id);
-    if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden');
-    } else {
-        element.classList.add('hidden');
-    }
-}
       </script>
-   
+   <script src="/js/sidebar.js"></script>
     
    
   </body>
