@@ -165,51 +165,53 @@
           </div>
   </div>
   <div id="main-content" class="main-content px-[20px] lg:py-[5rem] pt-[11rem]">
-      <div class="lg:flex md:flex justify-between">
-        <div>
-          <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]">
-            Tender Mangement
-          </h2>
-        </div>
-        <div class="lg:flex md:flex items-center gap-4">
-          <div
-            class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center"
-          >
-            <div
-              class="rounded-full w-[20px] h-[20px] border border-white relative"
-            >
-              <i
-                class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"
-              ></i>
-            </div>
-            <a href="/Dashboard/AddNewTender.html" class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
-              Add New Tender
-            </a>
-          </div>
-
-          <div class="md:hidden xl:flex gap-2">
-            <div class="flex items-center gap-3 md:my-0 my-2 lg:my-0">
-              <label
-                class="font-normal text-[15px] leading-[20px] text-[#000000s]"
-                >Show Result</label
-              >
-              <div
-                class="w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]"
-              ></div>
-            </div>
-            <div class="relative">
-              <i
-                class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"
-              ></i>
-              <input
-                type="text"
-                placeholder="Type and Enter"
-                class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4"
-              />
-            </div>
-          </div>
-        </div>
+    <div class=" lg:flex md:flex justify-between">
+      <div>
+          <h2 class=" font-bold text-[30px] leading-[30px] text-[#000000]">Tender
+              Mangement</h2>
       </div>
+      <div class="lg:flex md:flex items-center gap-4">
+      <div class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+          <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+              <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+          </div>
+          <a href="/Dashboard/AddNewTender.html" class="text-white  font-semibold text-[14px] leading-[30px] cursor-pointer">
+              Add New Tender
+          </a>
+      </div>
+     
+      <div class="md:hidden xl:flex gap-2">
+      <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+          <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+          <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+            <option value="10">10</option>
+            <option value="20">30</option>
+            <option value="30">30</option>
+           </select>
+      </div>
+      <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+          <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+      </div>
+      </div>
+  </div>
+  </div>
+  <div class="md:flex gap-2 hidden xl:hidden ">
+      <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+          <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+          
+           <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+            <option value="1">10</option>
+            <option value="1">10</option>
+            <option value="1">10</option>
+           </select>
+
+      </div>
+      <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+          <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+      </div>
+  </div>
       <div class="md:flex gap-2 hidden xl:hidden">
         <div class="flex items-center gap-3 md:my-0 my-2 lg:my-0">
           <label class="font-normal text-[15px] leading-[20px] text-[#000000s]"
@@ -292,10 +294,10 @@
       <div class="lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3">
         <div class="mt-4">
           <div
-            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3"
+            class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3"
           >
             <p
-              class="text-center font-semibold text-[18px] leading-[30px] text-white"
+              class=" text-center font-semibold text-[18px] leading-[30px] text-white"
             >
               Awarded (100)
             </p>
@@ -303,7 +305,7 @@
         </div>
         <div class="mt-4">
           <div
-            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+            class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
           >
             <p
               class="text-center font-semibold text-[18px] leading-[30px] text-white"
@@ -314,7 +316,7 @@
         </div>
         <div class="mt-4">
           <div
-            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+            class="category-button cursor-pointer  w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
           >
             <p
               class="text-center font-semibold text-[18px] leading-[30px] text-white"
@@ -325,7 +327,7 @@
         </div>
         <div class="mt-4">
           <div
-            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+            class="category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
           >
             <p
               class="text-center font-semibold text-[18px] leading-[30px] text-white"
@@ -336,7 +338,7 @@
         </div>
         <div class="mt-4">
           <div
-            class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+            class="category-button cursor-pointer' w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
           >
             <p
               class="text-center font-semibold text-[18px] leading-[30px] text-white"
@@ -362,7 +364,7 @@
               </div>
             </div>
 
-            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+            <div class="flex  gap-4 items-center mt-4 lg:mt-0">
               <div>
                 <p
                   class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
@@ -388,7 +390,7 @@
                 </div>
               </div>
               <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
-               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+               <img src="/images/edit-2.png" class="absolute top-[8px] left-[8px]">
               </div>
             </div>
           </div>
@@ -470,7 +472,7 @@
               </div>
             </div>
 
-            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+            <div class="flex  gap-4 items-center mt-4 lg:mt-0">
               <div>
                 <p
                   class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
@@ -496,7 +498,7 @@
                 </div>
               </div>
               <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
-               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+               <img src="/images/edit-2.png" class="absolute top-[8px] left-[8px]">
               </div>
             </div>
           </div>
@@ -548,15 +550,15 @@
                 <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
               </div>
           </div>
-          <div class=" grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
-                <p class=" font-medium text-[14px] leading-[24px] text-white text-center">Presentation</p>
+          <div class="grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
+            <div id="Presentation-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
+                <p class=" font-medium text-[14px] leading-[24px] text-white text-center cursor-pointer">Presentation</p>
             </div>
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
-                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Clarification</p>
+            <div id="Clarification-button" class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Clarification</p>
             </div>
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
-                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Corrigendum</p>
+            <div id="Corrigendum-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Corrigendum</p>
             </div>
           </div>
         </div>
@@ -578,7 +580,7 @@
               </div>
             </div>
 
-            <div class="flex gap-4 items-center mt-4 lg:mt-0">
+            <div class="flex  gap-4 items-center mt-4 lg:mt-0">
               <div>
                 <p
                   class="font-semibold text-[13px] lg:text-[14px] leading-[23px] text-[#979797]"
@@ -604,7 +606,7 @@
                 </div>
               </div>
               <div class="w-[40px] h-[40px] rounded-full bg-[#F3FCFF] relative">
-               <img src="/images/edit-2.svg" class="absolute top-[8px] left-[8px]">
+               <img src="/images/edit-2.png" class="absolute top-[8px] left-[8px]">
               </div>
             </div>
           </div>
@@ -656,21 +658,23 @@
                 <p class="w-[167px]  font-normal text-[13px] leading-[25px] text-[#979797]">Lorem ipsum dolor sit amet consectetur.</p>
               </div>
           </div>
-          <div class=" grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
-                <p class=" font-medium text-[14px] leading-[24px] text-white text-center">Presentation</p>
+          <div class="grid grid-cols-2 md:flex gap-3 lg:mt-0 mt-3 lg:flex items-center lg:gap-4">
+            <div id="Presentation-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#005787]">
+                <p class=" font-medium text-[14px] leading-[24px] text-white text-center cursor-pointer">Presentation</p>
             </div>
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
-                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Clarification</p>
+            <div id="Clarification-button" class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Clarification</p>
             </div>
-            <div class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
-                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center">Corrigendum</p>
+            <div id="Corrigendum-button"  class="w-[114px] rounded-[100px] h-[50px] py-[11px] bg-[#F3FCFF]">
+                <p class=" font-medium text-[14px] leading-[24px] text-[#005787] text-center cursor-pointer">Corrigendum</p>
             </div>
           </div>
         </div>
         </div>
       </div>
+    
       <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+
       <div id="Presentation" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
         <div class="w-full ">
             <div class="flex justify-between items-center border-b border-[#CADDE4]  pl-[46px] p-4 lg:px-[10px]">
@@ -681,7 +685,7 @@
                     <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
                 </div>
             </div>
-            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+            <div class="px-[10px] lg:px-[20px] py-[20px]">
                 <ul>
                     <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
                 </ul>
@@ -746,8 +750,8 @@
     </div>
 
     <div id="Clarification" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full ">
-            <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 pl-[20px]">
+        <div class="lg:w-full w-[321px]">
+            <div class="flex justify-between items-center border-b border-[#CADDE4]  p-4 lg:px-[10px]">
                 <div>
                     <h2 class="font-bold text-[24px] leading-[40px]">Clarification</h2>
                 </div>
@@ -755,7 +759,7 @@
                     <i class="fa-solid fa-xmark cursor-pointer" id="closeClarificationModalButton"></i>
                 </div>
             </div>
-            <div id="modalContent" class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+            <div id="modalContent" class=" px-[10px] lg:px-[20px] py-[20px]">
                 <ul>
                     <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
                 </ul>
@@ -795,7 +799,7 @@
     </div>
 
     <div id="Corrigendum" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full ">
+        <div class="lg:w-full w-[321px] ">
             <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 pl-[20px]">
                 <div>
                     <h2 class="font-bold text-[24px] leading-[40px]">Corrigendum</h2>
@@ -864,52 +868,55 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('Clarification-button');
+    const assignModal = document.getElementById('Clarification');
+    const closeModalButton = document.getElementById('closeClarificationModalButton');
+
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+  document.getElementById('overlay').classList.add('show');
+
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+        document.getElementById('overlay').classList.remove('show');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == Clarification) {
+            assignModal.classList.add('hidden');
+        }
+    });
+});
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Clarification modal elements
-    const clarificationButton = document.getElementById('Clarification-button');
-    const clarificationModal = document.getElementById('Clarification');
-    const closeClarificationModalButton = document.getElementById('closeClarificationModalButton');
+    const assignButton = document.getElementById('Corrigendum-button');
+    const assignModal = document.getElementById('Corrigendum');
+    const closeModalButton = document.getElementById('closeCorrigendumModalButton');
 
-    if (clarificationButton && clarificationModal && closeClarificationModalButton) {
-        clarificationButton.addEventListener('click', () => {
-            clarificationModal.classList.remove('hidden');
-            document.getElementById('overlay').classList.add('show');
-        });
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+  document.getElementById('overlay').classList.add('show');
 
-        closeClarificationModalButton.addEventListener('click', () => {
-            clarificationModal.classList.add('hidden');
-            document.getElementById('overlay').classList.remove('show');
-        });
+    });
 
-        window.addEventListener('click', (event) => {
-            if (event.target.id === 'Clarification') {
-                clarificationModal.classList.add('hidden');
-            }
-        });
-    }
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+        document.getElementById('overlay').classList.remove('show');
+    });
 
-    // Corrigendum modal elements
-    const corrigendumButton = document.getElementById('Corrigendum-button');
-    const corrigendumModal = document.getElementById('Corrigendum');
-    const closeCorrigendumModalButton = document.getElementById('closeCorrigendumModalButton');
-
-    if (corrigendumButton && corrigendumModal && closeCorrigendumModalButton) {
-        corrigendumButton.addEventListener('click', () => {
-            corrigendumModal.classList.remove('hidden');
-        });
-
-        closeCorrigendumModalButton.addEventListener('click', () => {
-            corrigendumModal.classList.add('hidden');
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target.id === 'Corrigendum') {
-                corrigendumModal.classList.add('hidden');
-            }
-        });
-    }
+    window.addEventListener('click', (event) => {
+        if (event.target == Corrigendum) {
+            assignModal.classList.add('hidden');
+        }
+    });
 });
+
+
+
+ 
 
 function selectMeetingType(type) {
             const meetingTypeButton = document.getElementById('meetingTypeButton');
@@ -934,7 +941,7 @@ function selectMeetingType(type) {
     document.getElementById('save-button').addEventListener('click', function() {
             const modalContent = document.getElementById('modalContent');
             modalContent.innerHTML = `
-                <div id="confirmationContent" class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
+                <div id="confirmationContent" class="lg:w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
                     <div class="flex justify-between items-center">
                         <div class="font-bold text-[14px] leading-[25px]">Tender ID:-</div>
                         <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
@@ -1006,6 +1013,8 @@ function selectMeetingType(type) {
   }
 }
 
+
     </script>
+    <script src="/js/activestate.js"></script>
   </body>
 </html>

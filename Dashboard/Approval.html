@@ -21,7 +21,7 @@
   </head>
   <body>
     <nav class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40  items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
-    
+      <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
         <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
           <img src="/images/logo.png" class="w-[194px] h-[25px]">
         </div>
@@ -142,20 +142,20 @@
                 </div>
               </div>
       </div>
-      <div id="main-content" class=" main-content  px-[20px] lg:py-[5rem] pt-[11rem]">
-      <div class="px-[10px]">
+      <div id="main-content" class=" main-content  px-[8px] lg:py-[5rem] pt-[11rem]">
+      <div class="lg:px-[10px]">
         <div>
-          <h2 class="font-bold text-[30px] mt-10 leading-[30px] text-[#000000]">
-            Approval
+          <h2 class="  cat font-bold text-[30px] mt-10 leading-[30px] text-[#000000]">
+         Approval
           </h2>
         </div>
         <div class="my-[40px] lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3">
           <div class="mt-4">
             <div
-              class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3"
+              class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3"
             >
               <p
-                class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                class="text-center font-semibold text-[15px]  lg:text-[18px] leading-[30px] text-white"
               >
                 New Request
               </p>
@@ -163,10 +163,10 @@
           </div>
           <div class="mt-4">
             <div
-              class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+              class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
             >
               <p
-                class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                class="text-center font-semibold text-[15px]  lg:text-[18px] leading-[30px] text-white"
               >
                 Approve Request
               </p>
@@ -174,58 +174,61 @@
           </div>
           <div class="mt-4">
             <div
-              class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+              class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
             >
               <p
-                class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                class="text-center font-semibold text-[15px]  lgtext-[18px] leading-[30px] text-white"
               >
                 Denied Request
               </p>
             </div>
           </div>
+
           <div class="mt-4">
             <div
-              class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
+              class=" category-button cursor-pointer w-[145px] lg:w-[170px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3"
             >
               <p
-                class="text-center font-semibold text-[18px] leading-[30px] text-white"
+                class="text-center font-semibold text-[15px] lg:text-[18px] leading-[30px] text-white"
               >
-                Completed Request
+                completed Request
               </p>
             </div>
           </div>
+          
+          
         </div>
       </div>
       <div class="overflow-x-auto mt-">
-        <table class="min-w-full">
+        <table id="table-body" class=" min-w-full">
           <thead class="bg-[#005787] text-white">
             <tr>
-              <th class="px-4 py-2">#</th>
-              <th class="px-4 py-2">Tender ID</th>
-              <th class="px-4 py-2">Requirement</th>
-              <th class="px-4 py-2">Payment Mode</th>
-              <th class="px-4 py-2">Amount</th>
-              <th class="px-4 py-2">Requester Name</th>
-              <th class="px-4 py-2">Finance Executive</th>
-              <th class="px-4 py-2">Requested Date</th>
-              <th class="px-4 py-2">Deadline Date</th>
-              <th class="px-4 py-2">Approval Status</th>
-              <th class="px-4 py-2">Action</th>
+              <th class="px-4 py-2 whitespace-nowrap">#</th>
+              <th class="px-4 py-2 whitespace-nowrap">Tender ID</th>
+              <th class="px-4 py-2 whitespace-nowrap">Requirement</th>
+              <th class="px-4 py-2 whitespace-nowrap">Payment Mode</th>
+              <th class="px-4 py-2 whitespace-nowrap">Amount</th>
+              <th class="px-4 py-2 whitespace-nowrap">Requester Name</th>
+              <th class="px-4 py-2 whitespace-nowrap">Finance Executive</th>
+              <th class="px-4 py-2 whitespace-nowrap">Requested Date</th>
+              <th class="px-4 py-2 whitespace-nowrap">Deadline Date</th>
+              <th class="px-4 py-2 whitespace-nowrap">Approval Status</th>
+              <th class="px-4 py-2 whitespace-nowrap">Action</th>
             </tr>
           </thead>
           <tbody>
             <!-- Example row, duplicated to show multiple entries -->
             <tr class="bg-white my-4">
-              <td class="px-4 py-2 text-center">01</td>
-              <td class="px-4 py-2 text-center">1179</td>
-              <td class="px-4 py-2 text-center">EMD</td>
-              <td class="px-4 py-2 text-center">Offline</td>
-              <td class="px-4 py-2 text-center">10,000</td>
-              <td class="px-4 py-2 text-center">Palak Shah</td>
-              <td class="px-4 py-2 text-center">Virishin Patel</td>
-              <td class="px-4 py-2 text-center">15-04-2023,11:17 PM</td>
-              <td class="px-4 py-2 text-center">15-04-2023,11:17 PM</td>
-              <td class="px-4 py-2 text-center">Pending</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">01</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">1179</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">EMD</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">Offline</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">10,000</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">Palak Shah</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">Virishin Patel</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">15-04-2023,11:17 PM</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">15-04-2023,11:17 PM</td>
+              <td class="px-4 py-2 text-center whitespace-nowrap">Pending</td>
               <td
                 class="px-4 py-2 text-center flex justify-center items-center gap-2"
               >
@@ -474,7 +477,147 @@
         <button class="page-link page-number" data-page="5">5</button>
         <button class="page-link" id="next-page">→</button>
     </div>
-</div>
+    </div>
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    <div
+      id="FinanceDetails"
+      class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg"
+    >
+      <div class="w-full">
+          <div class="flex justify-between items-center border-b border-[#CADDE4] p-4">
+            <div>
+                <h2 class="font-bold text-[24px] leading-[40px] lg:pl-[10px] pl-[36px]">View Request Finance Details</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+            </div>
+        </div>
+        <div class="pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+          <div
+            id="confirmationContent"
+            class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4"
+          >
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">
+                Tender ID:-
+              </div>
+              <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">
+                Reminder Date and Time:-
+              </div>
+              <div class="font-semibold text-[14px] leading-[25px]">
+                29-02-2024, 12:00PM
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">Comment:-</div>
+              <div class="font-semibold text-[14px] leading-[25px]">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">Modify:-</div>
+              <div class="font-semibold text-[14px] leading-[25px] underline">
+                Change
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="border-b border-[#CADDE4] p-4 pl-[20px]">
+          <div>
+            <h2 class="font-bold text-[24px] leading-[40px]">
+              View Request Finance Details
+            </h2>
+          </div>
+        </div>
+        <div class="pl-[47px] pr-[12px] lg:px-[20px] py-[20px] mt-6">
+          <div
+            id="confirmationContent"
+            class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4"
+          >
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">
+                Tender ID:-
+              </div>
+              <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">
+                Reminder Date and Time:-
+              </div>
+              <div class="font-semibold text-[14px] leading-[25px]">
+                29-02-2024, 12:00PM
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">Comment:-</div>
+              <div class="font-semibold text-[14px] leading-[25px]">
+                Lorem ipsum dolor sit amet consectetur.
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="font-bold text-[14px] leading-[25px]">Modify:-</div>
+              <div class="font-semibold text-[14px] leading-[25px] underline">
+                Change
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="border-b border-[#CADDE4] p-4 pl-[20px]">
+          <div>
+            <h2 class="font-bold text-[24px] leading-[40px]">
+              View Request Finance Details
+            </h2>
+          </div>
+        </div>
+        <div>
+        <div class="grid grid-cols-2 px-[20px] py-[10px] gap-[10px]">
+          <div>
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">
+              Finance Excusitive
+            </div>
+            <select
+              class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+            >
+              <option
+                value="0"
+                class="font-normal text-[14px] leading-[20px] text-[#000000]"
+              >
+                1
+              </option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+            </select>
+          </div>
+          <div class="">
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">
+              Deadline
+            </div>
+            <input
+              type="date"
+              placeholder="Reminder Date"
+              class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]"
+            />
+          </div>
+        </div>
+        <div class="mt-6 px-[20px]">
+          <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Payment Description</div>
+          <div class="">
+              <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[90px]"></textarea>
+          </div>
+      </div>
+      <div class="w-[170px] ml-[10px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+           Submit
+    </div>
+  </div>
+      </div>
+    </div>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
             const menuButton = document.getElementById('menu-button');
@@ -513,8 +656,30 @@ function toggleSubItems(id) {
         element.classList.add('hidden');
     }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+  const assignButton = document.getElementById('view');
+  const assignModal = document.getElementById('FinanceDetails');
+  const closeModalButton = document.getElementById('closeModalButton');
 
+  assignButton.addEventListener('click', () => {
+      assignModal.classList.remove('hidden');
+      document.getElementById('overlay').classList.add('show');
+  });
+
+  closeModalButton.addEventListener('click', () => {
+      assignModal.classList.add('hidden');
+      document.getElementById('overlay').classList.remove('show');
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target == FinanceDetails) {
+          assignModal.classList.add('hidden');
+      }
+  });
+})
 
     </script>
+      <script src="/js/Pagination.js"></script>
+      <script src="/js/activestate.js"></script>
   </body>
 </html>

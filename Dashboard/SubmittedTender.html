@@ -161,9 +161,11 @@
                 <div class="md:hidden xl:flex gap-2">
                 <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
                     <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
-                    <div class=" w-[60px] lg:w-[80px] h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
-
-                    </div>
+                    <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+                      <option value="10">10</option>
+                      <option value="20">30</option>
+                      <option value="30">30</option>
+                     </select>
                 </div>
                 <div class="relative">
                     <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
@@ -171,6 +173,22 @@
                 </div>
                 </div>
             </div>
+            </div>
+            <div class="md:flex gap-2 hidden xl:hidden ">
+                <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+                    <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+                    
+                     <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+                      <option value="1">10</option>
+                      <option value="1">10</option>
+                      <option value="1">10</option>
+                     </select>
+
+                </div>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+                    <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+                </div>
             </div>
             <div class="md:flex gap-2 hidden xl:hidden ">
                 <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
@@ -219,37 +237,36 @@
                     Clear All
                 </div>
             </div>
-        <div class="lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3">
-            <div class="mt-4">
-            <div class=" w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
-                <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
-                Fresh( 100)
-                </p>
+            <div class="lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3">
+                <div class="mt-4">
+                    <div class="category-button w-[145px] cursor-pointer lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3" data-value="Fresh">
+                        <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
+                            Fresh (100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button w-[145px] cursor-pointer lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Live">
+                        <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
+                            Live (100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button w-[145px] cursor-pointer lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Archive">
+                        <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
+                            Archive (100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button w-[145px] cursor-pointer lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Interested">
+                        <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
+                            Interested (100)
+                        </p>
+                    </div>
+                </div>  
             </div>
-            </div>
-            <div class="mt-4">
-            <div class=" w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-                <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
-                Live (100)
-                </p>
-            </div>
-            </div>
-            <div class="mt-4">
-            <div class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-                <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
-                Archive (100)
-                </p>
-            </div>
-            </div>
-            <div class="mt-4">
-            <div class="w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-                <p class="text-center font-semibold text-[18px] leading-[30px] text-white">
-                Intrested( 100)
-                </p>
-            </div>
-            </div>
-      
-    </div>
     <div class=" rounded-[30px] border border-[#A0A0A0] p-4 mt-5 lg:flex justify-between">
         <div>
         <div class="font-semibold text-[18px] leading-[22px] text-[#000000]">
@@ -310,12 +327,12 @@
                 <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
                 </div>
              <div >
-             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+             <div class="w-[40px] mt-[10px]  h-[40px] bg-[#CCEFFC] rounded-full relative">
                         <i
                         class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
                         ></i>
                     </div>
-                    <p class="font-normal lg:text-center text-[14px] leading-[17px]">Tender
+                    <p class="font-normal   w-[67px]  text-[14px] leading-[17px]">Tender
                         Statur</p>
              </div>
              <div id="RequestApproval" >
@@ -401,12 +418,12 @@
                 <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
                 </div>
              <div >
-             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+             <div class="w-[40px] mt-[10px]  h-[40px] bg-[#CCEFFC] rounded-full relative">
                         <i
                         class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
                         ></i>
                     </div>
-                    <p class="font-normal lg:text-center text-[14px] leading-[17px]">Tender
+                    <p class="font-normal   w-[67px]  text-[14px] leading-[17px]">Tender
                         Statur</p>
              </div>
              <div id="RequestApproval" >
@@ -492,12 +509,12 @@
                 <p class="font-normal  w-[67px] text-[14px] leading-[17px]">Request to Finance</p>
                 </div>
              <div >
-             <div class="w-[40px] h-[40px] bg-[#CCEFFC] rounded-full relative">
+             <div class="w-[40px] mt-[10px]  h-[40px] bg-[#CCEFFC] rounded-full relative">
                         <i
                         class="fa-regular fa-user absolute top-[11px] left-[13px] text-[16px]"
                         ></i>
                     </div>
-                    <p class="font-normal lg:text-center text-[14px] leading-[17px]">Tender
+                    <p class="font-normal   w-[67px]  text-[14px] leading-[17px]">Tender
                         Statur</p>
              </div>
              <div id="RequestApproval" >
@@ -529,16 +546,16 @@
 
 <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
     <div id="ApprovalModal" class="hidden fixed top-0 right-0 z-50 h-full  bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full">
+        <div class="lg:w-full w-[321px]">
             <div class="flex justify-between items-center border-b border-[#CADDE4] p-4">
                 <div>
-                    <h2 class="font-bold text-[24px] leading-[40px] lg:pl-[10px] pl-[36px]">Tender Request For Approval</h2>
+                    <h2 class="font-bold text-[24px] leading-[40px] lg:pl-[10px] md:pl-0 ">Tender Request For Approval</h2>
                 </div>
                 <div>
                     <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
                 </div>
             </div>
-            <div class="lg:px-[20px] py-[20px] md:px-[10px] pl-[42px] p-[13px] ">
+            <div class="lg:px-[20px] py-[20px] md:px-[10px] md:pl-2 approval pr-[10px] p-[13px] ">
                 <div class="lg:w-[800px] rounded-[15px] bg-[#CCEFFC] p-4">
                     <div class=" flex justify-between items-center">
                         <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
@@ -602,13 +619,13 @@
                 <table class="min-w-full">
                     <thead class="bg-[#005787] text-white">
                         <tr>
-                            <th class="text-[15px] py-2">#</th>
-                            <th class="text-[15px] py-2">Assign By</th>
-                            <th class="text-[15px] py-2">Comment</th>
-                            <th class="text-[15px] py-2">Number</th>
-                            <th class="text-[15px] py-2">Assign Date Time</th>
-                            <th class="text-[15px] py-2">Tender Awarded</th>
-                            <th class="text-[15px] py-2">Action</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">#</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Assign By</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Comment</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Number</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Assign Date Time</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Tender Awarded</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Action</th>
                         </tr>
                     </thead>
                 </table>
@@ -617,7 +634,7 @@
     </div>
     
     <div id="finnace" class="hidden fixed top-0 right-0 z-50 h-full  bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full">
+        <div class="lg:w-full w-[321px]">
             <div class="flex justify-between border-b border-[#CADDE4] p-4">
                 <div>
                     <h2 class="font-bold text-[24px] leading-[40px] lg:pl-[10px] pl-[36px]">Tender Request To Finance</h2>
@@ -626,7 +643,7 @@
                     <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton2"></i>
                 </div>
             </div>
-            <div class="g:px-[20px] py-[20px] md:px-[10px] pl-[42px] p-[13px] ">
+            <div class="lg:px-[20px] py-[20px] md:px-[10px] p-[13px] ">
                 <div class="lg:w-[800px] rounded-[15px] bg-[#CCEFFC] p-4">
                     <div class=" flex justify-between items-center">
                         <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
@@ -705,6 +722,60 @@
                 <table class="min-w-full">
                     <thead class="bg-[#005787] text-white">
                         <tr>
+                            <th class="text-[15px] py-2 whitespace-nowrap">#</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Assign By</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Comment</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Number</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Assign Date Time</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Tender Awarded</th>
+                            <th class="text-[15px] py-2 whitespace-nowrap">Action</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div class="w-full ">
+            <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5 pl-[46px]">
+                <div>
+                    <h2 class="font-bold text-[24px] leading-[40px]">Tender Assign</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButtonassign"></i>
+                </div>
+            </div>
+            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                <ul>
+                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                </ul>
+                <div>
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Select User</div>
+                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Abhishek Sharma</option>
+                        <option value="1">Abhishek Sharma</option>
+                        <option value="2">Abhishek Sharma</option>
+                    </select>
+                </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Document completion date</div>
+                    <input type="date" placeholder="Select Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                </div>
+                <div class="mt-6">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
+                    <div class="">
+                        <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
+                    </div>
+                </div>
+                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                    Assign User
+                </div>
+            </div>
+            <div class="overflow-x-auto mt-5">
+                <table class="min-w-full">
+                    <thead class="bg-[#005787] text-white">
+                        <tr>
                             <th class="text-[15px] py-2">#</th>
                             <th class="text-[15px] py-2">Assign By</th>
                             <th class="text-[15px] py-2">Comment</th>
@@ -714,10 +785,47 @@
                             <th class="text-[15px] py-2">Action</th>
                         </tr>
                     </thead>
+            
                 </table>
             </div>
         </div>
     </div>
+
+        <div id="ReminderModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+            <div class="lg:w-full w-[321px]">
+                <div class="flex justify-between border-b border-[#CADDE4] p-4">
+                    <div>
+                        <h2 class="font-bold text-[24px] leading-[40px]">Tender Reminder</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButtonreminder"></i>
+                    </div>
+                </div>
+                <div class="px-[20px] py-[20px]" id="modalContent">
+                <div>
+                    <div class="mt-6">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Reminder Date*</div>
+                        <input type="date" placeholder="Select Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                    </div>
+                    <div class="mt-6">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
+                        <div class="">
+                            <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
+                        </div>
+                    </div>
+                </div>
+            
+                    <div id="setReminder" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                        Set Reminder
+                    </div>
+
+                
+                </div>
+            
+            </div>
+        </div>  
+
+    
 
     <script>
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -792,6 +900,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
         });
 
+
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('assign-button');
+    const assignModal = document.getElementById('assignModal');
+    const closeModalButton = document.getElementById('closeModalButtonassign');
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+        document.getElementById('overlay').classList.add('show');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+        document.getElementById('overlay').classList.remove('show');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == assignModal) {
+            assignModal.classList.add('hidden');
+        }
+    });
+});
+    
+document.addEventListener('DOMContentLoaded', (event) => {
+    const assignButton = document.getElementById('reminder');
+    const assignModal = document.getElementById('ReminderModal');
+    const closeModalButton = document.getElementById('closeModalButtonreminder');
+
+    assignButton.addEventListener('click', () => {
+        assignModal.classList.remove('hidden');
+        document.getElementById('overlay').classList.add('show');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+        document.getElementById('overlay').classList.remove('show');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == ReminderModal) {
+            assignModal.classList.add('hidden');
+        }
+    });
+});
 function toggleSubItems(id) {
     const element = document.getElementById(id);
     if (element.classList.contains('hidden')) {
@@ -801,6 +953,6 @@ function toggleSubItems(id) {
     }
 }
     </script>
-
+<script src="/js/activestate.js"></script>
 </body>
 </html>

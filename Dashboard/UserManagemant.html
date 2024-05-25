@@ -149,10 +149,10 @@
                     <div class="lg:flex md:flex items-center gap-4">
                     <div class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
                         <div class="rounded-full w-[20px] h-[20px] border border-white relative">
-                            <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+                           <a href="/Dashboard/AddUser.html"><i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i></a> 
                         </div>
-                        <a href="/Dashboard/AddUser.html" class="text-white  font-semibold text-[14px] leading-[30px] cursor-pointer">
-                            Add New User
+                        <a  class="text-white  font-semibold text-[14px] leading-[30px] cursor-pointer">
+                             Add New User
                         </a>
                     </div>
                    
@@ -223,7 +223,7 @@
                 </div>
                 
                 <div class="overflow-x-auto mt-5">
-                    <table class="min-w-full">
+                    <table id="table-body" class="min-w-full">
                         <thead class="bg-[#005787] text-white">
                             <tr>
                                 <th class="px-4 py-2">S. No.</th>
@@ -413,6 +413,7 @@
                        
                         
                     </tbody></table>
+                 
                     <div class="pagination mt-4 flex justify-end">
                         <button class="page-link" id="prev-page">←</button>
                         <button class="page-link page-number active" data-page="1">1</button>
@@ -463,5 +464,7 @@ function toggleSubItems(id) {
     }
 }
        </script>
+       
+       <script src="/js/Pagination.js"></script>
     </body>
 </html>

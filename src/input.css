@@ -161,7 +161,7 @@
 #overlay.show {
   display: block;
 }
-#overlay.show + nav .search {
+#overlay.show .search {
   background-color: #F3FCFF;
   opacity: 0.5;
 }
@@ -176,8 +176,10 @@
   .main-content.shifted {
     margin-left: 0; /* Adjust based on your sidebar width */
   }
+ 
 
 }
+
 .active-link {
   background-color: #DFEAF0; /* Change this to your desired color */
 }
