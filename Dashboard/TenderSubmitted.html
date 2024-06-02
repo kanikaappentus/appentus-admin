@@ -676,8 +676,8 @@
       <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
 
       <div id="Presentation" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full ">
-            <div class="flex justify-between items-center border-b border-[#CADDE4]  pl-[46px] p-4 lg:px-[10px]">
+        <div class="w-full">
+            <div class="flex justify-between items-center border-b border-[#CADDE4] pl-[46px] p-4 lg:px-[10px]">
                 <div>
                     <h2 class="font-bold text-[24px] leading-[40px]">Presentation</h2>
                 </div>
@@ -689,139 +689,130 @@
                 <ul>
                     <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
                 </ul>
-            <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="mt-6">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
+                        <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                    </div>
+                    <div class="mt-6">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Time *</div>
+                        <input type="time" placeholder="Enter Time" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                    </div>
+                </div>
+    
                 <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
-                    <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                    <span class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting type *</span>
+                    <a href="#" id="meetingTypeButton" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572]" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <span id="meetingTypeText1" class="font-normal text-[14px] leading-[18px] text-[#979797]">Select meeting type</span>
+                        <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('Metting-Type')">
+                    </a>
+                    <ul id="Metting-Type" class="hidden py-2 space-y-2">
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('Virtual', 'meetingTypeText1')">Virtual</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('Offline', 'meetingTypeText1')">Offline</a>
+                        </li>
+                    </ul>
                 </div>
+    
+                <div class="hidden" id="meetingLinkField">
+                    <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Meeting link *</div>
+                    <a href="#" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572]" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <span id="meetingTypeText2" class="font-normal text-[14px] leading-[18px] underline text-[#00ADEE]">meet.google.com</span>
+                        <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('Meeting-Link')">
+                    </a>
+                    <ul id="Meeting-Link" class="hidden py-2 space-y-2">
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('meet.google.com', 'meetingTypeText2')">meet.google.com</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('link', 'meetingTypeText2')">link</a>
+                        </li>
+                    </ul>
+                </div>
+    
                 <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Time *</div>
-                    <input type="time" placeholder="Enter Time" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                    <span class="text-[14px] leading-[15px] font-medium pb-[8px]">Assigned To *</span>
+                    <a href="#" id="assigneeButton" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572]" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <span id="meetingTypeText3" class="font-normal text-[14px] leading-[18px] text-[#979797]">Choose assignee</span>
+                        <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('assignee')">
+                    </a>
+                    <ul id="assignee" class="hidden py-2 space-y-2">
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('1', 'meetingTypeText3')">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('2', 'meetingTypeText3')">2</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="mt-6">
-              <span class="text-[14px] leading-[15px] font-medium pb-[8px] ">Meeting type *</span>
-              <a href="#" id="meetingTypeButton" class="flex items-center relative h-[50px]   p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                <span id="meetingTypeText1"  class=" font-normal text-[14px] leading-[18px] text-[#979797]">Select meeting type</span>
-                    <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('Metting-Type')" >
-              </a>
-              <ul id="Metting-Type" class="hidden py-2 space-y-2">
-                    <li>
-                       <a href="#" id="virtual" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100   dark:hover:bg-gray-700" onclick="selectMeetingType('Virtual')">Virtual</a>
-                    </li>
-                    <li>
-                       <a href="#" id="offline" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700"  onclick="selectMeetingType('Offline')">Offline</a>
-                    </li>
-              </ul>
-          </div>
-          <div class="hidden"  id="meetingLinkField">
-            <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Meeting link *</div>
-            <a href="#"  class="flex items-center relative h-[50px]   p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-              <span id="meetingTypeText2"  class=" font-normal text-[14px] leading-[18px] underline text-[#00ADEE]">meet.google.com</span>
-                  <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('Meeting-Link')" >
-            </a>
-            <ul id="Meeting-Link" class="hidden py-2 space-y-2">
-                  <li>
-                     <a href="#"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100   dark:hover:bg-gray-700" onclick="selectMeetingType('meet')">meet.google.com</a>
-                  </li>
-                  <li>
-                     <a href="#"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700"  onclick="selectMeetingType('link')">link</a>
-                  </li>
-            </ul>
-        </div>
-        <div class="mt-6">
-          <span class="text-[14px] leading-[15px] font-medium pb-[8px] ">Assigned To *</span>
-          <a href="#" id="meetingTypeButton" class="flex items-center relative h-[50px]   p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-            <span id="meetingTypeText3"  class=" font-normal text-[14px] leading-[18px] text-[#979797]">Choose assignee</span>
-                <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('assignee')" >
-          </a>
-          <ul id="assignee" class="hidden py-2 space-y-2">
-                <li>
-                   <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100   dark:hover:bg-gray-700"  onclick="selectMeetingType('1')" >1</a>
-                </li>
-                <li>
-                   <a href="#"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700"   onclick="selectMeetingType('2')" >2</a>
-                </li>
-          </ul>
-      </div>
-        <!-- <div>
-            <div class="text-[14px] leading-[15px] font-medium pb-[8px] mt-6">Assigned To **</div>
-            <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
-                <button class="dropbtn">Choose assignee</button>
-                <div class="dropdown-content">
-                  <a href="#" >1</a>
-                  <a href="#">2</a>
-                </div>
-            </div>
-        </div> -->
+    
                 <div class="mt-6">
                     <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
-                    <div class="">
-                        <textarea class="  rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
+                    <div>
+                        <textarea class="rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
                     </div>
                 </div>
                 <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
-                  Save
-                </div>
-            </div>
-          
-        </div>
-    </div>
-
-    <div id="Clarification" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="lg:w-full w-[321px]">
-            <div class="flex justify-between items-center border-b border-[#CADDE4]  p-4 lg:px-[10px]">
-                <div>
-                    <h2 class="font-bold text-[24px] leading-[40px]">Clarification</h2>
-                </div>
-                <div>
-                    <i class="fa-solid fa-xmark cursor-pointer" id="closeClarificationModalButton"></i>
-                </div>
-            </div>
-            <div id="modalContent" class=" px-[10px] lg:px-[20px] py-[20px]">
-                <ul>
-                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
-                </ul>
-                <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
-                    <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
-                </div>
-                <div class="relative mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Attachment</div>
-                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
-                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
-                </div>
-                <div class="mt-6">
-                  <span class="text-[14px] leading-[15px] font-medium pb-[8px]">Assigned To **</span>
-                  <a href="#" id="" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <span id="meetingTypeText4" class=" font-normal text-[14px] leading-[18px] text-[#979797]">Choose assignee</span>
-                        <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('choose-assigne')" >
-                  </a>
-                  <ul id="choose-assigne" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100   dark:hover:bg-gray-700"  onclick="selectMeetingType('1')">1</a>
-                        </li>
-                        <li>
-                           <a href="#"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700"   onclick="selectMeetingType('2')">2</a>
-                        </li>
-                  </ul>
-              </div>
-                <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
-                    <div class="">
-                        <textarea class="  rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
-                    </div>
-                </div>
-                <div id="save-button" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
                     Save
                 </div>
             </div>
-           
-      
-       
         </div>
     </div>
+    
+
+    <div id="Clarification" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+      <div class="lg:w-full w-[321px]">
+          <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 lg:px-[10px]">
+              <div>
+                  <h2 class="font-bold text-[24px] leading-[40px]">Clarification</h2>
+              </div>
+              <div>
+                  <i class="fa-solid fa-xmark cursor-pointer" id="closeClarificationModalButton"></i>
+              </div>
+          </div>
+          <div id="modalContent" class="px-[10px] lg:px-[20px] py-[20px]">
+              <ul>
+                  <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+              </ul>
+              <div class="mt-6">
+                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date *</div>
+                  <input type="date" placeholder="Enter Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+              </div>
+              <div class="relative mt-6">
+                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Attachment</div>
+                  <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                  <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
+              </div>
+              <div class="mt-6">
+                  <span class="text-[14px] leading-[15px] font-medium pb-[8px]">Assigned To *</span>
+                  <a href="#" id="assigneeButton2" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572]" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <span id="meetingTypeText4" class="font-normal text-[14px] leading-[18px] text-[#979797]">Choose assignee</span>
+                      <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('choose-assigne')">
+                  </a>
+                  <ul id="choose-assigne" class="hidden py-2 space-y-2">
+                      <li>
+                          <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('1', 'meetingTypeText4')">1</a>
+                      </li>
+                      <li>
+                          <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('2', 'meetingTypeText4')">2</a>
+                      </li>
+                  </ul>
+              </div>
+  
+              <div class="mt-6">
+                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
+                  <div class="">
+                      <textarea class="rounded-[20px] border border-[#647986] outline-none w-full h-[105px] p-3" placeholder="Add Description"></textarea>
+                  </div>
+              </div>
+              <div id="save-button" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                  Save
+              </div>
+          </div>
+      </div>
+  </div>
 
     <div id="Corrigendum" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
         <div class="lg:w-full w-[321px] ">
@@ -847,20 +838,21 @@
                     <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
                 </div>
                 <div class="mt-6">
-                  <span class="text-[14px] leading-[15px] font-medium pb-[8px] ">Assigned To *</span>
-                  <a href="#"  class="flex items-center relative h-[50px]   p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <span id="meetingTypeText5" class=" font-normal text-[14px] leading-[18px] text-[#979797]" >Choose assignee</span>
-                        <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('assignee3')" >
+                  <span class="text-[14px] leading-[15px] font-medium pb-[8px]">Assigned To *</span>
+                  <a href="#" id="assigneeButton3" class="flex items-center relative h-[50px] p-3 text-base text-gray-900 transition duration-75 w-full border rounded-[60px] border-[#617572]" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <span id="meetingTypeText5" class="font-normal text-[14px] leading-[18px] text-[#979797]">Choose assignee</span>
+                      <img src="../images/Polygon 2.png" class="absolute right-[12px]" onclick="toggleSubItems('assignee3')">
                   </a>
                   <ul id="assignee3" class="hidden py-2 space-y-2">
-                        <li>
-                           <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100   dark:hover:bg-gray-700"  onclick="selectMeetingType('1')" >1</a>
-                        </li>
-                        <li>
-                           <a href="#"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700"   onclick="selectMeetingType('2')" >2</a>
-                        </li>
+                      <li>
+                          <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('1', 'meetingTypeText5')">1</a>
+                      </li>
+                      <li>
+                          <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:bg-gray-700" onclick="selectMeetingType('2', 'meetingTypeText5')">2</a>
+                      </li>
                   </ul>
               </div>
+  
                 <div class="mt-6">
                     <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Meeting notes</div>
                     <div class="">
@@ -946,31 +938,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
- 
 function selectMeetingType(type, targetId) {
-    const targetElement = document.getElementById(targetId);
-    const meetingLinkField = document.getElementById('meetingLinkField');
-    var dropdown = document.getElementById('Metting-Type');
-    var dropdown2 = document.getElementById('choose-assigne');
-    var dropdown3 = document.getElementById('assignee');
-    var dropdown4 = document.getElementById('assignee3');
-    var dropdown5 = document.getElementById('Meeting-Link');
+  const targetElement = document.getElementById(targetId);
+  const meetingLinkField = document.getElementById('meetingLinkField');
+  var dropdown = document.getElementById('Metting-Type');
+  var dropdown2 = document.getElementById('choose-assigne');
+  var dropdown3 = document.getElementById('assignee');
+  var dropdown4 = document.getElementById('assignee3');
+  var dropdown5 = document.getElementById('Meeting-Link');
 
-    // Update the appropriate text
-    targetElement.textContent = type;
+  // Update the appropriate text
+  targetElement.textContent = type;
 
-    if (type === 'Virtual') {
-        meetingLinkField.classList.remove('hidden');
-    } else {
-        meetingLinkField.classList.add('hidden');
-    }
+  if (type === 'Virtual') {
+      meetingLinkField.classList.remove('hidden');
+  } else if (targetId === 'meetingTypeText1') {
+    meetingLinkField.classList.add('hidden');
+}
 
-    // Close the dropdown menus
-    dropdown.classList.add('hidden');
-    dropdown2.classList.add('hidden');
-    dropdown3.classList.add('hidden'); // Assuming you want to close the assignee dropdown
-    dropdown4.classList.add('hidden'); // Assuming you want to close the assignee3 dropdown
-    dropdown5.classList.add('hidden'); // Assuming you want to close the Meeting-Link dropdown
+  // Close the dropdown menus
+  dropdown.classList.add('hidden');
+  dropdown2.classList.add('hidden');
+  dropdown3.classList.add('hidden');
+  dropdown4.classList.add('hidden');
+  dropdown5.classList.add('hidden');
+}
+
+function toggleSubItems(id) {
+  const element = document.getElementById(id);
+  element.classList.toggle('hidden');
 }
 
 

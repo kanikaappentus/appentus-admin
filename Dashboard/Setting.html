@@ -4,10 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/src/output.css" rel="stylesheet" />
-        <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-        />
         <link rel="stylesheet" href="/src/input.css" />
         <link
         rel="stylesheet"
@@ -18,6 +14,11 @@
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Document</title>
+        <style>
+          html {
+            scroll-behavior: smooth;
+          }
+        </style>
     </head>
 <body>
   <nav
@@ -172,7 +173,7 @@ id="sidebar"
         <div class="rounded-[25px] border lg:w-1/2 mx-auto mt-4">
             <!-- Tabs -->
             <ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b">
-              <li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px"><a id="default-tab" href="#first">Edit Profile</a></li>
+              <li class="bg-white px-4 text-gray-800 font-semibold py-2 border-b-2 border-[#005787]"><a id="default-tab" href="#first">Edit Profile</a></li>
               <li class="px-4 text-gray-800 font-semibold py-2 rounded-t"><a href="#second">Password</a></li>
 
             </ul>
@@ -274,14 +275,14 @@ tabTogglers.forEach(function(toggler) {
 
     for (let i = 0; i < tabContents.children.length; i++) {
       
-      tabTogglers[i].parentElement.classList.remove("border-t", "border-r", "border-l", "-mb-px", "bg-white");  tabContents.children[i].classList.remove("hidden");
+      tabTogglers[i].parentElement.classList.remove("border-b-2", "border-[#005787]", "text-[#005787]", "-mb-px", "bg-white");  tabContents.children[i].classList.remove("hidden");
       if ("#" + tabContents.children[i].id === tabName) {
         continue;
       }
       tabContents.children[i].classList.add("hidden");
       
     }
-    e.target.parentElement.classList.add("border-t", "border-r", "border-l", "-mb-px", "bg-white");
+    e.target.parentElement.classList.add("border-b-2", "border-[#005787]", "text-[#005787]", "-mb-px", "bg-white");
   });
 });
 document.addEventListener('DOMContentLoaded', function() {
