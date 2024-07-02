@@ -18,6 +18,20 @@
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Document</title>
+        <style>
+          .dropdown-item::before {
+            content: "ON";
+            display: inline-block;
+            background-color: #A8EED5; /* Green color for "ON" indicator */
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px 4px;
+            margin-right: 8px;
+            width:35px;
+            height: 35px;
+          }
+        </style>
     </head>
 <body>
     <nav
@@ -171,9 +185,9 @@
                 Tender Mangement
             </h2>
         </div>
-        <div class="lg:w-[600px] xl:w-[908px]  mt-10  rounded-[20px] border border-[B2B2B2]">
+        <div class="lg:w-[600px] xl:w-[908px]  mt-10  rounded-[20px] border border-[#B2B2B2]">
             <div>
-                <div class="border-b border-[B2B2B2] p-4">
+                <div class="border-b border-[#B2B2B2] p-4">
                     <h3 class=" font-bold text-[20px] leading-[30px]">Add New Tender</h3>
                 </div>
                 <div class=" px-[10px] lg:p-6  border-b border-[B2B2B2]">
@@ -185,69 +199,87 @@
                         <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Reference Number *</div>
                         <input type="text" placeholder="Enter Name" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
                     </div>  
-                    <div class="mt-4">
-                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Organization Name *</div>
-                        <!-- <select class="  w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                            <option value="0" class=" font-medium text-[16px] leading-[20px] text-[#000000]">Organization Name </option>
-                            <option value="1">Abhishek Sharma</option>
-                            <option value="2">Abhishek Sharma</option>
-                            <option>Add New Organization</option>
-                        </select> -->
-                    
-                    <div class="dropdown w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
-                        <button class="dropbtn">Organization Name</button>
-                        <div class="dropdown-content">
-                          <a href="#" >Organization Name</a>
-                          <a href="#">Organization Name</a>
-                          <a href="#" class="Border">Organization Name</a>
-                          <div class="flex justify-center py-[10px]">
-                          <button href="#" class="" id="addOrganization">Add New Organization</button>
-                        </div>
-                        </div>
-
-                        <div class=" dropdown-content pb-[20px] ">
-                            <div class="flex flex-col p-4 gap-4 Border">
-                            <div class="">
-                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Organization Name</div>
-                                <input type="text" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
-                            </div>  
-                            <div class="">
-                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Email</div>
-                                <input type="email" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
-                            </div> 
-                            <div class="mb-[20px]">
-                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Address</div>
-                                <input type="text" placeholder="John Deo" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
-                            </div>
-                        </div>
-                        <div class="flex justify-center gap-2">
-                            <button class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
-                                Cancel
-                            </button>
-                            <button class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
-                                Save
-                            </button>
-                        </div>
-                        </div>
-
+                    <div class="">
+                      <div class="text-[14px] leading-[15px] font-medium pb-[8px] lg:mt-0 md:mt-0 mt-5">Organization Name *</div>
+                      <div>
+                          <button id="dropdownButton" class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                              <div class="relative flex justify-between items-center">
+                                  <span id="selectedValue" class=" text-[15px] font-normal text-[#617572]">Select Organization</span>
+                                  <img src="../images/Polygon 2.png" class="absolute right-[12px]"/>
+                              </div>
+                          </button>
+                          <div id="dropdownMenu" class="hidden absolute mt-2 lg:w-[25rem] z-50  width mx-[16px]  bg-white border border-gray-300 rounded-[30px] shadow-lg">
+                              <ul class="">
+                                  <li class="dropdown-item px-4 py-4 hover:bg-[#B6E3FF] rounded-tl-[30px] rounded-tr-[30px] cursor-pointer">Organization Name 1</li>
+                                  <li class="dropdown-item px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer">Organization Name 2</li>
+                                  <li class="dropdown-item px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer">Organization Name 3</li>
+                                  <li id="addNewOrg" class="px-4 flex justify-center gap-2 text-center border-t border-[#647986] py-[20px] hover:bg-gray-[#B6E3FF] cursor-pointer">
+                                      <span><img src="../images/add-square.png"/></span>Add New Organization
+                                  </li>
+                              </ul>
+                          </div>
                       </div>
-                    </div>
-                <div>
+                      <div id="addOrganizationDiv" class="hidden absolute mt-2 lg:w-[25rem] z-50    width mx-[16px]  border border-[#647986] bg-white rounded-[30px] shade">
+                          <div class="flex flex-col p-4 gap-4 ">
+                              <div>
+                                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Organization Name</div>
+                                  <input type="text" placeholder="Organization Name" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                              </div>
+                              <div>
+                                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Email</div>
+                                  <input type="email" placeholder="Email" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                              </div>
+                              <div class="mb-[20px]">
+                                  <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Address</div>
+                                  <input type="text" placeholder="Address" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                              </div>
+                              <div class="flex justify-center gap-2">
+                                <button id="cancelButton" class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Cancel</button>
+                                <button class="w-[152px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Save</button>
+                            </div>
+                          </div>
+                       
+                      </div>
+                  </div>
+                  
+                  
+                  <div>
                     <div class="text-[14px] mt-5 leading-[15px] font-medium pb-[8px]">Keyword *</div>
-                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Keyword *</option>
-                        <option value="1">Abhishek Sharma</option>
-                        <option value="2">Abhishek Sharma</option>
-                    </select>
+                    <div class="relative">
+                        <button id="dropdownButton2" class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <div class="flex justify-between items-center">
+                                <span id="selectedValue2" class="text-[15px] font-normal text-[#617572]">Select Keyword</span>
+                                <img src="../images/Polygon 2.png" class="absolute right-[12px]"/>
+                            </div>
+                        </button>
+                        <div id="dropdownMenu2" class="hidden absolute mt-2 lg:w-[25rem] width mx-[16px] bg-white border border-gray-300 rounded-[30px] shadow-lg">
+                            <ul>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] rounded-tl-[30px] rounded-tr-[30px] cursor-pointer" onclick="selectDropdownValue('dropdownButton2', 'selectedValue2', 'Keyword 1')">Keyword 1</li>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer" onclick="selectDropdownValue('dropdownButton2', 'selectedValue2', 'Keyword 2')">Keyword 2</li>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer" onclick="selectDropdownValue('dropdownButton2', 'selectedValue2', 'Keyword 3')">Keyword 3</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="text-[14px] mt-5 leading-[15px] font-medium pb-[8px]">Site Location *</div>
-                    <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                        <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Site Location *</option>
-                        <option value="1">Abhishek Sharma</option>
-                        <option value="2">Abhishek Sharma</option>
-                    </select>
+                    <div class="relative">
+                        <button id="dropdownButton3" class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <div class="flex justify-between items-center">
+                                <span id="selectedValue3" class="text-[15px] font-normal text-[#617572]">Select Location</span>
+                                <img src="../images/Polygon 2.png" class="absolute right-[12px]"/>
+                            </div>
+                        </button>
+                        <div id="dropdownMenu3" class="hidden absolute mt-2 lg:w-[25rem] width mx-[16px] bg-white border border-gray-300 rounded-[30px] shadow-lg">
+                            <ul>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] rounded-tl-[30px] rounded-tr-[30px] cursor-pointer" onclick="selectDropdownValue('dropdownButton3', 'selectedValue3', 'Location 1')">Location 1</li>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer" onclick="selectDropdownValue('dropdownButton3', 'selectedValue3', 'Location 2')">Location 2</li>
+                                <li class="px-4 py-4 hover:bg-[#B6E3FF] cursor-pointer" onclick="selectDropdownValue('dropdownButton3', 'selectedValue3', 'Location 3')">Location 3</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="mt-5">
                     <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Estimated Cost *</div>
                     <input type="text" placeholder="Estimated Cost" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
@@ -284,6 +316,9 @@
             <div class="w-[60px] h-[59px] m-auto mt-10">
             <img src="/images/Uploadicon.png"/>
           </div>
+          <div class=" flex justify-center">
+          <input type="file" class="">
+        </div>
             <p class=" p-3  font-bold text-[16px] leading-[24px] mt-4 text-center">Drag & drop files or Browse</p>
             <p class=" p-3 font-normal text-[12px] leading-[18px] text-center">Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
         </div>
@@ -291,14 +326,49 @@
     </div>
 </div>
 <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const addOrganization = document.getElementById('addOrganization');
 
-    addOrganization.addEventListener('click', () => {
-        assignModal.classList.remove('hidden');
-    });
+  document.getElementById('dropdownButton').addEventListener('click', function(event) {
+      console.log("Dropdown button clicked");
+      var menu = document.getElementById('dropdownMenu');
+      if (!event.target.closest('#addNewOrg')) {
+          menu.classList.toggle('hidden');
+      }
+  });
+  
+  document.querySelectorAll('.dropdown-item').forEach(function(item) {
+      item.addEventListener('click', function(event) {
+          var selectedText = event.target.textContent;
+          console.log("Dropdown item clicked: " + selectedText);
+          if (selectedText !== "Add New Organization") {
+              document.getElementById('selectedValue').textContent = selectedText;
+          }
+          document.getElementById('dropdownMenu').classList.add('hidden');
+      });
+  });
+  
+  document.addEventListener('click', function(event) {
+      var isClickInside = document.getElementById('dropdownButton').contains(event.target) ||
+                          document.getElementById('dropdownMenu').contains(event.target);
+  
+      if (!isClickInside) {
+          document.getElementById('dropdownMenu').classList.add('hidden');
+      }
+  });
+  
+  document.getElementById('addNewOrg').addEventListener('click', function() {
+      console.log("Add New Organization clicked");
+      var dropdownMenu = document.getElementById('dropdownMenu');
+      var addOrganizationDiv = document.getElementById('addOrganizationDiv')
+  
+      dropdownMenu.classList.add('hidden');
+      addOrganizationDiv.classList.remove('hidden');
+  });
+  
+  document.getElementById('cancelButton').addEventListener('click', function() {
+      document.getElementById('addOrganizationDiv').classList.add('hidden');
+  });
+  
 
-})
 document.addEventListener('DOMContentLoaded', function() {
             const menuButton = document.getElementById('menu-button');
             if (menuButton) {
@@ -336,6 +406,40 @@ function toggleSubItems(id) {
         element.classList.add('hidden');
     }
 }
+function selectDropdownValue(buttonId, spanId, value) {
+  document.getElementById(buttonId).classList.remove('border-[#617572]');
+  document.getElementById(spanId).textContent = value;
+  hideDropdown(buttonId);
+}
+
+function toggleDropdown(buttonId) {
+  const dropdownMenu = document.getElementById('dropdownMenu' + buttonId.charAt(buttonId.length - 1));
+  dropdownMenu.classList.toggle('hidden');
+}
+
+function hideDropdown(buttonId) {
+  const dropdownMenu = document.getElementById('dropdownMenu' + buttonId.charAt(buttonId.length - 1));
+  dropdownMenu.classList.add('hidden');
+}
+
+// Event listeners for showing and hiding dropdowns
+document.getElementById('dropdownButton2').addEventListener('click', function() {
+  toggleDropdown('dropdownButton2');
+});
+
+document.getElementById('dropdownButton3').addEventListener('click', function() {
+  toggleDropdown('dropdownButton3');
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('#dropdownMenu2') && !event.target.closest('#dropdownButton2')) {
+      hideDropdown('dropdownButton2');
+  }
+  if (!event.target.closest('#dropdownMenu3') && !event.target.closest('#dropdownButton3')) {
+      hideDropdown('dropdownButton3');
+  }
+});
 </script>
 </body>
 </html>
