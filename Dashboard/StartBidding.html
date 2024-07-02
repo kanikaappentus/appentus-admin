@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav
+        class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+        <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
+            <img src="../images/logo.png" class="w-[194px] h-[25px]" />
+        </div>
+        <div class="block lg:hidden">
+            <!-- <div>
+      <img src="/images/menu.png" class="menu-button"  />
+    </div> -->
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+
+            <div class="text-sm flex gap-3 items-center lg:flex-grow">
+                <div class="hidden lg:block">
+                    <img src="../images/menu.png" id="menu-button" />
+                </div>
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+
+                    <input type="text" placeholder="Search"
+                        class=" search lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:block">
+                    <img src="../images/notification-bing.png" />
+                </div>
+                <div
+                    class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
+                    <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+                        <img src="../images/user.png" />
+                    </div>
+                    <div>
+                        <h6 class="font-medium text-[14px] leading-[25px] text-[Black Color]">
+                            Abhishek Sharma
+                        </h6>
+                        <p class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
+                            Sales Head
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar"
+        class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+        <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+            <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+                <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+            </div>
+            <a href="/Dashboard/AddNewTender.html"
+                class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
+                Add New Tender
+            </a>
+        </div>
+        <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+            <div class="mt-[17px] ">
+                <a href="/Dashboard/Dashboard.html"
+                    class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                    <img src="../images/category-2.svg">
+                    <span class="ms-3">Dashboard</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="/Dashboard/UserManagemant.html"
+                    class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/3 User.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+
+                </a>
+            </div>
+            <div>
+                <a href="#" onclick="toggleSubItems('tender-management')"
+                    class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/judge.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                    <img src="../images/Polygon 2.png">
+                </a>
+                <ul id="tender-management" class="hidden py-2 space-y-2">
+                    <li>
+                        <a href="/Dashboard/TenderManagement.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+                    </li>
+                    <li>
+                        <a href="/Dashboard/TenderDetails.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My
+                            Tender</a>
+                    </li>
+                    <li>
+                        <a href="/Dashboard/SubmittedTender.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned
+                            to learn</a>
+                    </li>
+                    <li>
+                        <a href="/Dashboard/TenderSubmitted.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss
+                            Tender</a>
+                    </li>
+                    <li>
+                        <a href="/Dashboard/TenderSubmitted.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender
+                            Result</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="/Dashboard/Approval.html"
+                    class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/card-tick.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                </a>
+
+            </div>
+            <div>
+                <a href="/Dashboard/Schedulecall.html"
+                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/calendar.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+                </a>
+            </div>
+            <div>
+                <a href="/Dashboard/FinancialManagemet.html"
+                    class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/wallet-money.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                        Management</span>
+                </a>
+
+            </div>
+
+            <div>
+                <a href="/Dashboard/Setting.html"
+                    class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/setting.svg">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="main-content lg:px-[3rem]  px-[10px] lg:py-[5rem] py-[11rem]">
+        <div class="flex items-center lg:gap-2 gap-[4px]">
+            <div class=" font-normal text-[14px] leading-[20px]">Tender Management </div>
+            <div><img src="../images/Polygon.png" /></div>
+            <div class=" font-normal text-[14px] leading-[20px]">All Tender</div>
+            <div><img src="../images/Polygon.png" /></div>
+            <div class=" font-normal text-[14px] leading-[20px]">Start Bidding</div>
+        </div>
+
+
+        <div class=" lg:flex md:flex justify-between mt-[3rem]">
+            <div>
+                <h2 class=" font-bold text-[30px] leading-[30px]  text-[#000000]">Tender Details</h2>
+            </div>
+            <div class="lg:mt-0 md:mt-0 mt-5">
+                <button id="upload"
+                    class=" w-[170px] h-[50px] bg-[#005787] text-white font-medium rounded-[100px] text-[13px] leading-[30px]">Upload
+                    Response</button>
+            </div>
+        </div>
+
+
+        <div class="lg:flex lg:gap-4 xl:gap-10 mt-10">
+            <div id="modalContent" class="border border-[#000000] rounded-[20px] bg-[#FFFFFF] xl:w-[70%]  ">
+                <div class="lg:flex md:flex justify-between border-b border-[#000000] p-3 lg:p-5">
+                    <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Prepare Checklist</h3>
+                    <div class="lg:mt-0 md:mt-0 mt-5">
+                        <button
+                            class=" w-[170px] h-[50px] bg-[#005787] text-white font-medium text-[13px] rounded-[100px] leading-[30px]">Generate
+                            Responses</button>
+                    </div>
+                </div>
+
+                <div id="checklist-container" class=" px-[10px] ">
+                    <div
+                        class="checklist-section lg:grid grid-cols-2 gap-3 xl:gap-10 border-b border-[#CCCCCC] xl:px-[30px] py-[40px]">
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Document Name
+                            </div>
+                            <input type="text" id="Name"
+                                class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]"
+                                placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Select Document
+                            </div>
+                            <div class="select-box relative">
+                                <div class="select-option relative">
+                                    <input type="text" id="soValue1"
+                                        class="soValue outline-none cursor-pointer w-full border border-[#B1B6C6] rounded-[100px] pl-[19px] h-[60px]"
+                                        placeholder="Select Document">
+                                </div>
+                                <div
+                                    class="content bg-[#ffffff] absolute text-black w-full z-50 border mt-[-7px] rounded-bl-[24px] rounded-br-[24px] border-[#B1B6C6] hidden">
+                                    <ul class="options mt-[10px] pl-[30px] pb-[20px] ">
+                                        <li class="font-normal text-[15px] leading-[30px]">1</li>
+                                        <li class="font-normal text-[15px] leading-[30px]">2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+                            <input type="text" placeholder="Choose File"
+                                class="bg-transparent w-full h-[60px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <button
+                                class="bg-[#00ADEE] w-[89px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose
+                                File
+                                <input type="file" class="absolute left-[2%] w-[80px] opacity-0">
+                            </button>
+                        </div>
+                        <div class="flex gap-3 mt-6">
+                            <button
+                                class="add-checklist w-[127px] h-[50px] bg-[#005787] rounded-[100px] text-white font-medium text-[13px] leading-[30px] text-center cursor-pointer">Add
+                                Checklist</button>
+                            <button
+                                class="delete-checklist w-[82px] h-[50px] bg-[#FF5B5B] rounded-[100px] text-white font-medium text-[13px] leading-[30px] text-center cursor-pointer">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden">
+                <div class=" lg:flex md:flex justify-between border-b border-[#000000] p-3 lg:p-5">
+                    <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Upload Response</h3>
+                    <div  class="lg:mt-0 md:mt-0 mt-5">
+                        <button id="backToChecklist" class=" w-[170px] h-[50px] bg-[#005787] text-white font-medium text-[13px] rounded-[100px] leading-[30px]">Back to Checklist</button>
+                    </div>
+                </div>
+                <div id="checklist-container" class=" px-[10px] ">
+                    <div class="checklist-section lg:grid grid-cols-2 gap-10 border-b border-[#CCCCCC] lg:px-[30px] py-[40px]">
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Name *</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Time *</div>
+                            <div class="select-box relative">
+                                <div class="select-option relative">
+                                    <input type="text" id="soValue1" class="soValue outline-none cursor-pointer w-full border border-[#B1B6C6] rounded-[100px] pl-[19px] h-[60px]" placeholder="Select Document">
+                                </div>
+                                <div class="content bg-[#ffffff] absolute text-black w-full z-50 border mt-[-7px] rounded-bl-[24px] rounded-br-[24px] border-[#B1B6C6] hidden">
+                                    <ul class="options mt-[10px] pl-[30px] pb-[20px] ">
+                                        <li class="font-normal text-[15px] leading-[30px]">1</li>
+                                        <li class="font-normal text-[15px] leading-[30px]">2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mt-5">
+                            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload Document</div>
+                            <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[60px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <button class="bg-[#00ADEE] w-[118px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File
+                                <input type="file" class="absolute left-[2%] w-[80px] opacity-0">
+                            </button>
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Remarks *</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Select Document">
+                        </div>
+                     
+                    </div>
+                </div>
+           
+                <div class="flex justify-center mt-7">
+                    <button class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
+                </div>
+           
+                <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
+                    <table class="min-w-full">
+                        <thead class="bg-[#005787] text-white ">
+                            <tr>
+                                <th class="text-[15px] py-2">#</th>
+                                <th class="text-[15px] py-2 text-left ">Tender Submitted <br>
+                                    Response Name</th>
+                                <th class="text-[15px] text-left py-2">Response Type<br>
+                                    Name</th>
+                                <th class="text-[15px] py-2">Created Date</th>
+                                <th class="text-[15px] py-2">Remark</th>
+                                <th class="text-[15px] py-2">Download</th>
+                                <th class="text-[15px] py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]">01</td>
+                              <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Tech 1</td>
+                              <td  class=" py-2 font-medium text-[15px] leading-[25px]">Technical Response</td>
+                             <td  class=" py-2 text-center font-medium text-[15px] leading-[25px]">27-02-24</td>
+                             <td  class="px-4 py-2  text-center font-medium text-[15px] leading-[25px]">DFD</td>
+                              <td  class="px-4 py-2  text-center flex justify-center">
+                                <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                               <img src="../images/downloadSign.png"/>
+                                    Download
+                                    </div>
+                                </td>
+                                <td  class="px-4 py-2  text-center">
+                                <div class="relative  flex justify-center">
+                              <img src="../images/RectangleBox.png" class=""/>
+                              <img src="../images/delete.png" class="absolute top-[9px] left-[44px]"/>
+                                   
+                                </div>
+                                </td>
+                        </tbody>
+                
+                    </table>
+                </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="border border-[#A0A0A0] rounded-[30px] xl:w-[485px] mt-5 lg:mt-0 pb-[10px]">
+                    <div class=" p-6 Border rounded-tl-[20px] rounded-tr-[20px]  bg-[#005787]">
+                        <h2 class="font-semibold text-[18px] text-white  leading-[22px]">
+                            Tender Details
+                        </h2>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <p class="font-medium text-[18px] leading-[24px]">Tender Id: 1179</p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Breif :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">Lorem ipsum dolor sit amet consectetur.
+                            Laoreet gravida tincidunt orci orci enim </p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Pre-Qualification Criteria :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">01-01-1753</p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Website:</div>
+                        <a href="#" class=" font-medium text-[14px] leading-[24px] text-[#00ADEE] underline">Click
+                            Here</a>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Document Fees :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">₹ 2.95 Thousand</p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Earnest Money Deposit (EMD) :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">₹ 38.00 Lakhs</p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Estimated Cost :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">₹ 19.00 Cr</p>
+                    </div>
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Site location :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">Ajmer, Rajasthan</p>
+                    </div>
+
+                    <div class="border-b border-[#CCCCCC] px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Download Document :</div>
+                        <a href="#" class=" font-medium text-[14px] leading-[24px] text-[#00ADEE] underline">Click to
+                            Download all Document</a>
+                    </div>
+                    <div class=" px-[20px] py-[10px]">
+                        <div class="font-medium text-[18px] leading-[24px]">Brief Value :</div>
+                        <p class=" font-medium text-[14px] leading-[24px]">Refer Document</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+       
+        <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+            <div class="lg:w-full w-[321px] ">
+                <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5 pl-[46px]">
+                    <div>
+                        <h2 class="font-bold text-[24px] leading-[40px]">Tender Assign</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                    </div>
+                </div>
+                <div id="modalContent" class=" pl-[17px]  pr-[12px] lg:px-[20px] py-[20px]">
+                    <div class="flex justify-between">
+                        <div>
+                    <ul class="pl-[20px]" style="list-style-type: disc;">
+                        <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                    </ul>
+                </div>
+                <div>
+                    <label class=" font-normal text-[15px] leading-[30px] text-[#000000]">Include index *</label>
+                    <input type="text" class=" lg:w-[400px] w-full h-[60px] border border-[#CCCCCC]" placeholder="Enter Name">
+                </div>
+                    </div>
+                    <div class="overflow-x-auto mt-5 rounded-[20px] pb-[100px]">
+                        <table class="min-w-full">
+                            <thead class="bg-[#005787] text-white ">
+                                <tr>
+                                    <th class="text-[15px] px-4 py-2">
+                                        <input type="checkbox">
+                                    </th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap py-2 text-left ">Document Name
+                                    </th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-2">Order By    </th>
+                                    <th class="text-[15px]  px-4 py-2">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                  <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]"> <input type="checkbox"></td>
+                                  <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Document Name</td>
+                                  <td  class=" py-2 font-medium text-[15px] leading-[25px]">
+                                    <div>
+                                        <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]"></button>
+                                    </div>
+                                  </td>
+                                  <td  class="px-4 py-2  text-center flex justify-center">
+                                    <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                                   <img src="../images/downloadSign.png"/>
+                                        Download
+                                        </div>
+                                    </td>
+                               
+                            </tbody>
+                    
+                        </table>
+                    </div>
+     
+                    <div class="lg:grid grid-cols-2 gap-5 xl:gap-10 border-b border-[#CCCCCC] xl:px-[30px] py-[40px]">
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Name *</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Type*</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Remarks *</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                        </div>
+                        <div>
+                            <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Include Index *</div>
+                            <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
+                        <table class="min-w-full">
+                            <thead class="bg-[#005787] text-white ">
+                                <tr>
+                                    <th class="text-[15px] px-4 py-2">#</th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap py-2 text-left ">Tender Submitted Response Name</th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-2">Response Type Name</th>
+                                    <th class="text-[15px]  px-4 py-2">Created Date</th>
+                                    <th class="text-[15px]  px-4 py-2">Remark</th>
+                                    <th class="text-[15px]  px-4 py-2">Download</th>
+                                    <th class="text-[15px]  px-4 py-2">Action</th>
+                                </tr>
+                            </thead>
+                          <tbody>
+
+                          </tbody>
+                    
+                        </table>
+                    </div>
+                </div>
+                </div>
+         
+            </div>
+</div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const assignButton = document.getElementById('tenderassign');
+                const assignModal = document.getElementById('assignModal');
+                const closeModalButton = document.getElementById('closeModalButton');
+                assignButton.addEventListener('click', () => {
+                    alert('hello')
+                    assignModal.classList.remove('hidden');
+                    document.getElementById('overlay').classList.add('show');
+                });
+
+                closeModalButton.addEventListener('click', () => {
+                    assignModal.classList.add('hidden');
+                    document.getElementById('overlay').classList.remove('show');
+                });
+
+                window.addEventListener('click', (event) => {
+                    if (event.target == assignModal) {
+                        assignModal.classList.add('hidden');
+                    }
+                });
+            });
+
+      
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuButton = document.getElementById('menu-button');
+                if (menuButton) {
+                    menuButton.addEventListener('click', function () {
+                        console.log('Menu button clicked');
+                        const sidebar = document.getElementById('sidebar');
+                        console.log('Sidebar classes before toggle:', sidebar.className);
+                        sidebar.classList.toggle('-translate-x-full');
+                        console.log('Sidebar classes after toggle:', sidebar.className);
+
+                        const mainContent = document.getElementById('main-content');
+                        console.log('Main content classes before toggle:', mainContent.className);
+                        mainContent.classList.toggle('shifted');
+                        console.log('Main content classes after toggle:', mainContent.className);
+                    });
+                } else {
+                    console.error('Menu button not found');
+                }
+                const currentLocation = window.location.href;
+                const sidebarLinks = document.querySelectorAll('#sidebar a');
+
+                sidebarLinks.forEach(link => {
+                    if (link.href === currentLocation) {
+                        link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
+                        link.closest('div').classList.remove('hidden');
+                    }
+                });
+            });
+
+            function toggleSubItems(id) {
+                const element = document.getElementById(id);
+                if (element.classList.contains('hidden')) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+            document.getElementById('attachfile').addEventListener('click', function () {
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+    <div id="confirmationContent" class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
+        <div class="flex justify-between items-center">
+            <div class="font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+            <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+        </div>
+        <div class="flex justify-between items-center mt-6">
+            <div class="font-bold text-[14px] leading-[25px]">Work Order File :-</div>
+            <div class="font-semibold text-[14px] leading-[25px] underline">Work Order File.pdf</div>
+        </div>
+        <div class="flex justify-between  mt-6">
+            <div class="font-bold text-[14px] leading-[25px]">Note:-</div>
+            <div class="font-semibold text-[14px] leading-[25px] text-right ">Lorem ipsum dolor sit amet consectetur. Interdum vitae tellus risus quis enim ut. Laoreet risus amet purus lobortis ac dolor cum condimentum.</div>
+        </div>
+    </div>
+`;
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const checklistContainer = document.getElementById('checklist-container');
+
+                checklistContainer.addEventListener('click', function (e) {
+                    if (e.target && e.target.classList.contains('add-checklist')) {
+                        const checklistSection = e.target.closest('.checklist-section');
+                        const newSection = checklistSection.cloneNode(true);
+
+                        newSection.querySelectorAll('input').forEach(input => input.value = '');
+
+                        checklistContainer.appendChild(newSection);
+                    }
+
+                    if (e.target && e.target.classList.contains('delete-checklist')) {
+                        const checklistSection = e.target.closest('.checklist-section');
+                        if (checklistContainer.children.length > 1) {
+                            checklistSection.remove();
+                        } else {
+                            alert('At least one section must be present.');
+                        }
+                    }
+                }); 
+            });
+        </script>
+        <script src="/js/activestate.js"></script>
+        <script>
+            // Select all select-box elements
+            const selectBoxes = document.querySelectorAll('.select-box');
+
+            // Loop through each select box
+            selectBoxes.forEach(function (selectBox, index) {
+                const selectOption = selectBox.querySelector('.select-option');
+                const soValue = selectBox.querySelector('.soValue');
+                const optionsLi = selectBox.querySelectorAll('.options li');
+
+                // Toggle active class on click of select-option
+                selectOption.addEventListener('click', function () {
+                    selectBox.classList.toggle('active');
+                });
+
+                // Set value on click of options
+                optionsLi.forEach(function (option) {
+                    option.addEventListener('click', function () {
+                        const text = this.textContent;
+                        soValue.value = text;
+                        selectBox.classList.remove('active');
+                    });
+                });
+            });
+
+
+
+        </script>
+        <script>
+            document.getElementById('upload').addEventListener('click', function () {
+                const modal = document.getElementById('modal');
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="lg:flex justify-between border-b border-[#000000] p-3 lg:p-5">
+                        <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Upload Response</h3>
+                        <div  class="lg:mt-0 md:mt-0 mt-5">
+                            <button id="backToChecklist" class=" w-[170px] h-[50px] bg-[#005787] text-white font-medium text-[13px] rounded-[100px] leading-[30px]">Back to Checklist</button>
+                        </div>
+                    </div>
+                    <div id="checklist-container" class=" px-[10px] ">
+                        <div class="checklist-section lg:grid grid-cols-2 gap-10 border-b border-[#CCCCCC] lg:px-[30px] py-[40px]">
+                            <div>
+                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Name *</div>
+                                <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
+                            </div>
+                            <div>
+                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Time *</div>
+                                <div class="select-box relative">
+                                    <div class="select-option relative">
+                                        <input type="text" id="soValue1" class="soValue outline-none cursor-pointer w-full border border-[#B1B6C6] rounded-[100px] pl-[19px] h-[60px]" placeholder="Select Document">
+                                    </div>
+                                    <div class="content bg-[#ffffff] absolute text-black w-full z-50 border mt-[-7px] rounded-bl-[24px] rounded-br-[24px] border-[#B1B6C6] hidden">
+                                        <ul class="options mt-[10px] pl-[30px] pb-[20px] ">
+                                            <li class="font-normal text-[15px] leading-[30px]">1</li>
+                                            <li class="font-normal text-[15px] leading-[30px]">2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative mt-5">
+                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload Document</div>
+                                <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[60px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                                <button class="bg-[#00ADEE] w-[118px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File
+                                    <input type="file" class="absolute left-[2%] w-[80px] opacity-0">
+                                </button>
+                            </div>
+                            <div>
+                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Remarks *</div>
+                                <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Select Document">
+                            </div>
+                         
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-7">
+                        <button class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
+                    </div>
+                    <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
+                        <table class="min-w-full">
+                            <thead class="bg-[#005787] text-white ">
+                                <tr>
+                                    <th class="text-[15px] py-2">#</th>
+                                    <th class="text-[15px] py-2 text-left ">Tender Submitted <br>
+                                        Response Name</th>
+                                    <th class="text-[15px] text-left py-2">Response Type<br>
+                                        Name</th>
+                                    <th class="text-[15px] py-2">Created Date</th>
+                                    <th class="text-[15px] py-2">Remark</th>
+                                    <th class="text-[15px] py-2">Download</th>
+                                    <th class="text-[15px] py-2">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                  <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]">01</td>
+                                  <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Tech 1</td>
+                                  <td  class=" py-2 font-medium text-[15px] leading-[25px]">Technical Response</td>
+                                 <td  class=" py-2 text-center font-medium text-[15px] leading-[25px]">27-02-24</td>
+                                 <td  class="px-4 py-2  text-center font-medium text-[15px] leading-[25px]">DFD</td>
+                                  <td  class="px-4 py-2  text-center flex justify-center">
+                                    <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                                   <img src="../images/downloadSign.png"/>
+                                        Download
+                                        </div>
+                                    </td>
+                                    <td  class="px-4 py-2  text-center">
+                                    <div class="relative  flex justify-center">
+                                  <img src="../images/RectangleBox.png" class=""/>
+                                  <img src="../images/delete.png" class="absolute top-[9px] left-[44px]"/>
+                                       
+                                    </div>
+                                    </td>
+                            </tbody>
+                    
+                        </table>
+                    </div>
+                `;
+    
+                modal.classList.remove('hidden');
+    
+                document.getElementById('backToChecklist').addEventListener('click', function() {
+                    alert('hello')
+                    window.history.back();
+                });
+            });
+        </script>
+</body>
+
+</html>

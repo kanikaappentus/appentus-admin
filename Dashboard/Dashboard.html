@@ -39,7 +39,7 @@
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       
       <div class="text-sm flex gap-3 items-center lg:flex-grow">
-        <div class="hidden lg:block">
+        <div class=" lg:block">
           <img src="../images/menu.png" id="menu-button" />
         </div>
         <div class="relative">
@@ -82,9 +82,12 @@
   </nav>
   <div
   id="sidebar"
-        class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+        class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform  translate-x-0   flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+        <div id="close-button" class="flex justify-end px-[20px] xl:hidden lg:flex md:flex "> 
+          <i class="fa-solid fa-xmark"></i>
+      </div>
         <div
-            class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+            class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-3 items-center">
             <div
                 class="rounded-full w-[20px] h-[20px] border border-white relative">
                 <i
@@ -96,61 +99,61 @@
           </a>
         </div>
         <div
-            className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+            class="  flex flex-col items-center w-[234px]  gap-3 ">
             <div class="mt-[17px] ">
-                <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+                <a href="/Dashboard/Dashboard.html" class="flex items-center p-3 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
                <img src="../images/category-2.svg">
                    <span class="ms-3">Dashboard</span>
                 </a>
             </div>
 
             <div>
-                <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <a href="/Dashboard/UserManagemant.html" class="flex items-center p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <img src="../images/3 User.svg">
                       <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
 
                 </a>
             </div>
             <div>
-                <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <img src="../images/judge.svg">
                       <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
                       <img src="../images/Polygon 2.png" >
                 </a>
                 <ul id="tender-management" class="hidden py-2 space-y-2">
                       <li>
-                         <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+                         <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-3 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
                       </li>
                       <li>
-                         <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My Tender</a>
+                         <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-3 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My Tender</a>
                       </li>
                       <li>
-                         <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned to learn</a>
+                         <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-3 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned to learn</a>
                       </li>
                       <li>
-                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss Tender</a>
+                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-3 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss Tender</a>
                      </li>
                      <li>
-                      <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender Result</a>
+                      <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-3 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender Result</a>
                    </li>
                 </ul>
             </div>
 
             <div>
-                <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <a href="/Dashboard/Approval.html" class="flex items-center  p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <img src="../images/card-tick.svg">
                       <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
                 </a>
 
             </div>
           <div>
-            <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <a href="/Dashboard/Schedulecall.html" class="flex items-center  p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                 <img src="../images/calendar.svg">
                   <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
             </a>
           </div>
           <div>
-            <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                 <img src="../images/wallet-money.svg">
                   <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
                     Management</span>
@@ -159,7 +162,7 @@
         </div>
       
           <div>
-            <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <a href="/Dashboard/Setting.html" class="flex items-center  p-3 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                 <img src="../images/setting.svg">
                   <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
             </a>
@@ -167,7 +170,7 @@
         </div>
 </div>
   
-    <div id="main-content" class=" main-content  lg:flex gap-2  px-[20px] lg:py-[5rem] pt-[11rem]">
+    <div id="main-content" class=" main-content shifted  lg:flex gap-4  px-[10px] lg:py-[5rem] pt-[11rem]">
       <div class="dashboard lg:w-[86%]" >
       <div class="lg:flex justify-between items-center">
         <div>
@@ -183,7 +186,7 @@
             <div class=" flex gap-8 items-center">
             <div>
               <h6 class=" font-semibold text-[18px] leading-[22px] text-[#000000]">Select User</h6>
-              <p class=" font-normal text-[14px] leading-[17px] text-[#777777]">Judith Rodriguez</p>
+              <p class=" font-normal text-[13px] leading-[17px] text-[#777777]">Judith Rodriguez</p>
             </div>
             <div class="">
               <i class="fa-solid fa-chevron-down text-[10px] text-[#A098AE]"></i>
@@ -197,7 +200,7 @@
             <div class=" flex gap-8 items-center">
             <div>
               <h6 class=" font-semibold text-[18px] leading-[22px] text-[#000000]">Change Periode</h6>
-              <p class=" font-normal text-[14px] leading-[17px] text-[#777777]">August - October, 2024</p>
+              <p class=" font-normal text-[13px] leading-[17px] text-[#777777]">August - October, 2024</p>
             </div>
             <div class="">
               <i class="fa-solid fa-chevron-down text-[10px] text-[#A098AE]"></i>
@@ -312,10 +315,32 @@
             <p class=" mt-5 font-semibold text-[16px] leading-[20px]">8.5% Up from yesterday</p>
             </div>
           </div>
-          <div class="bg-[#B9E2EF] mt-5 rounded-[29px]  w-full   h-[371px] flex justify-center items-center font-bold text-[24px] leading-[30px] text-[#000000] ">
-            Recent Bid Assign
-           
-          </div>
+          <div class="rounded-[30px]  bg-[#EDE4FF] px-[20px] pt-[30px] pb-[50px] mt-10  lg:flex  justify-between">
+            <div>
+            <div class="font-semibold lg:text-[19px] md:text-[18px]   text-[15px]  leading-[22px] text-[#000000]">
+                Public Works Department - Nanded - Maharashtra
+            </div>
+            <div class="flex gap-2 items-center my-4">
+                <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+                <span class="font-bold text-[15px] leading-[18px]"><i class="fa-regular fa-clock"></i>12-03-2024
+                <sub>(14 Days Left)</sub>
+                </span>
+            </div>
+            <p class=" font-normal text-[15px] leading-[25px] xl:pr-[70px]  ">
+                Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+                vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+                dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+                pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+                amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+                duis.
+            </p>
+              <div class="2xl:flex  md:flex items-center lg:block lg:gap-[4px] xl:gap-5 mt-6">
+                <button class="lg:w-[249px] md:w-[249px] w-full h-[63px] bg-[#00ADEE] text-white rounded-[100px] font-semibold text-[18px] leading-[20px]">Assigned to : Ayush Sinha</button>
+                <button class="lg:w-[147px] md:w-[147px]  w-full h-[63px] 2xl:mt-0 xl:mt-4 lg:mt-4 md:mt-0 mt-5 bg-[#FFF6D6] text-[#E09400] rounded-[100px] font-semibold text-[18px] leading-[20px]">In progress</button>
+              </div>
+            </div>
+         
+        </div>
         </div>
 
       </div>
@@ -525,33 +550,43 @@ function removeAllChildren(parent) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('menu-button');
-            if (menuButton) {
-                menuButton.addEventListener('click', function() {
-                    console.log('Menu button clicked');
-                    const sidebar = document.getElementById('sidebar');
-                    console.log('Sidebar classes before toggle:', sidebar.className);
-                    sidebar.classList.toggle('-translate-x-full');
-                    console.log('Sidebar classes after toggle:', sidebar.className);
-
-                    const mainContent = document.getElementById('main-content');
-                    console.log('Main content classes before toggle:', mainContent.className);
-                    mainContent.classList.toggle('shifted');
-                    console.log('Main content classes after toggle:', mainContent.className);
-                });
-            } else {
-                console.error('Menu button not found');
-            }
-            const currentLocation = window.location.href;
-    const sidebarLinks = document.querySelectorAll('#sidebar a');
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
     
-    sidebarLinks.forEach(link => {
-        if (link.href === currentLocation) {
-            link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
-            link.closest('div').classList.remove('hidden');
+        if (menuButton) {
+            menuButton.addEventListener('click', function() {
+                console.log('Menu button clicked');
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.toggle('xl:-translate-x-full');
+                mainContent.classList.toggle('shifted');
+            });
+        } else {
+            console.error('Menu button not found');
         }
-    });
+    
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                console.log('Close button clicked');
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.toggle('xl:-translate-x-full');
+                mainContent.classList.toggle('shifted');
+            });
+        } else {
+            console.error('Close button not found');
+        }
+    
+        const currentLocation = window.location.href;
+        const sidebarLinks = document.querySelectorAll('#sidebar a');
+    
+        sidebarLinks.forEach(link => {
+            if (link.href === currentLocation) {
+                link.classList.add('bg-[#FFE4CD]', '');
+                link.closest('div').classList.remove('hidden');
+            }
         });
+    });
 
 function toggleSubItems(id) {
     const element = document.getElementById(id);

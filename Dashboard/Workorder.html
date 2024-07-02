@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body >
+    <nav
+    class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
+  >
+   <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    <div
+      class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white"
+    >
+      <img src="../images/logo.png" class="w-[194px] h-[25px]" />
+    </div>
+    <div class="block lg:hidden">
+      <!-- <div>
+      <img src="/images/menu.png" class="menu-button"  />
+    </div> -->
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      
+      <div class="text-sm flex gap-3 items-center lg:flex-grow">
+        <div class="hidden lg:block">
+          <img src="../images/menu.png" id="menu-button" />
+        </div>
+        <div class="relative">
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
+          ></i>
+        
+          <input
+            type="text"
+            placeholder="Search"
+            class=" search lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+          />
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="hidden lg:block">
+          <img src="../images/notification-bing.png" />
+        </div>
+        <div
+          class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
+        >
+          <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
+            <img src="../images/user.png" />
+          </div>
+          <div>
+            <h6
+              class="font-medium text-[14px] leading-[25px] text-[Black Color]"
+            >
+              Abhishek Sharma
+            </h6>
+            <p
+              class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
+            >
+              Sales Head
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+  id="sidebar"
+        class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+        <div
+            class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+            <div
+                class="rounded-full w-[20px] h-[20px] border border-white relative">
+                <i
+                    class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+            </div>
+            <a href="/Dashboard/AddNewTender.html"
+                class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
+                Add New Tender
+          </a>
+        </div>
+        <div
+            className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+            <div class="mt-[17px] ">
+                <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+               <img src="../images/category-2.svg">
+                   <span class="ms-3">Dashboard</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/3 User.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+
+                </a>
+            </div>
+            <div>
+                <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/judge.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+                      <img src="../images/Polygon 2.png">
+                </a>
+                <ul id="tender-management" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+                      </li>
+                      <li>
+                         <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My Tender</a>
+                      </li>
+                      <li>
+                         <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned to learn</a>
+                      </li>
+                      <li>
+                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss Tender</a>
+                     </li>
+                     <li>
+                      <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender Result</a>
+                   </li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="../images/card-tick.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+                </a>
+
+            </div>
+          <div>
+            <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <img src="../images/calendar.svg">
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+            </a>
+          </div>
+          <div>
+            <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <img src="../images/wallet-money.svg">
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+                    Management</span>
+            </a>
+       
+        </div>
+      
+          <div>
+            <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <img src="../images/setting.svg">
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+            </a>
+          </div>
+        </div>
+</div>
+  
+      <div id="main-content" class="main-content lg:px-[3rem]  px-[10px] lg:py-[5rem] py-[11rem]">
+        <div class="lg:flex justify-between items-center mt-[2rem]">
+            <div class="flex items-center gap-2">
+                <div class=" font-normal text-[14px] leading-[20px]">Work Order</div>
+                <div><img src="../images/Polygon.png"/></div>
+                <div class=" font-normal text-[14px] leading-[20px]">All Work orders</div>
+            </div>
+            <div class="lg:mt-0 md:mt-0 mt-6">
+                <img src="../images/download (2).png"/>
+            </div>
+        </div>
+       
+              <div class=" lg:flex md:flex justify-between mt-[3rem]">
+                  <div>
+                      <h2 class=" font-bold text-[30px] leading-[30px]  text-[#000000]">Work Order</h2>
+                  </div>
+                  <div class="lg:flex md:flex items-center gap-4">
+                  <div class="md:hidden xl:flex gap-2 ">
+                  <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
+                      <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
+                      <select class=" w-[69px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
+                        <option value="10">10</option>
+                        <option value="20">30</option>
+                        <option value="30">30</option>
+                       </select>
+                  </div>
+                  <div class="relative">
+                      <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
+                      <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
+                  </div>
+                  </div>
+              </div>
+              </div>
+        
+              <div class="lg:flex md:flex md:gap-2 grid grid-cols-2 gap-3 mt-10">
+                <div class="mt-4">
+                    <div class="category-button    lg:w-[197px]  md:w-[171px]  w-full        cursor-pointer               h-[55px] rounded-[35px] bg-[#00ADEE] py-3" data-value="Fresh">
+                        <p class="text-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]   leading-[30px] text-white">
+                            All tenders (1/100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button    lg:w-[197px]  md:w-[171px]  w-full        cursor-pointer               h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Live">
+                        <p class="text-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[30px] text-[#7B7B7B]">
+                            Name (1/100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button    lg:w-[197px]  md:w-[171px]  w-full        cursor-pointer               h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Archive">
+                        <p class="text-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[30px] text-[#7B7B7B]">
+                            Name (1/100)
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="category-button    lg:w-[197px]  md:w-[171px]  w-full        cursor-pointer               h-[55px] rounded-[35px] bg-[#F4F8FA] py-3" data-value="Interested">
+                        <p class="text-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[30px] text-[#7B7B7B]">
+                            Name (1/100)
+                        </p>
+                    </div>
+                </div>  
+            </div>
+            
+
+        <div class="lg:grid grid-cols-2 gap-5"> 
+          <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-10  lg:flex  justify-between">
+              <div>
+              <div class="font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[22px] text-[#000000]">
+                  Public Works Department - Nanded - Maharashtra
+              </div>
+              <div class="flex gap-2 items-center my-4">
+                  <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+                  <span class="font-bold text-[15px] leading-[18px]"><i class="fa-regular fa-clock"></i>12-03-2024
+                  <sub>(14 Days Left)</sub>
+                  </span>
+              </div>
+              <p class=" font-normal text-[15px] leading-[25px] lg:pr-[70px] ">
+                  Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+                  vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+                  dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+                  pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+                  amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+                  duis.
+              </p>
+          <div class="lg:flex gap-5  my-5 md:flex">
+         <div id="attach" class=" xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#00ADEE] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] cursor-pointer md:text-[18px] text-[15px]  leading-[20px]">
+            <img src="../images/document-upload.png"/>
+            Attach Work Order
+         </div>
+         <div class=" xl:w-[237px] w-full md:w-[237px] lg:w-full  cursor-pointer  h-[60px] lg:mt-0 md:mt-0 mt-4 rounded-[100px] bg-[#272727] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+            <img src="../images/wallet-3.png"/>
+            Schedule Payment
+         </div>
+          </div>
+              </div>
+           
+          </div>
+          <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-10  lg:flex  justify-between">
+            <div>
+            <div class="font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[22px] text-[#000000]">
+                Public Works Department - Nanded - Maharashtra
+            </div>
+            <div class="flex gap-2 items-center my-4">
+                <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+                <span class="font-bold text-[15px] leading-[18px]"><i class="fa-regular fa-clock"></i>12-03-2024
+                <sub>(14 Days Left)</sub>
+                </span>
+            </div>
+            <p class=" font-normal text-[15px] leading-[25px] lg:pr-[70px] ">
+                Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+                vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+                dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+                pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+                amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+                duis.
+            </p>
+        <div class="lg:flex gap-5 my-5 md:flex">
+       <div class=" xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#00ADEE] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/document-upload.png"/>
+          Attach Work Order
+       </div>
+       <div class=" xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px]  lg:mt-0 md:mt-0 mt-4 rounded-[100px] bg-[#272727] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/wallet-3.png"/>
+          Schedule Payment
+       </div>
+        </div>
+            </div>
+         
+        </div>
+        <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-10  lg:flex  justify-between">
+            <div>
+            <div class="font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[22px] text-[#000000]">
+                Public Works Department - Nanded - Maharashtra
+            </div>
+            <div class="flex gap-2 items-center my-4">
+                <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+                <span class="font-bold text-[15px] leading-[18px]"><i class="fa-regular fa-clock"></i>12-03-2024
+                <sub>(14 Days Left)</sub>
+                </span>
+            </div>
+            <p class=" font-normal text-[15px] leading-[25px] lg:pr-[70px] ">
+                Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+                vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+                dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+                pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+                amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+                duis.
+            </p>
+        <div class="lg:flex gap-5  my-5 md:flex">
+       <div class=" xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#00ADEE] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/document-upload.png"/>
+          Attach Work Order
+       </div>
+       <div class=" lg:mt-0 md:mt-0 mt-4 xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#272727] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/wallet-3.png"/>
+          Schedule Payment
+       </div>
+        </div>
+            </div>
+         
+        </div>
+        <div class="rounded-[30px] border border-[#A0A0A0] p-4 mt-10  lg:flex  justify-between">
+            <div>
+            <div class="font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[22px] text-[#000000]">
+                Public Works Department - Nanded - Maharashtra
+            </div>
+            <div class="flex gap-2 items-center my-4">
+                <p class="font-normal text-[15px] leading-[18px]">₹ 81.49 CR</p>
+                <span class="font-bold text-[15px] leading-[18px]"><i class="fa-regular fa-clock"></i>12-03-2024
+                <sub>(14 Days Left)</sub>
+                </span>
+            </div>
+            <p class=" font-normal text-[15px] leading-[25px] lg:pr-[70px] ">
+                Lorem ipsum dolor sit amet consectetur. In vitae in volutpat
+                vulputate enim faucibus lacus morbi mi. Id egestas dictumst
+                dignissim sed nunc dolor vestibulum viverra urna. Varius phasellus
+                pharetra et iaculis ipsum dolor morbi. Vehicula enim nisi diam sed
+                amet sit. Venenatis consectetur erat quis diam sit pharetra ut sem
+                duis.
+            </p>
+        <div class="lg:flex gap-5  my-5 md:flex">
+       <div class=" xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#00ADEE] text-white flex items-center  lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/document-upload.png"/>
+          Attach Work Order
+       </div>
+       <div class=" lg:mt-0 md:mt-0 mt-4 xl:w-[237px] w-full md:w-[237px] lg:w-full   h-[60px] rounded-[100px] bg-[#272727] text-white flex items-center lg:gap-[2px] gap-3 xl:gap-3 justify-center font-semibold lg:text-[18px] md:text-[18px] text-[15px]  leading-[20px]">
+          <img src="../images/wallet-3.png"/>
+          Schedule Payment
+       </div>
+        </div>
+            </div>
+         
+        </div>
+        </div>
+
+      
+          <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+          <div id="AttachModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+              <div class="lg:w-full w-[321px] ">
+                  <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5 pl-[46px]">
+                      <div>
+                          <h2 class="font-bold text-[24px] leading-[40px]">Work Order</h2>
+                      </div>
+                      <div>
+                          <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+                      </div>
+                  </div>
+                  <div id="modalContent" class=" pl-[17px]  pr-[12px] lg:px-[20px] py-[20px]">
+                      <ul class="pl-[20px]" style="list-style-type: disc;">
+                          <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+                      </ul>
+                      <div class="relative">
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+                        <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
+                        <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File
+                            <input type="file" class="absolute left-[2%] opacity-0">
+                        </button>
+                    </div>
+                      <div class="mt-6">
+                          <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
+                          <div class="">
+                              <textarea class=" px-[20px] pt-5 rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
+                          </div>
+                      </div>
+                      <div id="attachfile" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                        Attach File
+                      </div>
+                  </div>
+           
+              </div>
+          </div>
+    <script>
+        
+   
+document.addEventListener('DOMContentLoaded', (event) => {
+const assignButton = document.getElementById('attach');
+const assignModal = document.getElementById('AttachModal');
+const closeModalButton = document.getElementById('closeModalButton');
+assignButton.addEventListener('click', () => {
+    assignModal.classList.remove('hidden');
+    document.getElementById('overlay').classList.add('show');
+});
+
+closeModalButton.addEventListener('click', () => {
+    assignModal.classList.add('hidden');
+    document.getElementById('overlay').classList.remove('show');
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == assignModal) {
+        assignModal.classList.add('hidden');
+    }
+});
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+const assignButton = document.getElementById('reminder');
+const assignModal = document.getElementById('ReminderModal');
+const closeModalButton = document.getElementById('closeModalButton2');
+
+assignButton.addEventListener('click', () => {
+    assignModal.classList.remove('hidden');
+    document.getElementById('overlay').classList.add('show');
+});
+
+closeModalButton.addEventListener('click', () => {
+    assignModal.classList.add('hidden');
+    document.getElementById('overlay').classList.remove('show');
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == ReminderModal) {
+        assignModal.classList.add('hidden');
+    }
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menu-button');
+        if (menuButton) {
+            menuButton.addEventListener('click', function() {
+                console.log('Menu button clicked');
+                const sidebar = document.getElementById('sidebar');
+                console.log('Sidebar classes before toggle:', sidebar.className);
+                sidebar.classList.toggle('-translate-x-full');
+                console.log('Sidebar classes after toggle:', sidebar.className);
+
+                const mainContent = document.getElementById('main-content');
+                console.log('Main content classes before toggle:', mainContent.className);
+                mainContent.classList.toggle('shifted');
+                console.log('Main content classes after toggle:', mainContent.className);
+            });
+        } else {
+            console.error('Menu button not found');
+        }
+        const currentLocation = window.location.href;
+const sidebarLinks = document.querySelectorAll('#sidebar a');
+
+sidebarLinks.forEach(link => {
+    if (link.href === currentLocation) {
+        link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
+        link.closest('div').classList.remove('hidden');
+    }
+});
+    });
+
+function toggleSubItems(id) {
+const element = document.getElementById(id);
+if (element.classList.contains('hidden')) {
+    element.classList.remove('hidden');
+} else {
+    element.classList.add('hidden');
+}
+}
+document.getElementById('attachfile').addEventListener('click', function() {
+const modalContent = document.getElementById('modalContent');
+modalContent.innerHTML = `
+    <div id="confirmationContent" class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
+        <div class="flex justify-between items-center">
+            <div class="font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+            <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
+        </div>
+        <div class="flex justify-between items-center mt-6">
+            <div class="font-bold text-[14px] leading-[25px]">Work Order File :-</div>
+            <div class="font-semibold text-[14px] leading-[25px] underline">Work Order File.pdf</div>
+        </div>
+        <div class="flex justify-between  mt-6">
+            <div class="font-bold text-[14px] leading-[25px]">Note:-</div>
+            <div class="font-semibold text-[14px] leading-[25px] text-right ">Lorem ipsum dolor sit amet consectetur. Interdum vitae tellus risus quis enim ut. Laoreet risus amet purus lobortis ac dolor cum condimentum.</div>
+        </div>
+    </div>
+`;
+});
+    </script>
+    <script src="/js/activestate.js"></script>
+</body>
+</html>
