@@ -187,7 +187,8 @@
 
 
         <div class="lg:flex lg:gap-4 xl:gap-10 mt-10">
-            <div id="modalContent" class="border border-[#000000] rounded-[20px] bg-[#FFFFFF] xl:w-[70%]  ">
+            <div  class="border border-[#000000] rounded-[20px] bg-[#FFFFFF] xl:w-[70%]  ">
+            <div id="modalContent">
                 <div class="lg:flex md:flex justify-between border-b border-[#000000] p-3 lg:p-5">
                     <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Prepare Checklist</h3>
                     <div class="lg:mt-0 md:mt-0 mt-5">
@@ -196,7 +197,6 @@
                             Responses</button>
                     </div>
                 </div>
-
                 <div id="checklist-container" class=" px-[10px] ">
                     <div
                         class="checklist-section lg:grid grid-cols-2 gap-3 xl:gap-10 border-b border-[#CCCCCC] xl:px-[30px] py-[40px]">
@@ -230,7 +230,7 @@
                             <input type="text" placeholder="Choose File"
                                 class="bg-transparent w-full h-[60px] outline-none rounded-[60px] p-3 border border-[#617572]">
                             <button
-                                class="bg-[#00ADEE] w-[89px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose
+                                class="bg-[#00ADEE] w-[118px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose
                                 File
                                 <input type="file" class="absolute left-[2%] w-[80px] opacity-0">
                             </button>
@@ -244,7 +244,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden">
+            </div>
+                <div id="response" class="hidden">
                 <div class=" lg:flex md:flex justify-between border-b border-[#000000] p-3 lg:p-5">
                     <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Upload Response</h3>
                     <div  class="lg:mt-0 md:mt-0 mt-5">
@@ -287,7 +288,7 @@
                 </div>
            
                 <div class="flex justify-center mt-7">
-                    <button class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
+                    <button id="submit" class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
                 </div>
            
                 <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
@@ -320,7 +321,7 @@
                                 <td  class="px-4 py-2  text-center">
                                 <div class="relative  flex justify-center">
                               <img src="../images/RectangleBox.png" class=""/>
-                              <img src="../images/delete.png" class="absolute top-[9px] left-[44px]"/>
+                              <img src="../images/delete.png" class="absolute top-[9px] xl:left-[25px] left-[11px]"/>
                                    
                                 </div>
                                 </td>
@@ -385,7 +386,7 @@
             </div>
         </div>
        
-        <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+        <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[794px] bg-[#FFFFFF] overflow-auto shadow-lg">
             <div class="lg:w-full w-[321px] ">
                 <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5 pl-[46px]">
                     <div>
@@ -395,29 +396,30 @@
                         <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
                     </div>
                 </div>
-                <div id="modalContent" class=" pl-[17px]  pr-[12px] lg:px-[20px] py-[20px]">
-                    <div class="flex justify-between">
+                <div  class="  py-[20px]">
+                    <div class="flex justify-between lg:px-[20px] px-[10px]">
                         <div>
                     <ul class="pl-[20px]" style="list-style-type: disc;">
                         <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
                     </ul>
                 </div>
-                <div>
+                <div class="flex gap-4 items-center">
                     <label class=" font-normal text-[15px] leading-[30px] text-[#000000]">Include index *</label>
-                    <input type="text" class=" lg:w-[400px] w-full h-[60px] border border-[#CCCCCC]" placeholder="Enter Name">
+                    <input type="text" class=" lg:w-[400px] rounded-[100px] outline-none pl-[19px] w-full h-[60px] border border-[#CCCCCC]" placeholder="Enter Name">
                 </div>
                     </div>
-                    <div class="overflow-x-auto mt-5 rounded-[20px] pb-[100px]">
+                    <div class="lg:px-[20px] px-[10px] ">
+                    <div class="overflow-x-auto mt-5  rounded-[20px] pb-[20px] border border-[#647986]">
                         <table class="min-w-full">
                             <thead class="bg-[#005787] text-white ">
                                 <tr>
-                                    <th class="text-[15px] px-4 py-2">
+                                    <th class="text-[15px] px-4 py-4">
                                         <input type="checkbox">
                                     </th>
-                                    <th class="text-[15px]  px-4 whitespace-nowrap py-2 text-left ">Document Name
+                                    <th class="text-[15px] py-4  px-4 whitespace-nowrap  text-left ">Document Name
                                     </th>
-                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-2">Order By    </th>
-                                    <th class="text-[15px]  px-4 py-2">Action</th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-4">Order By    </th>
+                                    <th class="text-[15px]  px-4 py-4">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -425,7 +427,7 @@
                                   <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Document Name</td>
                                   <td  class=" py-2 font-medium text-[15px] leading-[25px]">
                                     <div>
-                                        <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]"></button>
+                                        <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]">01</button>
                                     </div>
                                   </td>
                                   <td  class="px-4 py-2  text-center flex justify-center">
@@ -436,11 +438,58 @@
                                     </td>
                                
                             </tbody>
-                    
+                            <tbody>
+                                <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]"> <input type="checkbox"></td>
+                                <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Document Name</td>
+                                <td  class=" py-2 font-medium text-[15px] leading-[25px]">
+                                  <div>
+                                      <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]">01</button>
+                                  </div>
+                                </td>
+                                <td  class="px-4 py-2  text-center flex justify-center">
+                                  <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                                 <img src="../images/downloadSign.png"/>
+                                      Download
+                                      </div>
+                                  </td>
+                             
+                          </tbody>
+                          <tbody>
+                            <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]"> <input type="checkbox"></td>
+                            <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Document Name</td>
+                            <td  class=" py-2 font-medium text-[15px] leading-[25px]">
+                              <div>
+                                  <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]">01</button>
+                              </div>
+                            </td>
+                            <td  class="px-4 py-2  text-center flex justify-center">
+                              <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                             <img src="../images/downloadSign.png"/>
+                                  Download
+                                  </div>
+                              </td>
+                         
+                      </tbody>
+                      <tbody>
+                        <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]"> <input type="checkbox"></td>
+                        <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Document Name</td>
+                        <td  class=" py-2 font-medium text-[15px] leading-[25px]">
+                          <div>
+                              <button class="w-[104px] h-[40px] rounded-[30px] border border-[#0000004D]">01</button>
+                          </div>
+                        </td>
+                        <td  class="px-4 py-2  text-center flex justify-center">
+                          <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
+                         <img src="../images/downloadSign.png"/>
+                              Download
+                              </div>
+                          </td>
+                     
+                  </tbody>
                         </table>
                     </div>
-     
-                    <div class="lg:grid grid-cols-2 gap-5 xl:gap-10 border-b border-[#CCCCCC] xl:px-[30px] py-[40px]">
+                </div>
+                    <div class="lg:grid grid-cols-2 lg:px-[20px] px-[10px] gap-5 xl:gap-10  py-[40px]">
                         <div>
                             <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Name *</div>
                             <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
@@ -459,17 +508,21 @@
                         </div>
                     </div>
 
-                    <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
+                    <div class="flex justify-center my-20">
+                        <button id="submit" class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
+                    </div>
+
+                    <div class="overflow-x-auto mt-5 px-0 pb-[100px]">
                         <table class="min-w-full">
                             <thead class="bg-[#005787] text-white ">
                                 <tr>
                                     <th class="text-[15px] px-4 py-2">#</th>
-                                    <th class="text-[15px]  px-4 whitespace-nowrap py-2 text-left ">Tender Submitted Response Name</th>
-                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-2">Response Type Name</th>
-                                    <th class="text-[15px]  px-4 py-2">Created Date</th>
-                                    <th class="text-[15px]  px-4 py-2">Remark</th>
-                                    <th class="text-[15px]  px-4 py-2">Download</th>
-                                    <th class="text-[15px]  px-4 py-2">Action</th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap py-4 text-left ">Tender Submitted Response Name</th>
+                                    <th class="text-[15px]  px-4 whitespace-nowrap  text-left py-4">Response Type Name</th>
+                                    <th class="text-[15px] whitespace-nowrap  px-4 py-2">Created Date</th>
+                                    <th class="text-[15px]  px-4 py-4">Remark</th>
+                                    <th class="text-[15px]  px-4 py-4">Download</th>
+                                    <th class="text-[15px]  px-4 py-4">Action</th>
                                 </tr>
                             </thead>
                           <tbody>
@@ -487,11 +540,10 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
-                const assignButton = document.getElementById('tenderassign');
+                const assignButton = document.getElementById('submit');
                 const assignModal = document.getElementById('assignModal');
                 const closeModalButton = document.getElementById('closeModalButton');
                 assignButton.addEventListener('click', () => {
-                    alert('hello')
                     assignModal.classList.remove('hidden');
                     document.getElementById('overlay').classList.add('show');
                 });
@@ -620,100 +672,16 @@
 
 
         </script>
+       
         <script>
             document.getElementById('upload').addEventListener('click', function () {
-                const modal = document.getElementById('modal');
-                const modalContent = document.getElementById('modalContent');
-                modalContent.innerHTML = `
-                    <div class="lg:flex justify-between border-b border-[#000000] p-3 lg:p-5">
-                        <h3 class=" font-semibold text-[24px] leading-[30px]  text-[#000000]">Upload Response</h3>
-                        <div  class="lg:mt-0 md:mt-0 mt-5">
-                            <button id="backToChecklist" class=" w-[170px] h-[50px] bg-[#005787] text-white font-medium text-[13px] rounded-[100px] leading-[30px]">Back to Checklist</button>
-                        </div>
-                    </div>
-                    <div id="checklist-container" class=" px-[10px] ">
-                        <div class="checklist-section lg:grid grid-cols-2 gap-10 border-b border-[#CCCCCC] lg:px-[30px] py-[40px]">
-                            <div>
-                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Name *</div>
-                                <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Enter Name">
-                            </div>
-                            <div>
-                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Response Time *</div>
-                                <div class="select-box relative">
-                                    <div class="select-option relative">
-                                        <input type="text" id="soValue1" class="soValue outline-none cursor-pointer w-full border border-[#B1B6C6] rounded-[100px] pl-[19px] h-[60px]" placeholder="Select Document">
-                                    </div>
-                                    <div class="content bg-[#ffffff] absolute text-black w-full z-50 border mt-[-7px] rounded-bl-[24px] rounded-br-[24px] border-[#B1B6C6] hidden">
-                                        <ul class="options mt-[10px] pl-[30px] pb-[20px] ">
-                                            <li class="font-normal text-[15px] leading-[30px]">1</li>
-                                            <li class="font-normal text-[15px] leading-[30px]">2</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="relative mt-5">
-                                <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload Document</div>
-                                <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[60px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                                <button class="bg-[#00ADEE] w-[118px] h-[50px] absolute top-[27px] right-[4px] text-center text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File
-                                    <input type="file" class="absolute left-[2%] w-[80px] opacity-0">
-                                </button>
-                            </div>
-                            <div>
-                                <div class="font-normal text-[15px] leading-[30px] text-[#000000] pb-[10px]">Remarks *</div>
-                                <input type="text" id="Name" class="w-full border border-[#B1B6C6] pl-[19px] rounded-[100px] h-[60px]" placeholder="Select Document">
-                            </div>
-                         
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-7">
-                        <button class="w-[170px] h-[50px] rounded-[100px] bg-[#00ADEE] text-white font-medium text-[13px] leading-[30px]">Submit</button>
-                    </div>
-                    <div class="overflow-x-auto mt-5 rounded-tl-[20px] rounded-tr-[20px] pb-[100px]">
-                        <table class="min-w-full">
-                            <thead class="bg-[#005787] text-white ">
-                                <tr>
-                                    <th class="text-[15px] py-2">#</th>
-                                    <th class="text-[15px] py-2 text-left ">Tender Submitted <br>
-                                        Response Name</th>
-                                    <th class="text-[15px] text-left py-2">Response Type<br>
-                                        Name</th>
-                                    <th class="text-[15px] py-2">Created Date</th>
-                                    <th class="text-[15px] py-2">Remark</th>
-                                    <th class="text-[15px] py-2">Download</th>
-                                    <th class="text-[15px] py-2">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                  <td class="px-4 py-2 text-center font-medium text-[15px] leading-[25px]">01</td>
-                                  <td  class="px-4 py-2 font-medium text-[15px] leading-[25px]">Tech 1</td>
-                                  <td  class=" py-2 font-medium text-[15px] leading-[25px]">Technical Response</td>
-                                 <td  class=" py-2 text-center font-medium text-[15px] leading-[25px]">27-02-24</td>
-                                 <td  class="px-4 py-2  text-center font-medium text-[15px] leading-[25px]">DFD</td>
-                                  <td  class="px-4 py-2  text-center flex justify-center">
-                                    <div class=" w-[130px] h-[40px] bg-[#005787] text-white font-meduim text-[15px] leading-[25px] rounded-[100px] flex justify-center items-center gap-[10px]">
-                                   <img src="../images/downloadSign.png"/>
-                                        Download
-                                        </div>
-                                    </td>
-                                    <td  class="px-4 py-2  text-center">
-                                    <div class="relative  flex justify-center">
-                                  <img src="../images/RectangleBox.png" class=""/>
-                                  <img src="../images/delete.png" class="absolute top-[9px] left-[44px]"/>
-                                       
-                                    </div>
-                                    </td>
-                            </tbody>
-                    
-                        </table>
-                    </div>
-                `;
-    
-                modal.classList.remove('hidden');
-    
-                document.getElementById('backToChecklist').addEventListener('click', function() {
-                    alert('hello')
-                    window.history.back();
-                });
+                document.getElementById('modalContent').classList.add('hidden');
+                document.getElementById('response').classList.remove('hidden');
+            });
+        
+            document.getElementById('backToChecklist').addEventListener('click', function () {
+                document.getElementById('modalContent').classList.remove('hidden');
+                document.getElementById('response').classList.add('hidden');
             });
         </script>
 </body>

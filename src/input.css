@@ -204,3 +204,8 @@ display: block;
 .select-box.active .select-option:after{
   transform: rotate(-180deg);
 }
+input[type='checkbox'] { 
+  width:24px;
+  height:24px;
+  background: none;
+}
