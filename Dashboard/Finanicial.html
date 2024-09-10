@@ -62,126 +62,124 @@
     </div>
   </nav>
   <div id="sidebar"
-  class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
-  <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
-    <div class="rounded-full w-[20px] h-[20px] border border-white relative">
-      <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+    class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+    <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+      <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+        <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+      </div>
+      <a href="/Dashboard/AddNewTender.html" class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
+        Add New Tender
+      </a>
     </div>
-    <a href="/Dashboard/AddNewTender.html" class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
-      Add New Tender
-    </a>
+    <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+      <div class="mt-[17px] ">
+        <a href="/Dashboard/Dashboard.html"
+          class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+          <img src="../images/category-2.svg">
+          <span class="ms-3">Dashboard</span>
+        </a>
+      </div>
+
+      <div>
+        <a href="/Dashboard/UserManagemant.html"
+          class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/3 User.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+
+        </a>
+      </div>
+      <div>
+        <a href="#" onclick="toggleSubItems('tender-management')"
+          class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/judge.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+          <img src="../images/Polygon 2.png">
+        </a>
+        <ul id="tender-management" class="hidden py-2 space-y-2">
+          <li>
+            <a href="/Dashboard/TenderManagement.html"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+          </li>
+          <li>
+            <a href="/Dashboard/TenderDetails.html"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My
+              Tender</a>
+          </li>
+          <li>
+            <a href="/Dashboard/SubmittedTender.html"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned
+              to learn</a>
+          </li>
+          <li>
+            <a href="/Dashboard/TenderSubmitted.html"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss
+              Tender</a>
+          </li>
+          <li>
+            <a href="/Dashboard/TenderSubmitted.html"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender
+              Result</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="/Dashboard/Approval.html"
+          class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/card-tick.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+        </a>
+
+      </div>
+      <div>
+        <a href="/Dashboard/DocumentManagement.html"
+          class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/documents.png">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document Management</span>
+        </a>
+
+      </div>
+      <div>
+        <a href="/Dashboard/Schedulecall.html"
+          class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/calendar.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+        </a>
+      </div>
+      <div>
+        <a href="/Dashboard/Finanicial.html"
+          class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/wallet-money.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+            Management</span>
+        </a>
+
+      </div>
+
+      <div>
+        <a href="/Dashboard/Setting.html"
+          class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <img src="../images/setting.svg">
+          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+        </a>
+      </div>
+    </div>
   </div>
-  <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
-    <div class="mt-[17px] ">
-      <a href="/Dashboard/Dashboard.html"
-        class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
-        <img src="../images/category-2.svg">
-        <span class="ms-3">Dashboard</span>
-      </a>
-    </div>
-
-    <div>
-      <a href="/Dashboard/UserManagemant.html"
-        class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/3 User.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
-
-      </a>
-    </div>
-    <div>
-      <a href="#" onclick="toggleSubItems('tender-management')"
-        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/judge.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
-        <img src="../images/Polygon 2.png">
-      </a>
-      <ul id="tender-management" class="hidden py-2 space-y-2">
-        <li>
-          <a href="/Dashboard/TenderManagement.html"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
-        </li>
-        <li>
-          <a href="/Dashboard/TenderDetails.html"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My
-            Tender</a>
-        </li>
-        <li>
-          <a href="/Dashboard/SubmittedTender.html"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned
-            to learn</a>
-        </li>
-        <li>
-          <a href="/Dashboard/TenderSubmitted.html"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss
-            Tender</a>
-        </li>
-        <li>
-          <a href="/Dashboard/TenderSubmitted.html"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender
-            Result</a>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <a href="/Dashboard/Approval.html"
-        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/card-tick.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
-      </a>
-
-    </div>
-    <div>
-      <a href="/Dashboard/DocumentManagement.html"
-        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/documents.png">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document Management</span>
-      </a>
-
-    </div>
-    <div>
-      <a href="/Dashboard/Schedulecall.html"
-        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/calendar.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
-      </a>
-    </div>
-    <div>
-      <a href="/Dashboard/Finanicial.html"
-        class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/wallet-money.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
-          Management</span>
-      </a>
-
-    </div>
-
-    <div>
-      <a href="/Dashboard/Setting.html"
-        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
-        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-        <img src="../images/setting.svg">
-        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
-      </a>
-    </div>
-  </div>
-</div>
   <div id="main-content" class=" shifted main-content  px-[20px] lg:py-[5rem] pt-[11rem]">
-    <div class="lg:flex justify-between items-center ">
-      <div class="flex items-center gap-2">
+    <div class="">
+      <div class="flex items-center gap-2 px-[20px]">
         <div class=" font-normal text-[14px] leading-[20px]">Financial Management</div>
         <div><img src="../images/Polygon.png" /></div>
         <div class=" font-normal text-[14px] leading-[20px]">Finance Request</div>
       </div>
-      <div class="lg:mt-0 md:mt-0 mt-6">
-        <img src="../images/download (2).png" />
-      </div>
+  
     </div>
     <div class="lg:px-[10px]">
       <div>
@@ -189,107 +187,68 @@
           Financial Management
         </h2>
       </div>
-      <div class="my-[40px] lg:flex md:flex md:gap-2 grid md:grid-cols-2 grid-cols-1 gap-3">
-        <div class="mt-4">
-          <div class=" category-button cursor-pointer w-[145px] lg:w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
-            <p class="text-center font-semibold text-[15px]  lg:text-[18px] leading-[30px] text-white">
-              New Request
-            </p>
-          </div>
-        </div>
-        <div class="mt-4">
-          <div class=" category-button cursor-pointer w-[145px] lg:w-[190px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-            <p class="text-center font-semibold text-[15px]  lg:text-[18px] leading-[30px] text-[#CADDE4]">
-              Approve Request
-            </p>
-          </div>
-        </div>
-        <div class="mt-4">
-          <div class=" category-button cursor-pointer w-[145px] lg:w-[170px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-            <p class="text-center font-semibold text-[15px]  lg:text-[18px] leading-[30px] text-[#CADDE4]">
-              Denied Request
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-4">
-          <div class=" category-button cursor-pointer w-[145px] lg:w-[215px] h-[55px] rounded-[35px] bg-[#F4F8FA] py-3">
-            <p class="text-center font-semibold text-[15px] lg:text-[18px] leading-[30px] text-[#CADDE4]">
-              completed Request
-            </p>
-          </div>
-        </div>
-
-
+   
+    </div>
+ 
+    <div class="overflow-x-auto mt-5">
+        <table id="table-body" class=" min-w-full">
+          <thead class="bg-[#005787] text-white">
+            <tr>
+              <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">#</th>
+              <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Tender ID</th>
+              <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Requirement</th>
+              <th class="px-4 py-4  font-semibold text-[15px] leading-[22px]">Payment Mode</th>
+              <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Amount</th>
+              <th class="px-4 py-4 font-semibold text-[15px] leading-[22px] ">Requester Name</th>
+              <th class="px-4 py-4 font-semibold text-[15px] leading-[22px]">Finance Executive</th>
+              <th class="px-4 py-4  font-semibold text-[15px] leading-[22px]">Requested Date</th>
+              <th class="px-4 py-4 font-semibold text-[15px] leading-[22px]">Deadline Date</th>
+              <th class="px-4 py-4 font-semibold text-[15px] leading-[22px] ">Approval Status</th>
+              <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Action</th>
+            </tr>
+          </thead>
+          <tbody class="border-b border-[#000000] pb-[10px]">
+            <!-- Example row, duplicated to show multiple entries -->
+            <tr class="bg-white my-4">
+              <td class="px-4 py-4 text-center whitespace-nowrap">01</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">1179</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">EMD</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">Offline</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">10,000</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">Palak Shah</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">Virishin Patel</td>
+              <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
+              <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap">Pending</td>
+              <td class="px-4 py-4 text-center whitespace-nowrap ">
+                <button class="w-[136px] bg-[#D0F2FF] rounded-[30px] font-normal h-[45px] text-[14px] leading-[20px]">View Details</button>
+              </td>
+            </tr>
+            <!-- Add more rows as necessary -->
+          </tbody>
+          <tbody class="border-b border-[#000000] pb-[10px]">
+              <!-- Example row, duplicated to show multiple entries -->
+              <tr class="bg-white my-4">
+                <td class="px-4 py-4 text-center whitespace-nowrap">01</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">1179</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">EMD</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">Offline</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">10,000</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">Palak Shah</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">Virishin Patel</td>
+                <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
+                <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap">Pending</td>
+                <td class="px-4 py-4 text-center whitespace-nowrap ">
+                  <button class="w-[136px] bg-[#D0F2FF] rounded-[30px] font-normal h-[45px] text-[14px] leading-[20px]">View Details</button>
+                </td>
+              </tr>
+              <!-- Add more rows as necessary -->
+            </tbody>
+  
+  
+        </table>
       </div>
-    </div>
-    <div class="overflow-x-auto mt-">
-      <table id="table-body" class=" min-w-full">
-        <thead class="bg-[#005787] text-white">
-          <tr>
-            <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">#</th>
-            <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Tender ID</th>
-            <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Requirement</th>
-            <th class="px-4 py-4  font-semibold text-[15px] leading-[22px]">Payment Mode</th>
-            <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Amount</th>
-            <th class="px-4 py-4 font-semibold text-[15px] leading-[22px] ">Requester Name</th>
-            <th class="px-4 py-4 font-semibold text-[15px] leading-[22px]">Finance Executive</th>
-            <th class="px-4 py-4  font-semibold text-[15px] leading-[22px]">Requested Date</th>
-            <th class="px-4 py-4 font-semibold text-[15px] leading-[22px]">Deadline Date</th>
-            <th class="px-4 py-4 font-semibold text-[15px] leading-[22px] ">Approval Status</th>
-            <th class="px-4 py-4 whitespace-nowrap font-semibold text-[15px] leading-[22px]">Action</th>
-          </tr>
-        </thead>
-        <tbody class="border-b border-[#000000] pb-[10px]">
-          <!-- Example row, duplicated to show multiple entries -->
-          <tr class="bg-white my-4">
-            <td class="px-4 py-4 text-center whitespace-nowrap">01</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">1179</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">EMD</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Offline</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">10,000</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Palak Shah</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Virishin Patel</td>
-            <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
-            <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Pending</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap justify-center items-center gap-2">
-              <img src="../images/icon1.svg" class="w-[45x] h-[45px] view" id="view1" />
-              <img src="../images/icon2.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon3.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon4.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon5.svg" class="w-[45x] h-[45px]" />
-            </td>
-          </tr>
-          <!-- Add more rows as necessary -->
-        </tbody>
-        <tbody class="border-b border-[#000000] pb-[10px]">
-          <!-- Example row, duplicated to show multiple entries -->
-          <tr class="bg-white my-4">
-            <td class="px-4 py-4 text-center whitespace-nowrap">01</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">1179</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">EMD</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Offline</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">10,000</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Palak Shah</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Virishin Patel</td>
-            <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
-            <td class="px-4 py-4 text-center ">15-04-2023,11:17 PM</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap">Pending</td>
-            <td class="px-4 py-4 text-center whitespace-nowrap  justify-center items-center gap-2">
-              <img src="../images/icon1.svg" class="w-[45x] h-[45px] view" id="view2" />
-              <img src="../images/icon2.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon3.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon4.svg" class="w-[45x] h-[45px]" />
-              <img src="../images/icon5.svg" class="w-[45x] h-[45px]" />
-            </td>
-          </tr>
-          <!-- Add more rows as necessary -->
-        </tbody>
-
-
-      </table>
-    </div>
     <div class="pagination mt-4 flex justify-end">
       <button class="page-link" id="prev-page">←</button>
       <button class="page-link page-number active" data-page="1">1</button>
@@ -315,7 +274,7 @@
       </div>
       <div class="lg:px-[20px] px-[10px]">
         <div class="bg-[#CCEFFC] rounded-[15px] p-5 mt-5 ">
-          <div class="grid grid-cols-1 md:grid-cols-3  mt-3">
+          <div class="grid grid-cols-1 md:grid-cols-1  mt-3">
             <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
             <div class="font-semibold col-span-2 text-[14px] leading-[25px]">1179-</div>
           </div>

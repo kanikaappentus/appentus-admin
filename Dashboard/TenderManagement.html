@@ -48,7 +48,7 @@
               <input
                 type="text"
                 placeholder="Search"
-                class=" search lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
+                class=" search lg:w-[360px] h-[50px] rounded-[60px] z-[-10] relative border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
               />
             </div>
           </div>
@@ -78,94 +78,125 @@
           </div>
         </div>
       </nav>
-      <div
-      id="sidebar"
-            class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
-            <div
-                class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
-                <div
-                    class="rounded-full w-[20px] h-[20px] border border-white relative">
-                    <i
-                        class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
-                </div>
-                <a href="/Dashboard/AddNewTender.html"
-                    class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
-                    Add New Tender
-              </a>
-            </div>
-            <div
-                className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
-                <div class="mt-[17px] ">
-                    <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
-                   <img src="../images/category-2.svg">
-                       <span class="ms-3">Dashboard</span>
-                    </a>
-                </div>
+      <div id="sidebar"
+      class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+      <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+        <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+          <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+        </div>
+        <a href="/Dashboard/AddNewTender.html" class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
+          Add New Tender
+        </a>
+      </div>
+      <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+        <div class="mt-[17px] ">
+          <a href="/Dashboard/Dashboard.html"
+            class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+            <img src="../images/category-2.svg">
+            <span class="ms-3">Dashboard</span>
+          </a>
+        </div>
   
-                <div>
-                    <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <img src="../images/3 User.svg">
-                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
-    
-                    </a>
-                </div>
-                <div>
-                    <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <img src="../images/judge.svg">
-                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
-                          <img src="../images/Polygon 2.png">
-                    </a>
-                    <ul id="tender-management" class="hidden py-2 space-y-2">
-                          <li>
-                             <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
-                          </li>
-                          <li>
-                             <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My Tender</a>
-                          </li>
-                          <li>
-                             <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned to learn</a>
-                          </li>
-                          <li>
-                            <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss Tender</a>
-                         </li>
-                         <li>
-                          <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender Result</a>
-                       </li>
-                    </ul>
-                </div>
+        <div>
+          <a href="/Dashboard/UserManagemant.html"
+            class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/3 User.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
   
-                <div>
-                    <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <img src="../images/card-tick.svg">
-                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
-                    </a>
+          </a>
+        </div>
+        <div>
+          <a href="#" onclick="toggleSubItems('tender-management')"
+            class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/judge.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+            <img src="../images/Polygon 2.png">
+          </a>
+          <ul id="tender-management" class="hidden py-2 space-y-2">
+            <li>
+              <a href="/Dashboard/TenderManagement.html"
+                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+            </li>
+            <li>
+              <a href="/Dashboard/TenderDetails.html"
+                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My
+                Tender</a>
+            </li>
+            <li>
+              <a href="/Dashboard/SubmittedTender.html"
+                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned
+                to learn</a>
+            </li>
+            <li>
+              <a href="/Dashboard/TenderSubmitted.html"
+                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss
+                Tender</a>
+            </li>
+            <li>
+              <a href="/Dashboard/TenderSubmitted.html"
+                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender
+                Result</a>
+            </li>
+          </ul>
+        </div>
   
-                </div>
-              <div>
-                <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/calendar.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
-                </a>
-              </div>
-              <div>
-                <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/wallet-money.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
-                        Management</span>
-                </a>
-           
-            </div>
-          
-              <div>
-                <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/setting.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
-                </a>
-              </div>
-            </div>
+        <div>
+          <a href="/Dashboard/Approval.html"
+            class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/card-tick.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+          </a>
+  
+        </div>
+        <div>
+          <a href="/Dashboard/DocumentManagement.html"
+            class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/documents.png">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document Management</span>
+          </a>
+  
+        </div>
+        <div>
+          <a href="/Dashboard/Schedulecall.html"
+            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/calendar.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+          </a>
+        </div>
+        <div>
+          <a href="/Dashboard/Finanicial.html"
+            class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/wallet-money.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+              Management</span>
+          </a>
+  
+        </div>
+  
+        <div>
+          <a href="/Dashboard/Setting.html"
+            class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="../images/setting.svg">
+            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+          </a>
+        </div>
+      </div>
     </div>
       
           <div id="main-content" class="main-content lg:px-[3rem]  px-[20px] lg:py-[5rem] py-[11rem]">
+            <div class="flex items-center gap-2  mt-3">
+                <div class=" font-normal text-[14px] leading-[20px]">Tender Management</div>
+                <div><img src="../images/Polygon.png" /></div>
+                <div class=" font-normal text-[14px] leading-[20px]">All Tender</div>
+        
+              </div>
                   <div class=" lg:flex md:flex justify-between">
                       <div>
                           <h2 class=" font-bold text-[30px] leading-[30px] pt-10 text-[#000000]">Tender
@@ -197,49 +228,34 @@
                       </div>
                   </div>
                   </div>
-                  <div class="md:flex gap-2 hidden xl:hidden  ">
-                      <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
-                          <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
-                          
-                           <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
-                            <option value="1">10</option>
-                            <option value="1">10</option>
-                            <option value="1">10</option>
-                           </select>
-
-                      </div>
-                      <div class="relative">
-                          <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
-                          <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
-                      </div>
-                  </div>
-                  <div class="lg:flex md:flex md:gap-4 gap-2 items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-10 mt-20">
-                  <div class="">
-                      <div>State</div>
-                      <select class=" w-full md:w-[226px] lg:w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                          <option value="0" class=" font-normal text-[14px] leading-[20px] text-[#000000]">Select state</option>
-                          <option value="1">Audi</option>
-                          <option value="2">BMW</option>
-                      </select>
-                  </div>
-                  <div class="">
-                      <div>Start Date</div>
-                      <input type="date" placeholder="Select Date" class=" bg-transparent w-full md:w-[226px] lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
-                         
-                  </div>
-                  <div class="">
-                      <div>End Date</div>
-                      <input type="date" placeholder="Select Date" class="bg-transparent md:w-[226px] w-full lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">   
-                  </div>
-                  <div class="md:hidden lg:flex items-center gap-3">
-                  <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
-                      Apply
-                  </div>
-                  <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
-                      Clear All
-                  </div>
-              </div>
-                  </div>
+             
+                  <div class="flex flex-col gap-5  md:flex-row md:gap-4  lg:items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-10">
+                    <div class="">
+                        <div>State</div>
+                        <select class=" w-full md:w-[226px] lg:w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <option value="0" class=" font-normal text-[14px] leading-[20px] text-[#000000]">Select state</option>
+                            <option value="1">Audi</option>
+                            <option value="2">BMW</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <div>Start Date</div>
+                        <input type="date" placeholder="Select Date" class=" bg-transparent w-full md:w-[226px] lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                           
+                    </div>
+                    <div class="">
+                        <div>End Date</div>
+                        <input type="date" placeholder="Select Date" class="bg-transparent md:w-[226px] w-full lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">   
+                    </div>
+                    <div class="md:hidden lg:flex items-center gap-3">
+                    <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
+                        Apply
+                    </div>
+                    <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
+                        Clear All
+                    </div>
+                </div>
+                    </div>
                   <div class="md:flex items-center gap-3 lg:hidden hidden ">
                       <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
                           Apply
@@ -328,7 +344,7 @@
                   </div>
                   </div>
                   <div>
-                      <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-0  lg:text-center">Tender Id - 1050</div>
+                      <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-5  lg:text-center">Tender Id - 1050</div>
                       <div class="mt-3">
                           <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
                           <div class="text-center font-semibold text-[18px] leading-[30px] text-white">
@@ -386,7 +402,7 @@
                 </div>
                 </div>
                 <div>
-                    <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-0  lg:text-center">Tender Id - 1050</div>
+                    <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-4  lg:text-center">Tender Id - 1050</div>
                     <div class="mt-3">
                         <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
                         <div class="text-center font-semibold text-[18px] leading-[30px] text-white">
@@ -443,7 +459,7 @@
                 </div>
                 </div>
                 <div>
-                    <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-0  lg:text-center">Tender Id - 1050</div>
+                    <div class=" font-semibold text-[14px] leading-[23px] mt-4 lg:mt-0 md:mt-5  lg:text-center">Tender Id - 1050</div>
                     <div class="mt-3">
                         <div class="w-[156px] h-[55px] rounded-[35px] bg-[#00ADEE] py-3">
                         <div class="text-center font-semibold text-[18px] leading-[30px] text-white">
@@ -456,9 +472,9 @@
 
           
               <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
-              <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-                  <div class="lg:w-full w-[321px] ">
-                      <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5 pl-[46px]">
+              <div id="assignModal" class="hidden fixed top-0 right-0 z-50 h-full md:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+                  <div class="lg:w-full md:w-full w-[321px] ">
+                      <div class="flex justify-between  items-center  border-b border-[#CADDE4] p-4 px lg:pl-5">
                           <div>
                               <h2 class="font-bold text-[24px] leading-[40px]">Tender Assign</h2>
                           </div>
@@ -466,7 +482,7 @@
                               <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
                           </div>
                       </div>
-                      <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+                      <div class=" px-[10px] lg:px-[20px] py-[20px]">
                           <ul>
                               <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
                           </ul>
@@ -511,8 +527,8 @@
                   </div>
               </div>
       
-                  <div id="ReminderModal" class="hidden fixed top-0 right-0 z-50 h-full w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-                      <div class="lg:w-full w-[321px]">
+                  <div id="ReminderModal" class="hidden fixed top-0 right-0 z-50 h-full md:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+                      <div class="lg:w-full md:w-full w-[321px]">
                           <div class="flex justify-between border-b border-[#CADDE4] p-4">
                               <div>
                                   <h2 class="font-bold text-[24px] leading-[40px]">Tender Reminder</h2>
@@ -631,23 +647,23 @@ function toggleSubItems(id) {
 document.getElementById('setReminder').addEventListener('click', function() {
     const modalContent = document.getElementById('modalContent');
     modalContent.innerHTML = `
-        <div id="confirmationContent" class="w-[522px] rounded-[15px] bg-[#CCEFFC] p-4">
-            <div class="flex justify-between items-center">
-                <div class="font-bold text-[14px] leading-[25px]">Tender ID:-</div>
-                <div class="font-semibold text-[14px] leading-[25px]">1179-</div>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="font-bold text-[14px] leading-[25px]">Reminder Date and Time:-</div>
-                <div class="font-semibold text-[14px] leading-[25px]">29-02-2024, 12:00PM</div>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="font-bold text-[14px] leading-[25px]">Comment:-</div>
-                <div class="font-semibold text-[14px] leading-[25px]">Lorem ipsum dolor sit amet consectetur.</div>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="font-bold text-[14px] leading-[25px]">Modify:-</div>
-                <div class="font-semibold text-[14px] leading-[25px] underline">Change</div>
-            </div>
+        <div id="confirmationContent" class="lg:w-[522px] w-full rounded-[15px] bg-[#CCEFFC] p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3  mt-3">
+            <div class=" font-bold text-[14px] leading-[25px]">Tender ID:-</div>
+            <div class="font-semibold col-span-2 text-[14px] leading-[25px]">1179</div>
+          </div>
+               <div class="grid grid-cols-1 md:grid-cols-3  mt-3">
+            <div class=" font-bold text-[14px] leading-[25px]">Reminder Date and Time:-</div>
+            <div class="font-semibold col-span-2 text-[14px] leading-[25px]">29-02-2024, 12:00PM</div>
+          </div>
+             <div class="grid grid-cols-1 md:grid-cols-3  mt-3">
+            <div class=" font-bold text-[14px] leading-[25px]">Comment:-</div>
+            <div class="font-semibold col-span-2 text-[14px] leading-[25px]">Lorem ipsum dolor sit amet consectetur.</div>
+          </div>
+               <div class="grid grid-cols-1 md:grid-cols-3  mt-3">
+            <div class=" font-bold text-[14px] leading-[25px]">Modify:-</div>
+            <div class="font-semibold col-span-2 text-[14px] leading-[25px] underline">Change</div>
+          </div>
         </div>
     `;
 });

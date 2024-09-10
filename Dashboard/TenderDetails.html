@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/src/output.css" rel="stylesheet" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/src/input.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <nav
-    class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]"
-  >
-   <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
-    <div
-      class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white"
-    >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/output.css" rel="stylesheet" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/input.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <nav
+    class="flex gap-2 lg:gap-[42px] fixed top-0 w-full z-40 items-center justify-between flex-wrap bg-[#FFFFFF] Border p-[8px]">
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    <div class="flex items-center justify-center flex-shrink-0 lg:pl-[34px] text-white">
       <img src="../images/logo.png" class="w-[194px] h-[25px]" />
     </div>
     <div class="block lg:hidden">
@@ -35,21 +27,16 @@
     </div> -->
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      
+
       <div class="text-sm flex gap-3 items-center lg:flex-grow">
         <div class="hidden lg:block">
           <img src="../images/menu.png" id="menu-button" />
         </div>
         <div class="relative">
-          <i
-            class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"
-          ></i>
-        
-          <input
-            type="text"
-            placeholder="Search"
-            class=" search lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4"
-          />
+          <i class="fa-solid fa-magnifying-glass absolute top-[17px] left-[17px]"></i>
+
+          <input type="text" placeholder="Search"
+            class=" search lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#F3FCFF] p-4" />
         </div>
       </div>
       <div class="flex items-center gap-4">
@@ -57,20 +44,15 @@
           <img src="../images/notification-bing.png" />
         </div>
         <div
-          class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]"
-        >
+          class="flex items-center gap-4 mt-[10px] lg:mt-0 w-[234px] h-[50px] bg-[#DFEAF0] rounded-[60px] border border-[#DFEAF0]">
           <div class="w-[40px] h-[40px] rounded-full ml-[6px]">
             <img src="../images/user.png" />
           </div>
           <div>
-            <h6
-              class="font-medium text-[14px] leading-[25px] text-[Black Color]"
-            >
+            <h6 class="font-medium text-[14px] leading-[25px] text-[Black Color]">
               Abhishek Sharma
             </h6>
-            <p
-              class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]"
-            >
+            <p class="font-medium text-[12px] mt-[-5px] leading-[20px] text-[#979797]">
               Sales Head
             </p>
           </div>
@@ -78,213 +60,243 @@
       </div>
     </div>
   </nav>
-  <div
-  id="sidebar"
-        class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
-        <div
-            class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
-            <div
-                class="rounded-full w-[20px] h-[20px] border border-white relative">
-                <i
-                    class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
-            </div>
-            <a href="/Dashboard/AddNewTender.html"
-                class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
-                Add New Tender
-          </a>
-        </div>
-        <div
-            className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
-            <div class="mt-[17px] ">
-                <a href="/Dashboard/Dashboard.html" class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
-               <img src="../images/category-2.svg">
-                   <span class="ms-3">Dashboard</span>
-                </a>
-            </div>
+  <div id="sidebar"
+  class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full  flex flex-col py-[10px] px-[18px] border-r border-[#DFEAF0] ">
+  <div class="w-[200px] h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+    <div class="rounded-full w-[20px] h-[20px] border border-white relative">
+      <i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i>
+    </div>
+    <a href="/Dashboard/AddNewTender.html" class="text-white font-semibold text-[14px] leading-[30px] cursor-pointer">
+      Add New Tender
+    </a>
+  </div>
+  <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+    <div class="mt-[17px] ">
+      <a href="/Dashboard/Dashboard.html"
+        class="flex items-center p-2 text-gray-900 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700 group">
+        <img src="../images/category-2.svg">
+        <span class="ms-3">Dashboard</span>
+      </a>
+    </div>
 
-            <div>
-                <a href="/Dashboard/UserManagemant.html" class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/3 User.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+    <div>
+      <a href="/Dashboard/UserManagemant.html"
+        class="flex items-center p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/3 User.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
 
-                </a>
-            </div>
-            <div>
-                <a href="#" onclick="toggleSubItems('tender-management')" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/judge.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
-                      <img src="../images/Polygon 2.png">
-                </a>
-                <ul id="tender-management" class="hidden py-2 space-y-2">
-                      <li>
-                         <a href="/Dashboard/TenderManagement.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
-                      </li>
-                      <li>
-                         <a href="/Dashboard/TenderDetails.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My Tender</a>
-                      </li>
-                      <li>
-                         <a href="/Dashboard/SubmittedTender.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned to learn</a>
-                      </li>
-                      <li>
-                        <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss Tender</a>
-                     </li>
-                     <li>
-                      <a href="/Dashboard/TenderSubmitted.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender Result</a>
-                   </li>
-                </ul>
-            </div>
+      </a>
+    </div>
+    <div>
+      <a href="#" onclick="toggleSubItems('tender-management')"
+        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/judge.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Tender Management</span>
+        <img src="../images/Polygon 2.png">
+      </a>
+      <ul id="tender-management" class="hidden py-2 space-y-2">
+        <li>
+          <a href="/Dashboard/TenderManagement.html"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tenders</a>
+        </li>
+        <li>
+          <a href="/Dashboard/TenderDetails.html"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">My
+            Tender</a>
+        </li>
+        <li>
+          <a href="/Dashboard/SubmittedTender.html"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Assigned
+            to learn</a>
+        </li>
+        <li>
+          <a href="/Dashboard/TenderSubmitted.html"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">In-Progrss
+            Tender</a>
+        </li>
+        <li>
+          <a href="/Dashboard/TenderSubmitted.html"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100    dark:hover:bg-gray-700">Tender
+            Result</a>
+        </li>
+      </ul>
+    </div>
 
-            <div>
-                <a href="/Dashboard/Approval.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <img src="../images/card-tick.svg">
-                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
-                </a>
+    <div>
+      <a href="/Dashboard/Approval.html"
+        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/card-tick.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Financial Approvals</span>
+      </a>
 
-            </div>
-          <div>
-            <a href="/Dashboard/Schedulecall.html" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                <img src="../images/calendar.svg">
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
-            </a>
-          </div>
-          <div>
-            <a href="/Dashboard/FinancialManagemet.html" class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                <img src="../images/wallet-money.svg">
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
-                    Management</span>
-            </a>
-       
-        </div>
-      
-          <div>
-            <a href="/Dashboard/Setting.html" class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                <img src="../images/setting.svg">
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
-            </a>
-          </div>
-        </div>
+    </div>
+    <div>
+      <a href="/Dashboard/DocumentManagement.html"
+        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/documents.png">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Document Management</span>
+      </a>
+
+    </div>
+    <div>
+      <a href="/Dashboard/Schedulecall.html"
+        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/calendar.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Calendar</span>
+      </a>
+    </div>
+    <div>
+      <a href="/Dashboard/Finanicial.html"
+        class="flex items-center l p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/wallet-money.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Finance
+          Management</span>
+      </a>
+
+    </div>
+
+    <div>
+      <a href="/Dashboard/Setting.html"
+        class="flex items-center  p-2 text-base text-gray-900 transition duration-75 w-[239px] rounded-tl-[30px] rounded-bl-[30px]    hover:bg-[#DFEAF0] dark:hover:bg-gray-700"
+        aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="../images/setting.svg">
+        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+      </a>
+    </div>
+  </div>
 </div>
   <div id="main-content" class="main-content lg:px-[2rem]  px-[10px] lg:py-[5rem] py-[11rem]">
-      <div class="">
-       
-      </div>
-      <div class="mx-auto">
-         <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]  pt-[30px]">
-          Tender Details
-        </h2>
-        <div class=" lg:flex gap-6 mt-10 ">
-          <div class="flex flex-col gap-5 lg:w-[100%] ">
-            <div class="border border-[#A0A0A0] rounded-[30px] ">
-              <div class="flex justify-between px-[40px] py-[20px]">
-                  <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
-                    Tender Details
-                  </div>
-                  <div id="toggle-button1" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
-                      View
-                  </div>
+    <div class="flex items-center gap-2 mt-5">
+      <div class=" font-normal text-[14px] leading-[20px]">Tender Management</div>
+      <div><img src="../images/Polygon.png" /></div>
+      <div class=" font-normal text-[14px] leading-[20px]">All Tender</div>
+      <div><img src="../images/Polygon.png" /></div>
+      <div class=" font-normal text-[14px] leading-[20px]">Tender Details</div>
+    </div>
+    <div class="mx-auto">
+      <h2 class="font-bold text-[30px] leading-[30px] text-[#000000]  pt-[30px]">
+        Tender Details
+      </h2>
+
+      <div class=" lg:flex gap-6 mt-10 ">
+        <div class="flex flex-col gap-5 lg:w-[100%] ">
+          <div class="border border-[#A0A0A0] rounded-[30px] ">
+            <div class="flex justify-between px-[40px] py-[20px]">
+              <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
+                Tender Details
               </div>
-              <div id="toggle-content1" class="mt-4 hidden toggle-content">
-                  <div class="lg:flex md:flex justify-between items-center px-[40px] border-b border-[#000000] pb-[40px]">
-                    <div>
-                      <h6 class=" font-bold text-[18px] leading-[35px]">Reference No.</h6>
-                      <p class="font-normal text-[16px] leading-[35px]">2024_CSIR_199503_1</p>
-                    </div>
-                    <div>
-                      <h6 class=" font-bold text-[18px] leading-[35px]">Tendering Authority</h6>
-                      <p class="font-normal text-[16px] leading-[35px]">Council Of Scientific And<br>
-                        Industrial Research</p>
-                    </div>
-                    <div>
-                      <h6 class=" font-bold text-[18px] leading-[35px]">Title</h6>
-                      <p class="font-normal text-[16px] leading-[35px]">Design and Development of <br> CSIR NBRI Website Bilingual
-                      </p>
-                    </div>
-                    <div>
-                      <h6 class=" font-bold text-[18px] leading-[35px]">Website </h6>
-                      <a href="#" class="font-normal text-[16px] leading-[35px] capitalize text-[#005787] underline">Click here to open<br>
-                        website</a>
-                    </div>
-                  </div>
-                  <div class="px-[40px] py-[20px] flex gap-10">
-                    <div>
-                    <div  class=" font-semibold text-[18px] leading-[35px]">Description</div>
-                    <p class="font-normal text-[16px] leading-[35px]">Lorem ipsum dolor sit amet consectetur. Elit at libero posuere a pulvinar hendrerit.</p>
-                  </div>
-                  <div>
+              <div id="toggle-button1" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
+                View
+              </div>
+            </div>
+            <div id="toggle-content1" class="mt-4 hidden toggle-content">
+              <div class="lg:flex md:flex justify-between items-center px-[40px] border-b border-[#000000] pb-[40px]">
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender ID</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">1179</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender ID</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">In Progress</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Reference No.</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">2024_AVVNL_382210_1
+                  </p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender Authority</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">ajmer vidyut vitran nigam limited
+                  </p>
+                </div>
+              </div>
+              <div class="px-[40px] py-[20px] flex gap-10">
+                <div>
+                  <div class=" font-semibold text-[18px] leading-[35px]">Breif</div>
+                  <p class="font-normal text-[16px] leading-[35px]">Lorem ipsum dolor sit amet consectetur. Elit at
+                    libero posuere a pulvinar hendrerit.</p>
+                </div>
+                <!-- <div>
                     <h6 class=" font-semibold text-[18px] leading-[35px]">Document Link</h6>
                     <a href="#" class="font-normal text-[16px] leading-[35px] capitalize text-[#005787] underline">Click Here To Download File</a>
-                  </div>
-                  </div>
+                  </div> -->
               </div>
+            </div>
           </div>
           <div class="border border-[#A0A0A0] rounded-[30px] ">
             <div class="flex justify-between px-[40px] py-[20px]">
-                <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
-                  Tender Details
-                </div>
-                <div id="toggle-button2" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
-                    View
-                </div>
+              <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
+                Key Values
+              </div>
+              <div id="toggle-button2" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
+                View
+              </div>
             </div>
             <div id="toggle-content2" class="mt-4 hidden toggle-content">
-                <div class="lg:flex md:flex justify-between px-[40px] border-b border-[#000000] pb-[40px]">
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Tender ID</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">2024_CSIR_199503_1</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Tender Type</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">Open Tender	</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Tender Value</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">₹10,00,000</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Pre Bid</h6>
-                    <p class="font-normal text-[16px] leading-[35px] capitalize">NA</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Bid Submission End Date	</h6>
-                    <p class="font-normal text-[16px] leading-[35px] capitalize">03-Jul-2024 03:00 PM
-                    </p>
-                  </div>
+              <div class="lg:flex md:flex justify-between px-[40px] border-b border-[#000000] pb-[40px]">
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender ID</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">2024_CSIR_199503_1</p>
                 </div>
-                <div class="lg:flex md:flex justify-between px-[40px] py-[40px]">
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Tender Fee in ₹	</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">2024_CSIR_199503_1</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">Exemption Allowed</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">Open Tender	</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">EMD Amount in ₹</h6>
-                    <p class="font-normal text-[16px] leading-[35px]">₹10,00,000</p>
-                  </div>
-                  <div>
-                    <h6 class=" font-bold text-[18px] leading-[35px]">EMD Exemption</h6>
-                    <p class="font-normal text-[16px] leading-[35px] capitalize">NA</p>
-                  </div>
-                 
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender Type</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">Open Tender </p>
                 </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender Value</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">₹10,00,000</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Pre Bid</h6>
+                  <p class="font-normal text-[16px] leading-[35px] capitalize">NA</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Bid Submission End Date </h6>
+                  <p class="font-normal text-[16px] leading-[35px] capitalize">03-Jul-2024 03:00 PM
+                  </p>
+                </div>
+              </div>
+              <div class="lg:flex md:flex justify-between px-[40px] py-[40px]">
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Tender Fee in ₹ </h6>
+                  <p class="font-normal text-[16px] leading-[35px]">2024_CSIR_199503_1</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Exemption Allowed</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">Open Tender </p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">EMD Amount in ₹</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">₹10,00,000</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">EMD Exemption</h6>
+                  <p class="font-normal text-[16px] leading-[35px] capitalize">NA</p>
+                </div>
+
+              </div>
             </div>
-        </div>
-        <div class="border border-[#A0A0A0] rounded-[30px] ">
-          <div class="flex justify-between px-[40px] py-[20px]">
+          </div>
+          <div class="border border-[#A0A0A0] rounded-[30px] ">
+            <div class="flex justify-between px-[40px] py-[20px]">
               <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
                 Key Dates
               </div>
               <div id="toggle-button2" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
-                  View
+                View
               </div>
-          </div>
-          <div id="toggle-content2" class="mt-4 hidden toggle-content">
+            </div>
+            <div id="toggle-content2" class="mt-4 hidden toggle-content">
               <div class="lg:flex md:flex justify-between items-center px-[40px] border-b border-[#000000] pb-[40px]">
                 <div>
                   <h6 class=" font-bold text-[18px] leading-[35px]">Start Date of Document Collection</h6>
-                  <p class="font-normal text-[16px] leading-[35px]">26-06-2024  </p>
+                  <p class="font-normal text-[16px] leading-[35px]">26-06-2024 </p>
                 </div>
                 <div>
                   <h6 class=" font-bold text-[18px] leading-[35px]">Last Date of Document Collection</h6>
@@ -294,49 +306,108 @@
                   <h6 class=" font-bold text-[18px] leading-[35px]">Last Date for Submission</h6>
                   <p class="font-normal text-[16px] leading-[35px]">03-07-2024</p>
                 </div>
-               
+
               </div>
               <div class="px-[40px] py-[20px]">
-                <p class="font-normal text-[16px] leading-[35px]">* The estimated cost, values & dates are indicative only. Please read tender document for accurate information.
+                <p class="font-normal text-[16px] leading-[35px]">* The estimated cost, values & dates are indicative
+                  only. Please read tender document for accurate information.
                 </p>
               </div>
+            </div>
           </div>
-      </div>
-    <div class="mt-5 px-[10px]">
-      <div class=" font-normal text-[16px] leading-[35px]">
-        Disclaimer:</div>
-        <p class=" font-normal text-[16px] leading-[35px] text-[#000000]">
-         Tender247 tries to ensure accurate & authentic tender information at its level best however it cannot be held responsible for Omissions, Errors, etc. Users are advised to refer to Tender Document published by Procuring entity before they take submit the bid.</p>
-    </div>
+          <div class="border border-[#A0A0A0] rounded-[30px] ">
+            <div class="flex justify-between px-[40px] py-[20px]">
+              <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
+                Site Location
+              </div>
+              <div id="toggle-button2" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
+                View
+              </div>
+            </div>
+            <div id="toggle-content2" class="mt-4 hidden toggle-content">
+              <div class="lg:flex md:flex justify-between items-center px-[40px] border-b border-[#000000] pb-[40px]">
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Start Date of Document Collection</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">26-06-2024 </p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Last Date of Document Collection</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">03-07-2024</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Last Date for Submission</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">03-07-2024</p>
+                </div>
+
+              </div>
+              <div class="px-[40px] py-[20px]">
+                <p class="font-normal text-[16px] leading-[35px]">* The estimated cost, values & dates are indicative
+                  only. Please read tender document for accurate information.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-[#A0A0A0] rounded-[30px] ">
+            <div class="flex justify-between px-[40px] py-[20px]">
+              <div class="font-semibold text-[18px] leading-[22px] cursor-pointer">
+                Tender Document
+              </div>
+              <div id="toggle-button2" class="toggle-button font-semibold text-[18px] leading-[22px] cursor-pointer">
+                View
+              </div>
+            </div>
+            <div id="toggle-content2" class="mt-4 hidden toggle-content">
+              <div class="lg:flex md:flex justify-between items-center px-[40px] border-b border-[#000000] pb-[40px]">
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Start Date of Document Collection</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">26-06-2024 </p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Last Date of Document Collection</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">03-07-2024</p>
+                </div>
+                <div>
+                  <h6 class=" font-bold text-[18px] leading-[35px]">Last Date for Submission</h6>
+                  <p class="font-normal text-[16px] leading-[35px]">03-07-2024</p>
+                </div>
+
+              </div>
+              <div class="px-[40px] py-[20px]">
+                <p class="font-normal text-[16px] leading-[35px]">* The estimated cost, values & dates are indicative
+                  only. Please read tender document for accurate information.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-          
-       <div class="">
-          <div class="border border-[#A0A0A0] rounded-[30px] lg:w-[413px] mt-5 lg:mt-0 pb-[40px]">
-            <div class=" p-6 Border rounded-tl-[20px] rounded-tr-[20px]  bg-[#005787]">
+
+        <div class="">
+          <div class="border border-[#A0A0A0] rounded-[30px] lg:w-[413px] mt-5 lg:mt-0 pb-[40px] h-[420px]">
+            <div class=" p-6 Border rounded-tl-[20px] rounded-tr-[20px]  bg-[#005787] ">
               <h2 class="font-semibold text-[18px] text-white  leading-[22px]">
                 Tender Features
               </h2>
             </div>
             <div class="flex flex-col">
-            <div class="flex gap-4 items-center Border p-[10px]">
-              <div class="w-[24px] h-[24px] pl-[10px]">
-                <i class="fa-solid fa-user"></i>
+              <div class="flex gap-4 items-center Border p-[10px]">
+                <div class="w-[24px] h-[24px] pl-[10px]">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="font-medium text-[18px] leading-[24px]">Assign</div>
               </div>
-              <div class="font-medium text-[18px] leading-[24px]">Assign</div>
-            </div>
-            <div class="flex gap-4 items-center Border p-[10px]">
+              <div class="flex gap-4 items-center Border p-[10px]">
                 <div class="w-[24px] h-[24px]  pl-[10px]">
                   <i class="fa-solid fa-heart"></i>
                 </div>
                 <div class="font-medium text-[18px] leading-[24px]">Intrested</div>
               </div>
-              <div class="flex gap-4 items-center Border p-[10px]">
+              <div class="flex gap-4 items-center  p-[10px]">
                 <div class="w-[24px] h-[24px]  pl-[10px]">
                   <i class="fa-solid fa-clock"></i>
                 </div>
-                <div class="font-medium text-[18px] leading-[24px]">Request to Finance</div>
+                <div class="font-medium text-[18px] leading-[24px]">Set Reminder</div>
               </div>
-              <div class="flex gap-4 items-center Border p-[10px]">
+              <!-- <div class="flex gap-4 items-center Border p-[10px]">
                 <div class="w-[24px] h-[24px]  pl-[10px]">
                   <i class="fa-solid fa-phone"></i>
                 </div>
@@ -353,131 +424,138 @@
                   <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="font-medium text-[18px] leading-[24px] ">Request for Approvals</div>
-              </div>
+              </div> -->
             </div>
 
-          
+
           </div>
-          <div id="sumbit-button" class=" cursor-pointer lg:w-[413px] text-center py-[12px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[18px] leading-[22px]">
+          <a href="./StartBidding.html" id="sumbit-button"
+            class=" cursor-pointer lg:w-[413px] text-center  w-full flex items-center justify-center py-[12px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[18px] leading-[22px]">
             Start Bidding
-        </div>
-    </div>
+        </a>
         </div>
       </div>
-      <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
-      <div id="submit" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
-        <div class="w-full ">
-            <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 lg:pl-[10px] pl-[46px]">
-                <div>
-                    <h2 class="font-bold text-[24px] leading-[40px] ">Submit To Review</h2>
-                </div>
-                <div>
-                    <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
-                </div>
-            </div>
-            <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
-                <ul>
-                    <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
-                </ul>
-                <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date Of Submission</div>
-                    <input type="date" placeholder="Select Date" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
-                </div>
-                <div class="relative mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
-                    <input type="text" placeholder="Choose File" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" >
-                    <button class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose File</button>
-                </div>
-
-                <div class="mt-6">
-                    <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
-                    <div class="">
-                        <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
-                    </div>
-                </div>
-                <div class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
-                    Submit
-                </div>
-            </div>
+    </div>
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    <div id="submit" class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+      <div class="w-full ">
+        <div class="flex justify-between items-center border-b border-[#CADDE4] p-4 lg:pl-[10px] pl-[46px]">
+          <div>
+            <h2 class="font-bold text-[24px] leading-[40px] ">Submit To Review</h2>
+          </div>
+          <div>
+            <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton"></i>
+          </div>
         </div>
-    </div>
-    </div>
-    <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-    const sumbitbutton = document.getElementById('sumbit-button');
-    const submitModal = document.getElementById('submit');
-    const closeModalButton = document.getElementById('closeModalButton');
+        <div class=" pl-[47px] pr-[12px] lg:px-[20px] py-[20px]">
+          <ul>
+            <li class="underline mt-4 mb-[20px] font-medium text-[14px] leading-[25px]">Tender ID:- 1179</li>
+          </ul>
+          <div class="mt-6">
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Date Of Submission</div>
+            <input type="date" placeholder="Select Date"
+              class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+          </div>
+          <div class="relative mt-6">
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Upload File</div>
+            <input type="text" placeholder="Choose File"
+              class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+            <button
+              class="bg-[#00ADEE] w-[89px] h-[42px] absolute top-[27px] right-[4px]  text-center  text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">Choose
+              File</button>
+          </div>
 
-    sumbitbutton.addEventListener('click', () => {
+          <div class="mt-6">
+            <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Comment</div>
+            <div class="">
+              <textarea class="  rounded-[30px] border border-[#647986] outline-none w-full h-[170px]"></textarea>
+            </div>
+          </div>
+          <div
+            class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+            Submit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const sumbitbutton = document.getElementById('sumbit-button');
+      const submitModal = document.getElementById('submit');
+      const closeModalButton = document.getElementById('closeModalButton');
+
+      sumbitbutton.addEventListener('click', () => {
         submitModal.classList.remove('hidden');
         document.getElementById('overlay').classList.add('show');
-    });
+      });
 
-    closeModalButton.addEventListener('click', () => {
+      closeModalButton.addEventListener('click', () => {
         submitModal.classList.add('hidden');
         document.getElementById('overlay').classList.remove('show');
-    });
+      });
 
-    window.addEventListener('click', (event) => {
+      window.addEventListener('click', (event) => {
         if (event.target == submitModal) {
-            submitModal.classList.add('hidden');
+          submitModal.classList.add('hidden');
         }
+      });
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('menu-button');
-            if (menuButton) {
-                menuButton.addEventListener('click', function() {
-                    console.log('Menu button clicked');
-                    const sidebar = document.getElementById('sidebar');
-                    console.log('Sidebar classes before toggle:', sidebar.className);
-                    sidebar.classList.toggle('-translate-x-full');
-                    console.log('Sidebar classes after toggle:', sidebar.className);
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuButton = document.getElementById('menu-button');
+      if (menuButton) {
+        menuButton.addEventListener('click', function () {
+          console.log('Menu button clicked');
+          const sidebar = document.getElementById('sidebar');
+          console.log('Sidebar classes before toggle:', sidebar.className);
+          sidebar.classList.toggle('-translate-x-full');
+          console.log('Sidebar classes after toggle:', sidebar.className);
 
-                    const mainContent = document.getElementById('main-content');
-                    console.log('Main content classes before toggle:', mainContent.className);
-                    mainContent.classList.toggle('shifted');
-                    console.log('Main content classes after toggle:', mainContent.className);
-                });
-            } else {
-                console.error('Menu button not found');
-            }
-            const currentLocation = window.location.href;
-    const sidebarLinks = document.querySelectorAll('#sidebar a');
-    
-    sidebarLinks.forEach(link => {
+          const mainContent = document.getElementById('main-content');
+          console.log('Main content classes before toggle:', mainContent.className);
+          mainContent.classList.toggle('shifted');
+          console.log('Main content classes after toggle:', mainContent.className);
+        });
+      } else {
+        console.error('Menu button not found');
+      }
+      const currentLocation = window.location.href;
+      const sidebarLinks = document.querySelectorAll('#sidebar a');
+
+      sidebarLinks.forEach(link => {
         if (link.href === currentLocation) {
-            link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
-            link.closest('div').classList.remove('hidden');
+          link.classList.add('bg-[#DFEAF0]', 'dark:bg-gray-700');
+          link.closest('div').classList.remove('hidden');
         }
+      });
     });
-        });
 
-function toggleSubItems(id) {
-    const element = document.getElementById(id);
-    if (element.classList.contains('hidden')) {
+    function toggleSubItems(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
         element.classList.remove('hidden');
-    } else {
+      } else {
         element.classList.add('hidden');
+      }
     }
-}
-    </script>
-       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButtons = document.querySelectorAll('.toggle-button');
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const content = this.closest('div.border').querySelector('.toggle-content');
-                    if (content.classList.contains('hidden')) {
-                        content.classList.remove('hidden');
-                        this.textContent = 'Hide';
-                    } else {
-                        content.classList.add('hidden');
-                        this.textContent = 'View';
-                    }
-                });
-            });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButtons = document.querySelectorAll('.toggle-button');
+      toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const content = this.closest('div.border').querySelector('.toggle-content');
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            this.textContent = 'Hide';
+          } else {
+            content.classList.add('hidden');
+            this.textContent = 'View';
+          }
         });
-    </script>
-  </body>
+      });
+    });
+  </script>
+</body>
+
 </html>

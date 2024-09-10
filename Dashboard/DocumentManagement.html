@@ -188,28 +188,29 @@
       </div>
     </div>
             <div id="main-content" class="main-content lg:px-[3rem] px-[20px] lg:py-[5rem] pt-[11rem]">
-                <div class="flex items-center gap-2  mt-3">
-                    <div class=" font-normal text-[14px] leading-[20px]">User Management</div>
+                <div class="flex items-center gap-2 ">
+                    <div class=" font-normal text-[14px] leading-[20px]">Document Management</div>
                     <div><img src="../images/Polygon.png" /></div>
-                    <div class=" font-normal text-[14px] leading-[20px]">All Users</div>
+                    <div class=" font-normal text-[14px] leading-[20px]">All Documents</div>
                   </div>
-              
-                <div class=" lg:flex md:flex justify-between mt-5 ">
+                <div class=" lg:flex md:flex justify-between  mt-6 ">
                     <div>
-                        <h2 class=" font-bold text-[30px] pt-2  leading-[30px] text-[#000000]">User
-                            Mangement</h2>
+                        <h2 class=" font-bold text-[30px] pt-2  leading-[30px] text-[#000000]">Document Management  </h2>
                     </div>
-                    <div class="lg:flex md:flex items-center gap-4">
-                    <div class="w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
+                    <div class="">
+                    <div id="" class="AddDocumentbutton w-[200px] lg:mt-0 md:mt-0 mt-4 h-[50px] rounded-[60px] bg-[#005787] flex justify-center gap-2 items-center">
                         <div class="rounded-full w-[20px] h-[20px] border border-white relative">
-                           <a href="/Dashboard/AddUser.html"><i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i></a> 
+                           <a ><i class="fa-solid fa-plus text-white absolute top-[3px] left-[3px] text-[13px]"></i></a> 
                         </div>
-                        <a href="/Dashboard/AddUser.html" class="text-white  font-semibold text-[14px] leading-[30px] cursor-pointer">
-                             Add New User
+                        <a  class="text-white  font-semibold text-[14px] leading-[30px] cursor-pointer">
+                            Add New Document
                         </a>
                     </div>
                    
-                    <div class="md:hidden xl:flex gap-2">
+                 
+                </div>
+                </div>
+                <div class="md:flex gap-2 hidden xl:hidden  ">
                     <div class="flex items-center gap-3  md:my-0 my-2 lg:my-0">
                         <label class=" font-normal text-[15px] leading-[20px] text-[#000000s]">Show Result</label>
                         <select class=" w-[60px] lg:w-[50px] px-[10px] outline-none h-[50px] bg-[#EDF3F2] rounded-[60px] border border-[#DFEAF0]">
@@ -222,11 +223,8 @@
                         <i class="fa-solid fa-magnifying-glass absolute top-[19px] left-[17px]"></i>
                         <input type="text" placeholder="Type and Enter" class="lg:w-[360px] h-[50px] rounded-[60px] border pl-[36px] border-[#F3FCFF] bg-[#EDF3F2] p-4">
                     </div>
-                    </div>
                 </div>
-                </div>
-             
-                <div class="flex flex-col gap-5  md:flex-row md:gap-4  lg:items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-10">
+                <div class="lg:flex md:flex md:gap-4 gap-2 items-center lg:gap-5 rounded-[20px] bg-[#EDF3F2] p-4 mt-10">
                 <div class="">
                     <div>State</div>
                     <select class=" w-full md:w-[226px] lg:w-[200px] bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
@@ -245,7 +243,7 @@
                     <input type="date" placeholder="Select Date" class="bg-transparent md:w-[226px] w-full lg:w-[200px] h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">   
                 </div>
                 <div class="md:hidden lg:flex items-center gap-3">
-                <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
+                <div class="w-[100px] text-center  flex items-center justify-center h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
                     Apply
                 </div>
                 <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
@@ -254,7 +252,7 @@
             </div>
                 </div>
                 <div class="md:flex items-center gap-3 lg:hidden hidden ">
-                    <div class="w-[100px] text-center py-[10px] h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
+                    <div class="w-[100px] text-center flex items-center justify-center h-[45px] mt-5 bg-[#005787] text-white rounded-[50px] font-normal text-[14px] leading-[20px]">
                         Apply
                     </div>
                     <div class=" mt-5 font-semibold text-[14px]  text-[#000000] leading-[20px]">
@@ -262,7 +260,7 @@
                     </div>
                 </div>
                 
-                <div class="overflow-x-auto mt-6  ">
+                <div class="overflow-x-auto mt-6">
                     <table id="table-body" class="min-w-full">
                         <thead class="bg-[#005787] text-white">
                             <tr>
@@ -464,6 +462,52 @@
                         <button class="page-link" id="next-page">→</button>
                     </div>
                 </div>
+                <div id="AddDocument"
+                class="hidden fixed top-0 right-0 z-50 h-full lg:w-[582px] bg-[#FFFFFF] overflow-auto shadow-lg">
+                <div class="w-full">
+                  <div class="flex justify-between items-center border-b border-[#CADDE4] p-4">
+                    <div>
+                      <h2 class="font-bold text-[19px] lg:text-[24px] leading-[40px] lg:pl-[10px] ">Add New Document</h2>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-xmark cursor-pointer" id="closeModalButton2"></i>
+                    </div>
+                  </div>
+                <div class="px-[20px] mt-6 flex flex-col gap-5">
+                      <div>
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Folder Name</div>
+                        <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Enter date</option>
+                            <option value="1">Select</option>
+                            <option value="Awarded" >Awarded</option>
+                        </select>
+                      </div>
+                      <div class="">
+                      <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Document Name</div>
+                      <input type="text" placeholder="Enter Name" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                     </div>
+                     <div>
+                        <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Notes</div>
+                        <select class="w-full bg-transparent h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]">
+                            <option value="0" class="font-normal text-[14px] leading-[20px] text-[#000000]">Choose assignee</option>
+                            <option value="1">Select</option>
+                            <option value="Awarded" >Awarded</option>
+                        </select>
+                      </div>
+                      <div class="">
+                      <div class="text-[14px] leading-[15px] font-medium pb-[8px]">Attachment</div>
+                      <input type="text" placeholder="Enter Name" class="bg-transparent w-full h-[50px] outline-none rounded-[60px] p-3 border border-[#617572]" />
+                     </div>
+                     <div id="Submit" class="w-[170px] text-center py-[12px] h-[44px] mt-5 bg-[#00ADEE] text-white rounded-[50px] font-normal text-[14px] leading-[20px] cursor-pointer">
+                        Save
+                    </div>
+                </div>
+            
+                </div>
+            
+             
+              
+              </div>
             </div>
        <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -503,6 +547,31 @@ function toggleSubItems(id) {
         element.classList.add('hidden');
     }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+      const assignButtons = document.querySelectorAll('.AddDocumentbutton');
+      const assignModal = document.getElementById('AddDocument');
+      const closeModalButton = document.getElementById('closeModalButton2');
+      const overlay = document.getElementById('overlay');
+
+      assignButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          assignModal.classList.remove('hidden');
+          overlay.classList.remove('hidden');
+        });
+      });
+
+      closeModalButton.addEventListener('click', () => {
+        assignModal.classList.add('hidden');
+        overlay.classList.add('hidden');
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          assignModal.classList.add('hidden');
+          overlay.classList.add('hidden');
+        }
+      });
+    });
        </script>
        
        <script src="/js/Pagination.js"></script>
